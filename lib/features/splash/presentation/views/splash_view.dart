@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/data/cache/cach.dart';
+import '../../../../core/data/cache/cache.dart';
 import '../../../../core/functions/custom_navigate.dart';
 import '../../../../core/services/service_locator.dart';
 import '../../../../core/utils/app_strings.dart';
@@ -19,7 +19,7 @@ class _SplashViewState extends State<SplashView> {
     bool isOnBoardingVisited =
         getIt<CacheHelper>().getData(key: "isOnBoardingVisited") ?? false;
     if (isOnBoardingVisited == true) {
-      delayedNavigate(context, "/signUp");
+      delayedNavigate(context, "/onBoarding");
     } else {
       delayedNavigate(context, "/onBoarding");
     }

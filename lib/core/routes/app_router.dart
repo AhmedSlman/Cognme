@@ -12,7 +12,7 @@ import '../services/service_locator.dart';
 final GoRouter router = GoRouter(
   routes: [
     GoRoute(
-      path: "/",
+      path: "/mm",
       builder: (context, state) => const SplashView(),
     ),
     GoRoute(
@@ -34,8 +34,9 @@ final GoRouter router = GoRouter(
       ),
     ),
     GoRoute(
-      path: "/homeView",
+      path: "/",
       builder: (context, state) => const HomeView(),
     ),
+  
   ],
 );

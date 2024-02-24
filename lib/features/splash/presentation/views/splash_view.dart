@@ -1,3 +1,4 @@
+import 'package:cognme/core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/data/cache/cache.dart';
@@ -29,12 +30,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          AppStrings.appName,
-          style: AppStyles.s64,
-        ),
-      ),
+      body: Center(child: Image.asset(AppAssets.CognmeLogo)),
     );
   }
 }

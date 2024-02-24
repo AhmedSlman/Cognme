@@ -1,4 +1,5 @@
 import 'package:cognme/core/utils/app_assets.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 class RoutineCard extends StatelessWidget {
@@ -7,7 +8,7 @@ class RoutineCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: context.height * 0.18,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         image: const DecorationImage(

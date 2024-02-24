@@ -1,6 +1,11 @@
 import 'package:cognme/core/data/Api/app_styles.dart';
+import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
+
+import 'custom_clothes_image.dart';
 
 class ClothesCategory extends StatelessWidget {
   const ClothesCategory({super.key});
@@ -8,7 +13,7 @@ class ClothesCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
+      height: context.height * 0.18,
       decoration: ShapeDecoration(
         color: AppColors.cardColor,
         shape: RoundedRectangleBorder(
@@ -26,30 +31,21 @@ class ClothesCategory extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Cool Wears',
+                    AppStrings.coolWears,
                     style: AppStyles.s20.copyWith(
                         color: AppColors.black, fontWeight: FontWeight.w600),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Text('more options', style: AppStyles.s18),
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Text(AppStrings.moreOptions, style: AppStyles.s18),
                   ),
                 ],
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15),
-            child: Container(
-              height: 140,
-              width: 230,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: const DecorationImage(
-                    image: AssetImage('assets/images/clothes.png'),
-                    fit: BoxFit.fill),
-              ),
-            ),
+          const Padding(
+            padding: EdgeInsets.only(right: 15),
+            child: CustomClothesImage(),
           )
         ],
       ),

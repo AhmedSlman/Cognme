@@ -39,6 +39,8 @@ abstract class AppStrings {
       haventReceivedVerificationCode = "Haven’t received verification code?",
       homewelcom = "Good morning",
       name = "Ahmed",
-      Mansoura=' Mansoura, EGY',
-      Monday=' Monday, June';
+      Mansoura = ' Mansoura, EGY',
+      Monday = ' Monday, June',
+      coolWears = 'Cool Wears',
+      moreOptions = 'more options';
 }

@@ -15,75 +15,80 @@ class CustomSignUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AuthCubit, AuthState>(listener: (context, state) {
-      if (state is SignUpSuccessState) {
-        showToast("Account Created Successfully");
-        customReplacementNavigate(context, "/signIn");
-      } else if (state is SignUpFailuerState) {
-        showToast(state.errMessage);
-      }
-    }, builder: (context, state) {
-      AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
+    return BlocConsumer<AuthCubit, AuthState>(
+        listener: (context, state) {},
+        //  (context, state) {
+        //   if (state is SignUpSuccessState) {
+        //     showToast("Account Created Successfully");
+        //     customReplacementNavigate(context, "/signIn");
+        //   } else if (state is SignUpFailuerState) {
+        //     showToast(state.errMessage);
+        //   }
+        // },
+        builder: (context, state) {
+          AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
 
-      return Form(
-        key: authCubit.signUpFormKey,
-        child: Column(
-          children: [
-            CustomTextField(
-              labelText: AppStrings.fristName,
-              onChanged: (fristName) {
-                authCubit.firstName = fristName;
-              },
-            ),
-            CustomTextField(
-              labelText: AppStrings.lastName,
-              onChanged: (lastName) {
-                authCubit.lastName = lastName;
-              },
-            ),
-            CustomTextField(
-              labelText: AppStrings.emailAddress,
-              onChanged: (emailAddress) {
-                authCubit.emailAddress = emailAddress;
-              },
-            ),
-            CustomTextField(
-              suffixIcon: IconButton(
-                onPressed: () {
-                  authCubit.obscurePasswordText();
-                },
-                icon: Icon(
-                  authCubit.obscurePasswordTextValue == true
-                      ? Icons.visibility_outlined
-                      : Icons.visibility_off_outlined,
+          return Form(
+            key: authCubit.signUpFormKey,
+            child: Column(
+              children: [
+                CustomTextField(
+                  labelText: AppStrings.fristName,
+                  onChanged: (fristName) {
+                    authCubit.firstName = fristName;
+                  },
                 ),
-              ),
-              labelText: AppStrings.password,
-              obscureText: authCubit.obscurePasswordTextValue,
-              onChanged: (password) {
-                authCubit.password = password;
-              },
-            ),
-            const TermsAndCondtionsWidget(),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-            state is SignUpLoadingState
-                ? const CircularProgressIndicator()
-                : CustomBotton(
-                    buttonColor:
-                        authCubit.termsAndCondtionCheckBoxValue == false
-                            ? AppColors.lightGrey
-                            : null,
-                    text: AppStrings.signUp,
+                CustomTextField(
+                  labelText: AppStrings.lastName,
+                  onChanged: (lastName) {
+                    authCubit.lastName = lastName;
+                  },
+                ),
+                CustomTextField(
+                  labelText: AppStrings.emailAddress,
+                  onChanged: (emailAddress) {
+                    authCubit.emailAddress = emailAddress;
+                  },
+                ),
+                CustomTextField(
+                  suffixIcon: IconButton(
                     onPressed: () {
-                      if (authCubit.termsAndCondtionCheckBoxValue == true) {
-                        if (authCubit.signUpFormKey.currentState!.validate()) {
-                          authCubit.signUpWithEmailAndPassword();
-                        }
-                      }
-                    }),
-          ],
-        ),
-      );
-    });
+                      authCubit.obscurePasswordText();
+                    },
+                    icon: Icon(
+                      authCubit.obscurePasswordTextValue == true
+                          ? Icons.visibility_outlined
+                          : Icons.visibility_off_outlined,
+                    ),
+                  ),
+                  labelText: AppStrings.password,
+                  obscureText: authCubit.obscurePasswordTextValue,
+                  onChanged: (password) {
+                    authCubit.password = password;
+                  },
+                ),
+                const TermsAndCondtionsWidget(),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                state is SignUpLoadingState
+                    ? const CircularProgressIndicator()
+                    : CustomBotton(
+                        buttonColor:
+                            authCubit.termsAndCondtionCheckBoxValue == false
+                                ? AppColors.lightGrey
+                                : null,
+                        text: AppStrings.signUp,
+                        onPressed: () {
+                          if (authCubit.termsAndCondtionCheckBoxValue == true) {
+                            if (authCubit.signUpFormKey.currentState!
+                                .validate()) {
+                              authCubit.signUpWithEmailAndPassword();
+                              customReplacementNavigate(context, "/signIn");
+                            }
+                          }
+                        }),
+              ],
+            ),
+          );
+        });
   }
 }

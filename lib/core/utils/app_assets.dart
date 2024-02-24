@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 class AppAssets {
   static const String AmbulanceImage = "assets/images/ambulance.png";
 

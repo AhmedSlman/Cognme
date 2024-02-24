@@ -1,4 +1,5 @@
 import 'package:cognme/core/utils/app_assets.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/data/cache/cache.dart';
@@ -30,7 +31,18 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Image.asset(AppAssets.CognmeLogo)),
+      body: Center(
+        child: Container(
+          height: context.height * 0.2,
+          width: context.width * 0.5,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(AppAssets.CognmeLogo),
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

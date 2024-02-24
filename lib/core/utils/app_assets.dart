@@ -1,6 +1,4 @@
-class Assets {
-  Assets._();
-
+class AppAssets {
   static const String imagesAmbulance = "assets/images/ambulance.png";
 
   static const String imagesClothes = "assets/images/clothes.png";

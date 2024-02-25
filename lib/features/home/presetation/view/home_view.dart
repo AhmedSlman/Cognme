@@ -1,17 +1,15 @@
 import 'package:cognme/core/data/Api/app_styles.dart';
-import 'package:cognme/core/utils/app_assets.dart';
-import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/errors/app_styles.dart';
 import 'package:cognme/core/utils/app_strings.dart';
-import 'package:cognme/core/utils/app_styles.dart';
-import 'package:cognme/core/utils/mediaquery.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/home/presetation/widgets/checkbox_routine.dart';
-import 'package:cognme/features/home/presetation/widgets/clothes_category.dart';
+import 'package:cognme/features/home/presetation/widgets/clothes_card.dart';
 import 'package:cognme/features/home/presetation/widgets/heart_rate_category.dart';
 import 'package:cognme/features/home/presetation/widgets/locattion&date.dart';
-import 'package:cognme/features/home/presetation/widgets/routine_card.dart';
 import 'package:cognme/features/home/presetation/widgets/weather_category.dart';
 import 'package:cognme/features/home/presetation/widgets/home_appbar.dart';
 import 'package:flutter/material.dart';
+import '../widgets/routine_category.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -39,13 +37,7 @@ class HomeView extends StatelessWidget {
             SizedBox(
               height: context.height * 0.03,
             ),
-            const Align(
-                alignment: Alignment.centerLeft,
-                child: Text(AppStrings.account, style: AppStyles.s24)),
-            SizedBox(
-              height: context.height * 0.01,
-            ),
-            const RoutineCard(),
+            RoutineCategory(),
             SizedBox(
               height: context.height * 0.03,
             ),

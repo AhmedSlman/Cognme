@@ -2,6 +2,7 @@
 import 'package:cognme/core/data/Api/app_styles.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/mediaquery.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

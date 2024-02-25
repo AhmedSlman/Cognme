@@ -2,6 +2,7 @@ import 'package:cognme/core/data/Api/app_styles.dart';
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/mediaquery.dart';
 import 'package:cognme/features/home/presetation/widgets/checkbox_routine.dart';
 import 'package:cognme/features/home/presetation/widgets/clothes_category.dart';

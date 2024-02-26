@@ -1,22 +1,22 @@
 import 'package:cognme/core/errors/app_styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({
+class CustomButtonDoctor extends StatelessWidget {
+  const CustomButtonDoctor({
     Key? key,
     required this.lable,
-    required this.height,
-    required this.width,
-    required this.onTap,
-    required this.isOutlined,
-    required this.backgroundColor,
-    required this.textColor,
+    this.height,
+    this.width,
+    this.onTap,
+    this.isOutlined,
+    this.backgroundColor,
+    this.textColor,
   }) : super(key: key);
   final String lable;
-  final double height;
-  final double width;
-  final VoidCallback onTap;
-  final bool isOutlined;
+  final double? height;
+  final double? width;
+  final VoidCallback? onTap;
+  final bool? isOutlined;
   final Color? backgroundColor;
   final Color? textColor;
   @override
@@ -36,8 +36,7 @@ class CustomButton extends StatelessWidget {
                 )
               : BorderSide.none,
         ),
-        child:
-            Text(lable, style: AppStyles.s16),
+        child: Text(lable, style: AppStyles.s14),
       ),
     );
   }

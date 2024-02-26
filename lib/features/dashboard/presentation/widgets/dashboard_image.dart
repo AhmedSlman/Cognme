@@ -1,3 +1,5 @@
+import 'package:cognme/core/utils/app_assets.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 class DashboardImage extends StatelessWidget {
@@ -6,11 +8,13 @@ class DashboardImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
+      height: context.height * 0.2,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         image: const DecorationImage(
-            image: AssetImage('assets/images/dashbord.png'), fit: BoxFit.fill),
+          image: AssetImage(AppAssets.DashboardImage),
+          fit: BoxFit.fill,
+        ),
       ),
     );
   }

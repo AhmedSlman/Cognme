@@ -1,7 +1,9 @@
 import 'package:cognme/core/data/Api/app_styles.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_styles.dart';
 import '../../data/dashboard_category_model.dart';
 
 class ControlerCard extends StatelessWidget {
@@ -19,15 +21,15 @@ class ControlerCard extends StatelessWidget {
           Navigator.pushNamed(context, '');
         } else if (category.title == ' ') {
           Navigator.pushNamed(context, "");
-        } else if (category.title == 'Sensors') {
+        } else if (category.title == '') {
           Navigator.pushNamed(context, "");
         }
       },
       child: Container(
-        width: 189,
-        height: 121,
+        width: context.width * 0.3,
+        height: context.height * 0.1,
         decoration: ShapeDecoration(
-          color: const Color(0xFFF7F7F8),
+          color: AppColors.deepGrey,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),

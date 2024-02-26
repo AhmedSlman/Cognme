@@ -30,9 +30,6 @@ class ClothesCategory extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: 20,
-                  ),
                   Text(
                     AppStrings.coolWears,
                     style: AppStyles.s20.copyWith(

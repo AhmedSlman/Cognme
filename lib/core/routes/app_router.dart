@@ -37,6 +37,5 @@ final GoRouter router = GoRouter(
       path: "/",
       builder: (context, state) => const HomeView(),
     ),
-  
   ],
 );

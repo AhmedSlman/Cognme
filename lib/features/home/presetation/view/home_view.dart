@@ -1,4 +1,5 @@
 import 'package:cognme/core/data/Api/app_styles.dart';
+import 'package:cognme/core/errors/app_styles.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/home/presetation/widgets/checkbox_routine.dart';
@@ -8,7 +9,6 @@ import 'package:cognme/features/home/presetation/widgets/locattion&date.dart';
 import 'package:cognme/features/home/presetation/widgets/weather_category.dart';
 import 'package:cognme/features/home/presetation/widgets/home_appbar.dart';
 import 'package:flutter/material.dart';
-
 import '../widgets/routine_category.dart';
 
 class HomeView extends StatelessWidget {

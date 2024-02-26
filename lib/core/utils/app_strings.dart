@@ -42,5 +42,11 @@ abstract class AppStrings {
       Mansoura = ' Mansoura, EGY',
       Monday = ' Monday, June',
       coolWears = 'Cool Wears',
-      moreOptions = 'more options';
+      moreOptions = 'more options',
+      physicians = 'Physicians',
+      doctorName = 'Dr. Ahmed Lotfy',
+      doctorDisc = 'Ear, Nose and Throat Surgery ',
+      doctorLocation = ' In front of the Faculty of Islamic  ',
+      phone = 'Phone',
+      nameContact = 'Name';
 }

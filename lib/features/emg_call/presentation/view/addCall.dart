@@ -20,7 +20,8 @@ class AddCaller extends StatelessWidget {
             label: "Add Caller",
             appBarLeading: IconButton(
               onPressed: () {
-                customNavigate(context, RouterNames.EmergencyCallPage);
+                customReplacementNavigate(
+                    context, RouterNames.EmergencyCallPage);
               },
               icon: const Icon(
                 Icons.arrow_back,
@@ -35,10 +36,10 @@ class AddCaller extends StatelessWidget {
           SizedBox(
             height: context.height * 0.02,
           ),
-          CustomButton(
+          CustomButtonDoctor(
             lable: "Add",
-            width: context.width*0.5,
-            height: context.height*0.05,
+            width: context.width * 0.5,
+            height: context.height * 0.05,
             backgroundColor: AppColors.primaryColor,
             isOutlined: false,
             textColor: AppColors.white,
@@ -48,5 +49,3 @@ class AddCaller extends StatelessWidget {
     );
   }
 }
-
-

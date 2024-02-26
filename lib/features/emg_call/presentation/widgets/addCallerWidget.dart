@@ -1,8 +1,8 @@
 // ignore_for_file: non_constant_identifier_names
-
 import 'package:cognme/core/errors/app_styles.dart';
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/core/widgets/customTxtForm.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class AddCallerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.height * 0.35,
+      height: context.height * 0.4,
       width: context.width * 0.9,
       decoration: BoxDecoration(
           color: AppColors.white,
@@ -32,45 +32,44 @@ class AddCallerWidget extends StatelessWidget {
       child: Form(
         key: _formKey,
         child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Stack(children: [
-            Positioned(
-              left: context.width * 0.7,
-              bottom: context.height * 0.25,
-              child: Image.asset(
-                AppAssets.Victor1,
+          padding: const EdgeInsets.only(
+            top: 10,
+            left: 10,
+            right: 10,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(top: 10),
+                    child: Text(
+                      AppStrings.nameContact,
+                      style: AppStyles.s24,
+                    ),
+                  ),
+                  const Spacer(),
+                  Image.asset(AppAssets.Victor1),
+                ],
               ),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: context.height*0.05,),
-                const Text(
-                  "Name",
-                  style: AppStyles.s24,
-                ),
-                SizedBox(
-                  height: context.height * 0.01,
-                ),
-                CustomTxtFormField(
-                  controller: _name,
-                  validate: () {},
-                ),
-                SizedBox(
-                  height: context.height * 0.02,
-                ),
-                const Text(
-                  "Phone",
-                  style: AppStyles.s24,
-                ),
-                SizedBox(
-                  height: context.height * 0.01,
-                ),
-                CustomTxtFormField(controller: _Phone, validate: () {}),
-              ],
-            ),
-          ]),
+              const SizedBox(
+                height: 10,
+              ),
+              CustomTxtFormField(controller: _name, validate: () {}),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                AppStrings.phone,
+                style: AppStyles.s24,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              CustomTxtFormField(controller: _Phone, validate: () {})
+            ],
+          ),
         ),
       ),
     );

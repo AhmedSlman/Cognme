@@ -2,8 +2,8 @@ import 'package:cognme/core/errors/app_styles.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({
+class CustomButtonDoctor extends StatelessWidget {
+  const CustomButtonDoctor({
     Key? key,
     required this.lable,
     this.height,
@@ -31,13 +31,13 @@ class CustomButton extends StatelessWidget {
           backgroundColor: backgroundColor,
           shape: const StadiumBorder(),
           side: isOutlined == true
-              ?  BorderSide(
+              ? BorderSide(
                   width: 2,
                   color: AppColors.primaryColor,
                 )
               : BorderSide.none,
         ),
-        child: Text(lable, style: AppStyles.s24),
+        child: Text(lable, style: AppStyles.s16),
       ),
     );
   }

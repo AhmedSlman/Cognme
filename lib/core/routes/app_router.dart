@@ -29,17 +29,17 @@ final GoRouter router = GoRouter(
       ),
     ),
     GoRoute(
-      path:RouterNames.SignInView ,
+      path: RouterNames.SignInView,
       builder: (context, state) => BlocProvider(
         create: (context) => getIt<AuthCubit>(),
         child: const SignInView(),
       ),
     ),
     GoRoute(
-      path:RouterNames.HomeView ,
+      path: RouterNames.HomeView,
       builder: (context, state) => const HomeView(),
     ),
-   GoRoute(
+    GoRoute(
       path: RouterNames.EmergencyCallPage,
       builder: (context, state) => const EmergencyCallPage(),
     ),

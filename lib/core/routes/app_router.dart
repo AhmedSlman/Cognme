@@ -8,6 +8,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/auth/presentation/auth_cubit/auth_cubit.dart';
 import '../../features/auth/presentation/views/sign_in_view.dart';
+import '../../features/dashboard/presentation/views/dashbord_page.dart';
+import '../../features/emg_call/presentation/view/addCall.dart';
 import '../../features/on_boarding/presentation/views/on_bording_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 import '../services/service_locator.dart';

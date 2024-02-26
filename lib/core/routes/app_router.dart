@@ -1,7 +1,6 @@
 // ignore_for_file: constant_identifier_names, duplicate_ignore
 import 'package:cognme/core/routes/routernames.dart';
 import 'package:cognme/features/auth/presentation/views/sign_up_view.dart';
-import 'package:cognme/features/dashboard/presentation/views/dashbord_page.dart';
 import 'package:cognme/features/emg_call/presentation/view/emgergency_call.dart';
 import 'package:cognme/features/home/presetation/view/home_view.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_page.dart';
@@ -52,6 +51,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.PhysicalView,
       builder: (context, state) => const PhysicianView(),
+    ),
+    GoRoute(
+      path: RouterNames.AddCaller,
+      builder: (context, state) => const AddCaller(),
     ),
   ],
 );

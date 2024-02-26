@@ -1,4 +1,5 @@
 import 'package:cognme/core/errors/app_styles.dart';
+import 'package:cognme/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomButtonDoctor extends StatelessWidget {
@@ -30,13 +31,13 @@ class CustomButtonDoctor extends StatelessWidget {
           backgroundColor: backgroundColor,
           shape: const StadiumBorder(),
           side: isOutlined == true
-              ? const BorderSide(
+              ? BorderSide(
                   width: 2,
-                  color: Colors.white,
+                  color: AppColors.primaryColor,
                 )
               : BorderSide.none,
         ),
-        child: Text(lable, style: AppStyles.s14),
+        child: Text(lable, style: AppStyles.s16),
       ),
     );
   }

@@ -22,4 +22,6 @@ class RouterNames {
   static const EmergencyCallPage = "/1";
   static const DashBoardView = "/2";
   static const PhysicalView = "/";
+  static const AddCaller="/addcaller";
+
 }

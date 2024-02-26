@@ -6,5 +6,6 @@ static const SignUpView = "/signUp";
 static const SignInView = "/signIn";
 static const HomeView= "/homeView";
 static const EmergencyCallPage="/"; 
+static const AddCaller="/addcaller";
 
 }

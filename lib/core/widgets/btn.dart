@@ -1,22 +1,23 @@
 import 'package:cognme/core/errors/app_styles.dart';
+import 'package:cognme/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
     Key? key,
     required this.lable,
-    required this.height,
-    required this.width,
-    required this.onTap,
-    required this.isOutlined,
-    required this.backgroundColor,
-    required this.textColor,
+    this.height,
+    this.width,
+    this.onTap,
+    this.isOutlined,
+    this.backgroundColor,
+    this.textColor,
   }) : super(key: key);
   final String lable;
-  final double height;
-  final double width;
-  final VoidCallback onTap;
-  final bool isOutlined;
+  final double? height;
+  final double? width;
+  final VoidCallback? onTap;
+  final bool? isOutlined;
   final Color? backgroundColor;
   final Color? textColor;
   @override
@@ -30,14 +31,13 @@ class CustomButton extends StatelessWidget {
           backgroundColor: backgroundColor,
           shape: const StadiumBorder(),
           side: isOutlined == true
-              ? const BorderSide(
+              ?  BorderSide(
                   width: 2,
-                  color: Colors.white,
+                  color: AppColors.primaryColor,
                 )
               : BorderSide.none,
         ),
-        child:
-            Text(lable, style: AppStyles.s16),
+        child: Text(lable, style: AppStyles.s24),
       ),
     );
   }

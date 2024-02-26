@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names, duplicate_ignore
 import 'package:cognme/core/routes/routernames.dart';
 import 'package:cognme/features/auth/presentation/views/sign_up_view.dart';
+import 'package:cognme/features/emg_call/presentation/view/addCall.dart';
 import 'package:cognme/features/emg_call/presentation/view/emgergency_call.dart';
 import 'package:cognme/features/home/presetation/view/home_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,6 +43,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.EmergencyCallPage,
       builder: (context, state) => const EmergencyCallPage(),
+    ),
+    GoRoute(
+      path: RouterNames.AddCaller,
+      builder: (context, state) => const AddCaller(),
     ),
   ],
 );

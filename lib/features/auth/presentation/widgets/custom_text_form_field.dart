@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 8, left: 8, top: 24),
+      padding: const EdgeInsets.only(right: 20, left: 20, top: 24),
       child: TextFormField(
         validator: (value) {
           if (value!.isEmpty) {
@@ -34,8 +34,8 @@ class CustomTextField extends StatelessWidget {
         onFieldSubmitted: onFieldSubmitted,
         decoration: InputDecoration(
           suffixIcon: suffixIcon,
-          labelText: labelText,
-          labelStyle: AppStyles.s18,
+          // labelText: labelText,
+          //labelStyle: AppStyles.s18,
           border: getBorderStyle(),
           enabledBorder: getBorderStyle(),
           focusedBorder: getBorderStyle(),
@@ -47,6 +47,6 @@ class CustomTextField extends StatelessWidget {
 
 OutlineInputBorder getBorderStyle() {
   return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(4),
+      borderRadius: BorderRadius.circular(14),
       borderSide: BorderSide(color: AppColors.lightGrey));
 }

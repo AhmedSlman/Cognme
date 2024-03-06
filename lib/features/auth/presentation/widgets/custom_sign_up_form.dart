@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/functions/custom_navigate.dart';
-import '../../../../core/functions/custom_toast.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_botton.dart';
@@ -31,7 +30,9 @@ class CustomSignUpForm extends StatelessWidget {
           return Form(
             key: authCubit.signUpFormKey,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Text("Your Name"),
                 CustomTextField(
                   labelText: AppStrings.fristName,
                   onChanged: (fristName) {

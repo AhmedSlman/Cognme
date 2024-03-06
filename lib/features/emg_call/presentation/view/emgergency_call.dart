@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:cognme/core/errors/app_styles.dart';
 import 'package:cognme/core/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/routernames.dart';
-import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/core/widgets/custom_app_bar.dart';
@@ -25,9 +23,12 @@ class EmergencyCallPage extends StatelessWidget {
               appBarTrailing: IconButton(
                 color: AppColors.primaryColor,
                 onPressed: () {
-                  customNavigate(context,RouterNames.AddCaller);
+                  customNavigate(context, RouterNames.AddCaller);
                 },
-                icon: Icon(Icons.add,size: 35,),
+                icon: Icon(
+                  Icons.add,
+                  size: 35,
+                ),
               ),
             ),
             SizedBox(

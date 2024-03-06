@@ -1,4 +1,3 @@
-import 'package:cognme/core/data/Api/app_styles.dart';
 import 'package:cognme/core/errors/app_styles.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
@@ -37,7 +36,7 @@ class HomeView extends StatelessWidget {
             SizedBox(
               height: context.height * 0.03,
             ),
-            RoutineCategory(),
+            const RoutineCategory(),
             SizedBox(
               height: context.height * 0.03,
             ),

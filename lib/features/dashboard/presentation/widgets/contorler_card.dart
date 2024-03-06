@@ -1,6 +1,5 @@
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../data/dashboard_category_model.dart';

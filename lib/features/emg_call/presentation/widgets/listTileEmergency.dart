@@ -1,10 +1,11 @@
 // ignore_for_file: camel_case_types
 
-import 'package:cognme/core/errors/app_styles.dart';
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/utils/app_styles.dart';
 
 class listTileEmergencyCall extends StatelessWidget {
   const listTileEmergencyCall({

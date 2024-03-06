@@ -1,10 +1,11 @@
 // ignore_for_file: file_names, avoid_unnecessary_containers
-import 'package:cognme/core/errors/app_styles.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../../../core/utils/app_styles.dart';
 
 class LocationDateCetegory extends StatelessWidget {
   const LocationDateCetegory({super.key});

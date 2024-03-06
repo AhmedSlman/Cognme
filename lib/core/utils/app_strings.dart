@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 abstract class AppStrings {
   static const String appName = "Dalel",
       //On Boarding Strings

@@ -1,7 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 abstract class AppStrings {
-  static const String appName = "Dalel",
+  static const String
       //On Boarding Strings
       skip = "Skip",
       next = "Next",

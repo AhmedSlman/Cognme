@@ -4,7 +4,7 @@ import '../../../../core/functions/custom_navigate.dart';
 import '../../../../core/functions/on_boarding.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_styles.dart';
-import '../../../../core/widgets/custom_botton.dart';
+import '../../../../core/widgets/custom_button.dart';
 import '../../data/models/on_boarding_model.dart';
 
 class GetButtons extends StatelessWidget {
@@ -18,7 +18,7 @@ class GetButtons extends StatelessWidget {
     if (currentIndex == onBoardingData.length - 1) {
       return Column(
         children: [
-          CustomBotton(
+          CustomButton(
             text: AppStrings.createAccount,
             onPressed: () {
               onBoardingVisited();
@@ -44,7 +44,7 @@ class GetButtons extends StatelessWidget {
       return Center(
         child: Padding(
           padding: const EdgeInsets.only(bottom: 20),
-          child: CustomBotton(
+          child: CustomButton(
             text: AppStrings.next,
             onPressed: () {
               controller.nextPage(

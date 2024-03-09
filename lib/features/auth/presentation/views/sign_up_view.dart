@@ -1,3 +1,4 @@
+import 'package:cognme/core/routes/routernames.dart';
 import 'package:cognme/features/auth/presentation/widgets/cover_image.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/functions/custom_navigate.dart';
@@ -34,7 +35,7 @@ class SignUpView extends StatelessWidget {
               text1: AppStrings.alreadyHaveAnAccount,
               text2: AppStrings.signIn,
               onTap: () {
-                customNavigate(context, "/signIn");
+                customNavigate(context, RouterNames.SignInView);
               },
             ),
           ),

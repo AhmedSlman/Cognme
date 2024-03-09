@@ -1,8 +1,6 @@
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_colors.dart';
-
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
@@ -20,11 +18,11 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20, left: 20, top: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 8),
       child: TextFormField(
         validator: (value) {
           if (value!.isEmpty) {
-            return "This field is requierd";
+            return "This field is required";
           } else {
             return null;
           }
@@ -35,7 +33,7 @@ class CustomTextField extends StatelessWidget {
         decoration: InputDecoration(
           suffixIcon: suffixIcon,
           labelText: labelText,
-          labelStyle: AppStyles.s16.copyWith(color: Colors.grey[900],),
+          labelStyle: AppStyles.formText16,
           border: getBorderStyle(),
           enabledBorder: getBorderStyle(),
           focusedBorder: getBorderStyle(),
@@ -47,7 +45,6 @@ class CustomTextField extends StatelessWidget {
 
 UnderlineInputBorder getBorderStyle() {
   return UnderlineInputBorder(
-    
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(color:  Colors.black,width: 1));
+      borderSide: const BorderSide(color: Colors.black, width: 1));
 }

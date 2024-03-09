@@ -1,4 +1,3 @@
-import 'package:cognme/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/utils/app_styles.dart';
 
@@ -14,14 +13,14 @@ class HaveAnAccountWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            AppStrings.alreadyHaveAnAccount,
+          Text(
+            text1,
             style: AppStyles.s16,
           ),
           TextButton(
-              onPressed: () {},
+              onPressed: onTap,
               child: Text(
-                AppStrings.signIn,
+                text2,
                 style: AppStyles.s18.copyWith(color: Colors.blueAccent),
               ))
         ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/utils/app_strings.dart';
-import '../../../../core/widgets/custom_botton.dart';
+import '../../../../core/widgets/custom_button.dart';
 import '../auth_cubit/auth_cubit.dart';
 import 'custom_text_form_field.dart';
 import 'forget_password_text_widget.dart';
@@ -47,10 +47,10 @@ class CustomSignInForm extends StatelessWidget {
                   padding: EdgeInsets.only(top: 15),
                   child: ForgetPassWordTextWidget(),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.06),
                 state is SignInLoadingState
                     ? const CircularProgressIndicator()
-                    : CustomBotton(
+                    : CustomButton(
                         text: AppStrings.signIn,
                         onPressed: () async {
                           if (authCubit.signInFormKey.currentState!

@@ -4,8 +4,8 @@ import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_styles.dart';
 import 'custom_check_box.dart';
 
-class TermsAndCondtionsWidget extends StatelessWidget {
-  const TermsAndCondtionsWidget({super.key});
+class TermsAndConditionsWidget extends StatelessWidget {
+  const TermsAndConditionsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

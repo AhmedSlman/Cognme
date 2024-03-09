@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:convert';
 
 import 'package:cognme/features/auth/presentation/widgets/terms_and_condtions.dart';
@@ -6,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
-import '../../../../core/widgets/custom_botton.dart';
+import '../../../../core/widgets/custom_button.dart';
 import '../auth_cubit/auth_cubit.dart';
 import 'custom_text_form_field.dart';
 
@@ -33,9 +35,9 @@ class CustomSignUpForm extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-               
                 CustomTextField(
                   labelText: AppStrings.fristName,
+                  
                   onChanged: (fristName) {
                     authCubit.firstName = fristName;
                   },
@@ -69,13 +71,13 @@ class CustomSignUpForm extends StatelessWidget {
                     authCubit.password = password;
                   },
                 ),
-                const TermsAndCondtionsWidget(),
+                const TermsAndConditionsWidget(),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 state is SignUpLoadingState
                     ? const CircularProgressIndicator()
-                    : CustomBotton(
+                    : CustomButton(
                         buttonColor:
-                            authCubit.termsAndCondtionCheckBoxValue == false
+                            authCubit.termsAndConditionCheckBoxValue == false
                                 ? AppColors.lightGrey
                                 : null,
                         text: AppStrings.signUp,
@@ -94,14 +96,12 @@ class CustomSignUpForm extends StatelessWidget {
                               headers: headers,
                             ),
                           );
-
                           if (response.statusCode == 200) {
                             print(json.encode(response.data));
                           } else {
                             print(response.statusMessage);
                           }
-
-                          // if (authCubit.termsAndCondtionCheckBoxValue == true) {
+                          // if (authCubit.termsAndConditionCheckBoxValue == true) {
                           //   if (authCubit.signUpFormKey.currentState!
                           //       .validate()) {
                           //     authCubit.signUpWithEmailAndPassword();

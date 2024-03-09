@@ -1,3 +1,4 @@
+import 'package:cognme/features/auth/presentation/widgets/cover_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/functions/custom_navigate.dart';
@@ -6,7 +7,6 @@ import '../../../../core/utils/app_strings.dart';
 import '../widgets/custom_sign_in_form.dart';
 import '../widgets/have_an_account.dart';
 import '../widgets/welcom_text_widget.dart';
-import '../widgets/welcome_banner.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -18,31 +18,31 @@ class SignInView extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         slivers: [
           const SliverToBoxAdapter(
-            child: WelcomeBanner(),
-          ),
-          const SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.only(top: 32),
-              child: WelcomeTextWidget(text: AppStrings.welcomeBack),
-            ),
-          ),
-          const SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: CustomSignInForm(),
-            ),
+            child: CognmeImageWidget(),
           ),
           SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              child: HaveAnAccountWidget(
-                text1: AppStrings.dontHaveAnAccount,
-                text2: AppStrings.signUp,
-                onTap: () =>
-                    customReplacementNavigate(context, RouterNames.SignUpView),
-              ),
+              child:
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.04)),
+          const SliverToBoxAdapter(
+            child: WelcomeTextWidget(text: AppStrings.welcomeBack),
+          ),
+          SliverToBoxAdapter(
+              child:
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.03)),
+          const SliverToBoxAdapter(
+            child: CustomSignInForm(),
+          ),
+           SliverToBoxAdapter(
+              child:
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.08)),
+          SliverToBoxAdapter(
+            child: HaveAnAccountWidget(
+              text1: AppStrings.dontHaveAnAccount,
+              text2: AppStrings.signUp,
+              onTap: () =>
+                  customReplacementNavigate(context, RouterNames.SignUpView),
             ),
-          )
+          ),
         ],
       ),
     );

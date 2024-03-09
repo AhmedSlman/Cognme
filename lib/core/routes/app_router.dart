@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names, duplicate_ignore
 
 import 'package:cognme/core/routes/routernames.dart';
+import 'package:cognme/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -65,6 +66,9 @@ final GoRouter router = GoRouter(
       path: RouterNames.ProfileScreen,
       builder: (context, state) => const ProfileScreen(),
     ),
+    GoRoute(
+        path: RouterNames.forgotPasswordView,
+        builder: ((context, state) => const ForgotPasswordView()))
   ],
 );
 

@@ -12,4 +12,5 @@ class RouterNames {
   static const PhysicalView = "/c";
   static const AddCaller = "/00";
   static const ProfileScreen = "/profileScreen";
+  static const forgotPasswordView="/ForgotPasswordView";
 }

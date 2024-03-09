@@ -50,9 +50,9 @@ abstract class AppStyles {
     color: Colors.black,
     fontFamily: "Raleway",
   );
-  static const boldStyle38 = TextStyle(
-    fontSize: 38,
-    fontWeight: FontWeight.bold,
+  static const boldStyle28 = TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.w500,
     color: Colors.black,
     fontFamily: "Raleway",
   );

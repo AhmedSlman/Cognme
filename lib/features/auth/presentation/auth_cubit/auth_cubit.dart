@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-
 part 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
@@ -10,12 +9,16 @@ class AuthCubit extends Cubit<AuthState> {
   String? emailAddress;
   String? password;
   GlobalKey<FormState> signUpFormKey = GlobalKey();
+  GlobalKey<FormState> signInFormKey = GlobalKey();
+  GlobalKey<FormState> forgotPasswordFormKey = GlobalKey();
   bool termsAndCondtionCheckBoxValue = false;
   bool? obscurePasswordTextValue = true;
 
-  signUpWithEmailAndPassword() async {}
+  Future<void> signUpWithEmailAndPassword() async {}
 
-  updateTermsAndCondtionCheckBox({required newValue}) {
+  Future<void> verifyEmail() async {}
+
+  void updateTermsAndCondtionCheckBox({required newValue}) {
     termsAndCondtionCheckBoxValue = newValue;
     emit(TermsAndCondtionUpdataState());
   }
@@ -28,4 +31,10 @@ class AuthCubit extends Cubit<AuthState> {
     }
     emit(ObscurePasswordTextUpdateState());
   }
+
+  Future<void> sigInWithEmailAndPassword() async {}
+
+  Future<void> resetPasswordWithLink() async {}
+
+  Future<void> addUserProfile() async {}
 }

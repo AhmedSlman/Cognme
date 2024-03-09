@@ -1,17 +1,20 @@
-import 'package:cognme/core/utils/app_colors.dart';
-import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
+
+import '../utils/app_colors.dart';
+import '../utils/app_styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
-    super.key,
+    Key? key,
     this.buttonColor,
     required this.text,
     required this.onPressed,
-  });
+  }) : super(key: key);
+
   final Color? buttonColor;
   final String text;
   final VoidCallback onPressed;
+
   @override
   Widget build(BuildContext context) {
     return Padding(

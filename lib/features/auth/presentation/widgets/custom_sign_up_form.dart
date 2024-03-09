@@ -10,26 +10,19 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/functions/custom_navigate.dart';
+
 class CustomSignUpForm extends StatelessWidget {
-   CustomSignUpForm({super.key});
-final GlobalKey<FormState> _signUpFormKey = GlobalKey();
+  CustomSignUpForm({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
         listener: (context, state) {},
-        //  (context, state) {
-        //   if (state is SignUpSuccessState) {
-        //     showToast("Account Created Successfully");
-        //     customReplacementNavigate(context, "/signIn");
-        //   } else if (state is SignUpFailureState) {
-        //     showToast(state.errMessage);
-        //   }
-        // },
         builder: (context, state) {
           AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
 
           return Form(
-            key: _signUpFormKey,
+            key: authCubit.signUpFormKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -74,39 +67,18 @@ final GlobalKey<FormState> _signUpFormKey = GlobalKey();
                     ? const CircularProgressIndicator()
                     : CustomButton(
                         buttonColor:
-                            authCubit.termsAndConditionCheckBoxValue == false
+                            authCubit.termsAndCondtionCheckBoxValue == false
                                 ? AppColors.greyOfText
                                 : null,
                         text: AppStrings.signUp,
                         onPressed: () async {
-                          var headers = {
-                            'Accept': 'application/vnd.api+json',
-                            'Content-Type': 'application/vnd.api+json',
-                            'Authorization':
-                                'Bearer 7|pyCVqTc9IF1amr5wbN1W777DEUjieu7jfTfAMW6n81c279b7'
-                          };
-                          var dio = Dio();
-                          var response = await dio.request(
-                            'https://2484-156-197-191-31.ngrok-free.app/api/appointment',
-                            options: Options(
-                              method: 'GET',
-                              headers: headers,
-                            ),
-                          );
-                          if (response.statusCode == 200) {
-                            print(json.encode(response.data));
-                          } else {
-                            print(response.statusMessage);
+                          if (authCubit.termsAndCondtionCheckBoxValue == true) {
+                            if (authCubit.signUpFormKey.currentState!
+                                .validate()) {
+                              await authCubit.signUpWithEmailAndPassword();
+                            }
                           }
-                          // if (authCubit.termsAndConditionCheckBoxValue == true) {
-                          //   if (authCubit.signUpFormKey.currentState!
-                          //       .validate()) {
-                          //     authCubit.signUpWithEmailAndPassword();
-                          //     customReplacementNavigate(context, "/signIn");
-                          //   }
-                          // }
-                        },
-                      ),
+                        }),
               ],
             ),
           );

@@ -18,7 +18,7 @@ class CustomSignInForm extends StatelessWidget {
           AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
 
           return Form(
-            key: _signInFormKey,
+            key: authCubit.signInFormKey,
             child: Column(
               children: [
                 CustomTextField(

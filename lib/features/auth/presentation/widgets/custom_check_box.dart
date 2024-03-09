@@ -15,7 +15,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
   Widget build(BuildContext context) {
     return Checkbox(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-      side: const BorderSide(color:  Colors.black),
+      side: const BorderSide(color: Colors.black),
       value: value,
       onChanged: (newValue) {
         setState(() {

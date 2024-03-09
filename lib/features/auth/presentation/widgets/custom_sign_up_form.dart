@@ -1,8 +1,9 @@
+import 'dart:convert';
+
 import 'package:cognme/features/auth/presentation/widgets/terms_and_condtions.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../core/functions/custom_navigate.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_botton.dart';
@@ -32,6 +33,7 @@ class CustomSignUpForm extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+               
                 CustomTextField(
                   labelText: AppStrings.fristName,
                   onChanged: (fristName) {
@@ -77,14 +79,35 @@ class CustomSignUpForm extends StatelessWidget {
                                 ? AppColors.lightGrey
                                 : null,
                         text: AppStrings.signUp,
-                        onPressed: () {
-                          if (authCubit.termsAndCondtionCheckBoxValue == true) {
-                            if (authCubit.signUpFormKey.currentState!
-                                .validate()) {
-                              authCubit.signUpWithEmailAndPassword();
-                              customReplacementNavigate(context, "/signIn");
-                            }
+                        onPressed: () async {
+                          var headers = {
+                            'Accept': 'application/vnd.api+json',
+                            'Content-Type': 'application/vnd.api+json',
+                            'Authorization':
+                                'Bearer 7|pyCVqTc9IF1amr5wbN1W777DEUjieu7jfTfAMW6n81c279b7'
+                          };
+                          var dio = Dio();
+                          var response = await dio.request(
+                            'https://2484-156-197-191-31.ngrok-free.app/api/appointment',
+                            options: Options(
+                              method: 'GET',
+                              headers: headers,
+                            ),
+                          );
+
+                          if (response.statusCode == 200) {
+                            print(json.encode(response.data));
+                          } else {
+                            print(response.statusMessage);
                           }
+
+                          // if (authCubit.termsAndCondtionCheckBoxValue == true) {
+                          //   if (authCubit.signUpFormKey.currentState!
+                          //       .validate()) {
+                          //     authCubit.signUpWithEmailAndPassword();
+                          //     customReplacementNavigate(context, "/signIn");
+                          //   }
+                          // }
                         }),
               ],
             ),

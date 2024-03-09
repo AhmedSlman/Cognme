@@ -1,7 +1,8 @@
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
+import 'package:cognme/features/auth/presentation/auth_cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
-part 'auth_state.dart';
+
 
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitial());

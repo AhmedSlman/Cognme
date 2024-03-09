@@ -19,7 +19,7 @@ class PhysicianView extends StatelessWidget {
           toolbarHeight: 80,
           title: const Text(
             AppStrings.physicians,
-            style: AppStyles.s24,
+            style: AppStyles.regularStyle18,
           ),
           leading: IconButton(
             onPressed: () {},
@@ -33,7 +33,7 @@ class PhysicianView extends StatelessWidget {
               onPressed: () {},
               icon: Icon(
                 FontAwesomeIcons.penToSquare,
-                color: AppColors.black,
+                color: AppColors.blackOfText,
                 size: 25,
               ),
             )

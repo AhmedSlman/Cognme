@@ -22,7 +22,7 @@ class SkipButton extends StatelessWidget {
             AppStrings.skip,
             style: AppStyles.s16.copyWith(
               fontWeight: FontWeight.bold,
-              color: AppColors.deepBrown,
+              color: AppColors.blackOfText,
             ),
           ),
         ),

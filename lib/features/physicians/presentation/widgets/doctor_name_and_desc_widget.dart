@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../core/widgets/btn.dart';
-import 'custom_ratingbar.dart';
+import 'custom_rating-bar.dart';
 
 class DoctorNameAndDescWidget extends StatelessWidget {
   const DoctorNameAndDescWidget({
@@ -25,15 +25,15 @@ class DoctorNameAndDescWidget extends StatelessWidget {
           AppStrings.doctorDisc,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
-          style: AppStyles.s14.copyWith(
-            color: AppColors.greyForIcon,
+          style: AppStyles.regularStyle18.copyWith(
+            color: AppColors.greyOfText,
           ),
         ),
         Row(
           children: [
             Icon(
               Icons.location_pin,
-              color: AppColors.alertRed,
+              color: AppColors.mainColor,
             ),
             const Text(
               AppStrings.doctorLocation,
@@ -51,7 +51,7 @@ class DoctorNameAndDescWidget extends StatelessWidget {
             ),
             CustomButtonDoctor(
               lable: 'preview',
-              backgroundColor: AppColors.primaryColor,
+              backgroundColor: AppColors.mainColor,
             )
           ],
         ),

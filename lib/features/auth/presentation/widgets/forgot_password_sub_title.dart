@@ -7,11 +7,11 @@ class ForgotPasswordSubTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 34),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 34),
       child: Text(
-        'Enter your registered email below to receive password reset instructio',
-        style: AppStyles.s12,
+        'Enter your registered email below to receive password reset instruction',
+        style: AppStyles.formText16,
         textAlign: TextAlign.center,
       ),
     );

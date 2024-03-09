@@ -34,7 +34,7 @@ class CustomButtonDoctor extends StatelessWidget {
           side: isOutlined == true
               ? BorderSide(
                   width: 2,
-                  color: AppColors.primaryColor,
+                  color: AppColors.mainColor,
                 )
               : BorderSide.none,
         ),

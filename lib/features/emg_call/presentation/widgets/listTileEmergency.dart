@@ -1,12 +1,11 @@
-// ignore_for_file: camel_case_types
-
+// ignore_for_file: file_names
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/utils/app_styles.dart';
 
+// ignore: camel_case_types
 class listTileEmergencyCall extends StatelessWidget {
   const listTileEmergencyCall({
     super.key,
@@ -18,11 +17,11 @@ class listTileEmergencyCall extends StatelessWidget {
       height: context.height * 0.08,
       width: context.width * 0.9,
       decoration: BoxDecoration(
-          color: AppColors.white,
+          color: AppColors.whiteOfColor,
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-                color: AppColors.deepGrey,
+                color: AppColors.greyOfText,
                 blurRadius: 6,
                 offset: const Offset(0, 5),
                 spreadRadius: 3)
@@ -31,7 +30,7 @@ class listTileEmergencyCall extends StatelessWidget {
         leading: Image.asset(AppAssets.Victor1),
         title: const Text(
           "Ali",
-          style: AppStyles.s24,
+          style: AppStyles.regularStyle18,
         ),
         subtitle: const Text("989210690"),
       ),

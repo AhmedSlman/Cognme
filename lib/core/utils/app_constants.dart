@@ -1,4 +1,4 @@
-class EndPoins {
+class EndPoints {
   static String baseUrl = "";
   static String signIn = "user/signup";
   static String signUp = "user/signup";

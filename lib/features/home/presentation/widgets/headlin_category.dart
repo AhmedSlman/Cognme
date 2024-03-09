@@ -1,4 +1,3 @@
-import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +11,7 @@ class Headline extends StatelessWidget {
       child: Text(
         headline,
         style: AppStyles.s18.copyWith(
-          color: AppColors.alertGreen,
+          color: Colors.green,
           fontWeight: FontWeight.w600,
         ),
       ),

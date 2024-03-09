@@ -3,8 +3,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../core/utils/app_colors.dart';
 
-class CustomSmoothPageIndecator extends StatelessWidget {
-  const CustomSmoothPageIndecator({super.key, required this.controller});
+class CustomSmoothPageIndicator extends StatelessWidget {
+  const CustomSmoothPageIndicator({super.key, required this.controller});
   final PageController controller;
 
   @override
@@ -13,7 +13,7 @@ class CustomSmoothPageIndecator extends StatelessWidget {
       controller: controller,
       count: 3,
       effect: ExpandingDotsEffect(
-        activeDotColor: AppColors.deepBrown,
+        activeDotColor: AppColors.blackOfText,
         dotHeight: 6,
         dotWidth: 10,
       ),

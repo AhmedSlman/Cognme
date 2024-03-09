@@ -27,7 +27,7 @@ class DoctorCardIfoWidget extends StatelessWidget {
         const SizedBox(
           width: 10,
         ),
-        DoctorNameAndDescWidget()
+        const DoctorNameAndDescWidget()
       ],
     );
   }

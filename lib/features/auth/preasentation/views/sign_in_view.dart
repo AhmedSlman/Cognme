@@ -1,12 +1,11 @@
 import 'package:cognme/features/auth/presentation/widgets/cover_image.dart';
+import 'package:cognme/features/auth/presentation/widgets/custom_sign_in_form.dart';
+import 'package:cognme/features/auth/presentation/widgets/welcom_text_widget.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/functions/custom_navigate.dart';
 import '../../../../core/routes/router_names.dart';
 import '../../../../core/utils/app_strings.dart';
-import '../widgets/custom_sign_in_form.dart';
 import '../widgets/have_an_account.dart';
-import '../widgets/welcom_text_widget.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});

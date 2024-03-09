@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../core/utils/app_colors.dart';
 import '../auth_cubit/auth_cubit.dart';
 
 class CustomCheckBox extends StatefulWidget {
@@ -23,7 +21,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         setState(() {
           value = newValue;
           BlocProvider.of<AuthCubit>(context)
-              .updateTermsAndCondtionCheckBox(newValue: newValue);
+              .updateTermsAndConditionCheckBox(newValue: newValue);
         });
       },
     );

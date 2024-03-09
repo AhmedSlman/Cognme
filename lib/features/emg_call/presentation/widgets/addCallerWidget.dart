@@ -1,11 +1,10 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: file_names
 import 'package:cognme/core/utils/app_assets.dart';
+import 'package:flutter/material.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/core/widgets/customTxtForm.dart';
-import 'package:flutter/material.dart';
-
 import '../../../../core/utils/app_styles.dart';
 
 class AddCallerWidget extends StatelessWidget {
@@ -14,6 +13,7 @@ class AddCallerWidget extends StatelessWidget {
   });
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _name = TextEditingController();
+  // ignore: non_constant_identifier_names
   final TextEditingController _Phone = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -21,11 +21,11 @@ class AddCallerWidget extends StatelessWidget {
       height: context.height * 0.4,
       width: context.width * 0.9,
       decoration: BoxDecoration(
-          color: AppColors.white,
+          color: AppColors.whiteOfColor,
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-                color: AppColors.deepGrey,
+                color: AppColors.whiteOfColor,
                 blurRadius: 6,
                 offset: const Offset(0, 5),
                 spreadRadius: 3)
@@ -47,7 +47,7 @@ class AddCallerWidget extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10),
                     child: Text(
                       AppStrings.nameContact,
-                      style: AppStyles.s24,
+                      style: AppStyles.regularStyle18,
                     ),
                   ),
                   const Spacer(),
@@ -63,7 +63,7 @@ class AddCallerWidget extends StatelessWidget {
               ),
               const Text(
                 AppStrings.phone,
-                style: AppStyles.s24,
+                style: AppStyles.regularStyle18,
               ),
               const SizedBox(
                 height: 10,

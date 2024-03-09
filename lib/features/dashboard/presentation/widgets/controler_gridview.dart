@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../data/dashboard_category_model.dart';
-import 'contorler_card.dart';
+import 'controller_card.dart';
 
-class ControlerGridView extends StatelessWidget {
-  const ControlerGridView({super.key});
+class ControllerGridView extends StatelessWidget {
+  const ControllerGridView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class ControlerGridView extends StatelessWidget {
           childAspectRatio: 1.7,
         ),
         itemBuilder: (BuildContext context, int index) {
-          return ControlerCard(
+          return ControllerCard(
             category: categories[index],
           );
         },

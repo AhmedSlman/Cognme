@@ -16,7 +16,7 @@ class WelcomCategory extends StatelessWidget {
       title: Text(
         AppStrings.homewelcom,
         style: AppStyles.s16.copyWith(
-          color: AppColors.black,
+          color: AppColors.blackOfText,
           fontSize: 18,
           fontWeight: FontWeight.w300,
         ),
@@ -26,7 +26,7 @@ class WelcomCategory extends StatelessWidget {
         child: Text(
           AppStrings.name,
           style: AppStyles.s16.copyWith(
-            color: AppColors.black,
+            color: AppColors.blackOfText,
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),

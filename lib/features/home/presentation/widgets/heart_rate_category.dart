@@ -13,7 +13,7 @@ class HeartRateCategory extends StatelessWidget {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: AppColors.white,
+        color: AppColors.whiteOfColor,
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
@@ -35,11 +35,11 @@ class HeartRateCategory extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Text('Heart Rate',
-                      style: AppStyles.s18.copyWith(color: AppColors.black)),
+                      style: AppStyles.s18.copyWith(color: AppColors.blackOfText)),
                 ),
                 Text('Yesterday was 75',
                     style:
-                        AppStyles.s14.copyWith(color: AppColors.blackForText)),
+                        AppStyles.regularStyle18.copyWith(color: AppColors.blackOfText)),
               ],
             ),
             const Spacer(),

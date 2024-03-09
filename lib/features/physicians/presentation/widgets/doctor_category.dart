@@ -15,7 +15,7 @@ class DoctorCategory extends StatelessWidget {
         height: context.height * 0.2,
         width: context.width * 0.5,
         decoration: BoxDecoration(
-          color: AppColors.white,
+          color: AppColors.whiteOfColor,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [

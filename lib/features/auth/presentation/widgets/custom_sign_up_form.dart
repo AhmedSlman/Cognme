@@ -1,8 +1,6 @@
 // ignore_for_file: avoid_print
-
 import 'dart:convert';
-
-import 'package:cognme/features/auth/presentation/widgets/terms_and_condtions.dart';
+import 'package:cognme/features/auth/presentation/widgets/terms_and_conditions.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,7 +21,7 @@ class CustomSignUpForm extends StatelessWidget {
         //   if (state is SignUpSuccessState) {
         //     showToast("Account Created Successfully");
         //     customReplacementNavigate(context, "/signIn");
-        //   } else if (state is SignUpFailuerState) {
+        //   } else if (state is SignUpFailureState) {
         //     showToast(state.errMessage);
         //   }
         // },
@@ -78,7 +76,7 @@ class CustomSignUpForm extends StatelessWidget {
                     : CustomButton(
                         buttonColor:
                             authCubit.termsAndConditionCheckBoxValue == false
-                                ? AppColors.lightGrey
+                                ? AppColors.greyOfText
                                 : null,
                         text: AppStrings.signUp,
                         onPressed: () async {

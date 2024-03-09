@@ -4,8 +4,8 @@ import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../data/dashboard_category_model.dart';
 
-class ControlerCard extends StatelessWidget {
-  const ControlerCard({super.key, required this.category});
+class ControllerCard extends StatelessWidget {
+  const ControllerCard({super.key, required this.category});
   final Category category;
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class ControlerCard extends StatelessWidget {
         width: context.width * 0.3,
         height: context.height * 0.1,
         decoration: ShapeDecoration(
-          color: AppColors.deepGrey,
+          color: AppColors.greyOfText,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
@@ -49,7 +49,7 @@ class ControlerCard extends StatelessWidget {
               Text(
                 category.subTitle,
                 style: TextStyle(
-                  color: AppColors.deepGrey,
+                  color: AppColors.greyOfText,
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),

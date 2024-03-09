@@ -47,7 +47,7 @@ class DashboardView extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const ControlerGridView(),
+            const ControllerGridView(),
           ],
         ),
       ),

@@ -15,7 +15,7 @@ class LocationDateCetegory extends StatelessWidget {
     return Container(
       height: context.height * 0.05,
       decoration: ShapeDecoration(
-        color: AppColors.cardColor,
+        color: AppColors.blackOfText,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),
@@ -35,7 +35,7 @@ class LocationDateCetegory extends StatelessWidget {
                   Text(
                     AppStrings.Mansoura,
                     style: AppStyles.s16.copyWith(
-                      color: AppColors.black,
+                      color: AppColors.blackOfText,
                     ),
                   ),
                 ],
@@ -55,8 +55,8 @@ class LocationDateCetegory extends StatelessWidget {
                   ),
                   Text(
                     AppStrings.Monday,
-                    style: AppStyles.s14.copyWith(
-                      color: AppColors.black,
+                    style: AppStyles.regularStyle18.copyWith(
+                      color: AppColors.blackOfText,
                     ),
                   ),
                 ],

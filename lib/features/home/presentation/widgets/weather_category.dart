@@ -11,7 +11,7 @@ class WeatherCategory extends StatelessWidget {
     return Container(
       height: 60,
       decoration: ShapeDecoration(
-        color: AppColors.primaryColor,
+        color: AppColors.mainColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),

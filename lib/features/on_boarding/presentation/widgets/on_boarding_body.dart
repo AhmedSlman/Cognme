@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/utils/app_styles.dart';
 import '../../data/models/on_boarding_model.dart';
 import 'custom_smooth_page_indicator.dart';
 
 class OnBoardingBody extends StatelessWidget {
-  OnBoardingBody({super.key, required this.controller, this.onPageChanged});
+  const OnBoardingBody({super.key, required this.controller, this.onPageChanged});
   final PageController controller;
   final Function(int)? onPageChanged;
   @override
@@ -26,7 +25,7 @@ class OnBoardingBody extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
-                        onBoardingData[index].imagPath,
+                        onBoardingData[index].imagePath,
                       ),
                       fit: BoxFit.fill),
                 ),
@@ -34,7 +33,7 @@ class OnBoardingBody extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              CustomSmoothPageIndecator(controller: controller),
+              CustomSmoothPageIndicator(controller: controller),
               SizedBox(
                 height: MediaQuery.of(context).size.height * .1,
               ),
@@ -42,7 +41,7 @@ class OnBoardingBody extends StatelessWidget {
                 onBoardingData[index].title,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
-                style: AppStyles.s24.copyWith(fontWeight: FontWeight.bold),
+                style: AppStyles.regularStyle18.copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
               SizedBox(

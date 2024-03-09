@@ -2,11 +2,8 @@ import 'dart:convert';
 
 import 'package:cognme/features/auth/presentation/widgets/terms_and_condtions.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../core/functions/custom_navigate.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_botton.dart';
@@ -36,7 +33,7 @@ class CustomSignUpForm extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Your Name"),
+               
                 CustomTextField(
                   labelText: AppStrings.fristName,
                   onChanged: (fristName) {
@@ -62,8 +59,8 @@ class CustomSignUpForm extends StatelessWidget {
                     },
                     icon: Icon(
                       authCubit.obscurePasswordTextValue == true
-                          ? Icons.visibility_outlined
-                          : Icons.visibility_off_outlined,
+                          ? Icons.visibility_off_outlined
+                          : Icons.visibility_outlined,
                     ),
                   ),
                   labelText: AppStrings.password,

@@ -10,6 +10,7 @@ class WelcomeTextWidget extends StatelessWidget {
     return Align(
       child: Text(
         text,
+        textAlign: TextAlign.center,
         style: AppStyles.s28,
       ),
     );

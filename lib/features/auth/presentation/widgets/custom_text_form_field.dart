@@ -1,3 +1,4 @@
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_colors.dart';
@@ -33,8 +34,8 @@ class CustomTextField extends StatelessWidget {
         onFieldSubmitted: onFieldSubmitted,
         decoration: InputDecoration(
           suffixIcon: suffixIcon,
-          // labelText: labelText,
-          //labelStyle: AppStyles.s18,
+          labelText: labelText,
+          labelStyle: AppStyles.s16.copyWith(color: Colors.grey[900],),
           border: getBorderStyle(),
           enabledBorder: getBorderStyle(),
           focusedBorder: getBorderStyle(),
@@ -44,8 +45,9 @@ class CustomTextField extends StatelessWidget {
   }
 }
 
-OutlineInputBorder getBorderStyle() {
-  return OutlineInputBorder(
+UnderlineInputBorder getBorderStyle() {
+  return UnderlineInputBorder(
+    
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(color: AppColors.lightGrey));
+      borderSide: const BorderSide(color:  Colors.black,width: 1));
 }

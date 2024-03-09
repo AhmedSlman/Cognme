@@ -15,13 +15,13 @@ class TermsAndCondtionsWidget extends StatelessWidget {
         Text.rich(
           TextSpan(
             children: [
-              TextSpan(
+              const TextSpan(
                 text: AppStrings.iHaveAgreeToOur,
-                style: AppStyles.s12,
+                style: TextStyle(fontSize: 14),
               ),
               TextSpan(
                 text: AppStrings.termsAndCondition,
-                style: AppStyles.s12
+                style: const TextStyle(fontSize: 14)
                     .copyWith(decoration: TextDecoration.underline),
               ),
             ],

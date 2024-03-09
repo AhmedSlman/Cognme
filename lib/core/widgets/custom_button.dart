@@ -1,7 +1,6 @@
+import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -22,7 +21,7 @@ class CustomButton extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.07,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: buttonColor ?? AppColors.primaryColor,
+            backgroundColor: buttonColor ?? AppColors.mainColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),

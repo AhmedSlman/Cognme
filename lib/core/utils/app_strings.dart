@@ -33,7 +33,7 @@ abstract class AppStrings {
       backToHome = "Back To Home",
       //Forgot password
       forgotPasswordPage = "Forgot Password",
-      sendResetPasswordLink = "Send Reset Passwrod Link",
+      sendResetPasswordLink = "Send Reset password Link",
       verificationNow = "Verification Now",
       resendCode = "Resend Code",
       verifyAccount = "Verify Account",

@@ -1,3 +1,4 @@
+// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 part 'auth_state.dart';
@@ -18,9 +19,9 @@ class AuthCubit extends Cubit<AuthState> {
 
   Future<void> verifyEmail() async {}
 
-  void updateTermsAndCondtionCheckBox({required newValue}) {
+  void updateTermsAndConditionCheckBox({required newValue}) {
     termsAndConditionCheckBoxValue = newValue;
-    emit(TermsAndCondtionUpdataState());
+    emit(TermsAndConditionUpdateState());
   }
 
   void obscurePasswordText() {

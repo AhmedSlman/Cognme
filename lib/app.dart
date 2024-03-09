@@ -1,6 +1,5 @@
 import 'package:cognme/core/themes/app_theme.dart';
 import 'package:flutter/material.dart';
-
 import 'core/routes/app_router.dart';
 
 class Cognme extends StatelessWidget {

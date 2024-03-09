@@ -1,5 +1,5 @@
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/utils/app_styles.dart';
 
 class HaveAnAccountWidget extends StatelessWidget {
   const HaveAnAccountWidget(

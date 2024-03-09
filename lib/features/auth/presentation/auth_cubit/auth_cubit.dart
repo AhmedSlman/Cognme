@@ -11,16 +11,18 @@ class AuthCubit extends Cubit<AuthState> {
   GlobalKey<FormState> signUpFormKey = GlobalKey();
   GlobalKey<FormState> signInFormKey = GlobalKey();
   GlobalKey<FormState> forgotPasswordFormKey = GlobalKey();
-  bool termsAndConditionCheckBoxValue = false;
+  bool termsAndCondtionCheckBoxValue = false;
   bool? obscurePasswordTextValue = true;
+
+  get termsAndConditionCheckBoxValue => null;
 
   Future<void> signUpWithEmailAndPassword() async {}
 
   Future<void> verifyEmail() async {}
 
   void updateTermsAndCondtionCheckBox({required newValue}) {
-    termsAndConditionCheckBoxValue = newValue;
-    emit(TermsAndCondtionUpdataState());
+    termsAndCondtionCheckBoxValue = newValue;
+    emit(TermsAndConditionUpdateState());
   }
 
   void obscurePasswordText() {
@@ -37,4 +39,6 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> resetPasswordWithLink() async {}
 
   Future<void> addUserProfile() async {}
+
+  void updateTermsAndConditionCheckBox({bool? newValue}) {}
 }

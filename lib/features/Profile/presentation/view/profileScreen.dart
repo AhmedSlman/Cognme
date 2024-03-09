@@ -1,3 +1,4 @@
+// ignore_for_file: file_names
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class ProfileScreen extends StatelessWidget {
               width: double.infinity,
               height: context.height * 0.4,
               decoration: BoxDecoration(
-                color: AppColors.primaryColor,
+                color: AppColors.mainColor,
               ),
             )
           ],

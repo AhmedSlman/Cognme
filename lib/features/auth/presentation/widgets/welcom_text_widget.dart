@@ -1,6 +1,5 @@
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_styles.dart';
 
 class WelcomeTextWidget extends StatelessWidget {
   const WelcomeTextWidget({super.key, required this.text});

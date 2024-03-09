@@ -1,5 +1,5 @@
-import '../../errors/exceptions.dart';
-import '../../utils/app_constants.dart';
+import 'package:cognme/core/errors/exceptions.dart';
+import 'package:cognme/core/utils/app_constants.dart';
 import 'api_consumer.dart';
 import 'api_interceptors.dart';
 import 'package:dio/dio.dart';
@@ -8,7 +8,7 @@ class DioConsumer extends ApiConsumer {
   final Dio dio;
 
   DioConsumer({required this.dio}) {
-    dio.options.baseUrl = EndPoins.baseUrl;
+    dio.options.baseUrl = EndPoints.baseUrl;
     dio.interceptors.add(ApiInterceptors());
     dio.interceptors.add(LogInterceptor(
       request: true,

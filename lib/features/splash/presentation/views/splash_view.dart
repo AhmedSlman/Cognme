@@ -1,10 +1,9 @@
+import 'package:cognme/core/data/cache/cache.dart';
+import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/services/service_locator.dart';
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/data/cache/cache.dart';
-import '../../../../core/functions/custom_navigate.dart';
-import '../../../../core/services/service_locator.dart';
-
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

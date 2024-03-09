@@ -1,7 +1,6 @@
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/app_styles.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key, required this.label, this.appBarLeading,this.appBarTrailing});
@@ -16,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
       child: ListTile(
         leading: appBarLeading,
         title: Text(label,style: AppStyles.formText16.copyWith(
-          color: AppColors.black,
+          color: AppColors.blackOfText,
           fontWeight: FontWeight.bold
         ),),
         trailing: appBarTrailing,

@@ -1,3 +1,4 @@
+// ignore_for_file: file_names
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -31,8 +32,8 @@ Widget CustomTxtFormField({
               borderSide: const BorderSide(color: Colors.red)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: AppColors.deepGrey)),
+              borderSide: BorderSide(color: AppColors.blackOfText)),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: AppColors.deepGrey)),
+              borderSide: BorderSide(color: AppColors.blackOfText)),
         ));

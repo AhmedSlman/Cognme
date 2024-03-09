@@ -1,7 +1,6 @@
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/app_styles.dart';
 
 class CustomButtonDoctor extends StatelessWidget {
   const CustomButtonDoctor({
@@ -34,7 +33,7 @@ class CustomButtonDoctor extends StatelessWidget {
           side: isOutlined == true
               ? BorderSide(
                   width: 2,
-                  color: AppColors.primaryColor,
+                  color: AppColors.mainColor,
                 )
               : BorderSide.none,
         ),

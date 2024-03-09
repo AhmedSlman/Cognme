@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'doctor_category.dart';
+import 'physician_category.dart';
 
 class DoctorCardsListView extends StatelessWidget {
   const DoctorCardsListView({

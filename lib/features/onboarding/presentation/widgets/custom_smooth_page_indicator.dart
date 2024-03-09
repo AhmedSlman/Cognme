@@ -1,7 +1,6 @@
+import 'package:cognme/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
-import '../../../../core/utils/app_colors.dart';
 
 class CustomSmoothPageIndicator extends StatelessWidget {
   const CustomSmoothPageIndicator({super.key, required this.controller});

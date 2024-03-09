@@ -1,5 +1,4 @@
 // ignore_for_file: constant_identifier_names, duplicate_ignore
-
 class RouterNames {
 // ignore: constant_identifier_names
   static const SplashView = "/splashScreen";

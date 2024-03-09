@@ -1,14 +1,14 @@
 // ignore_for_file: avoid_print
 import 'dart:convert';
+import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/widgets/custom_button.dart';
+import 'package:cognme/features/auth/presentation/auth_cubit/auth_cubit.dart';
+import 'package:cognme/features/auth/presentation/widgets/custom_text_form_field.dart';
 import 'package:cognme/features/auth/presentation/widgets/terms_and_conditions.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_strings.dart';
-import '../../../../core/widgets/custom_button.dart';
-import '../auth_cubit/auth_cubit.dart';
-import 'custom_text_form_field.dart';
 
 class CustomSignUpForm extends StatelessWidget {
   const CustomSignUpForm({super.key});
@@ -35,7 +35,6 @@ class CustomSignUpForm extends StatelessWidget {
               children: [
                 CustomTextField(
                   labelText: AppStrings.fristName,
-                  
                   onChanged: (fristName) {
                     authCubit.firstName = fristName;
                   },
@@ -106,7 +105,8 @@ class CustomSignUpForm extends StatelessWidget {
                           //     customReplacementNavigate(context, "/signIn");
                           //   }
                           // }
-                        }),
+                        },
+                      ),
               ],
             ),
           );

@@ -1,7 +1,7 @@
+import 'package:cognme/core/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
+import 'package:cognme/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/functions/custom_navigate.dart';
-import '../../../../core/utils/app_strings.dart';
 
 class ForgetPassWordTextWidget extends StatelessWidget {
   const ForgetPassWordTextWidget({super.key});

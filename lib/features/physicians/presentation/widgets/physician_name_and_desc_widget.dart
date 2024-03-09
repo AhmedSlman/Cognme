@@ -1,10 +1,9 @@
+import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/core/widgets/btn.dart';
+import 'package:cognme/features/physicians/presentation/widgets/custom_rating-bar.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_styles.dart';
-import '../../../../core/widgets/btn.dart';
-import 'custom_rating-bar.dart';
 
 class DoctorNameAndDescWidget extends StatelessWidget {
   const DoctorNameAndDescWidget({

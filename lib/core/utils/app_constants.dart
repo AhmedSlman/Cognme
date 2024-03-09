@@ -1,6 +1,6 @@
 class EndPoints {
   static String baseUrl = "";
-  static String signIn = "user/signup";
+  static String signIn = "user/signup"; //!
   static String signUp = "user/signup";
   static String getUserDataEndPoint(id) {
     return "user/get-user/$id";

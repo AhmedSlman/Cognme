@@ -1,14 +1,14 @@
 import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/home/presentation/widgets/checkbox_routine.dart';
 import 'package:cognme/features/home/presentation/widgets/clothes_card.dart';
 import 'package:cognme/features/home/presentation/widgets/heart_rate_category.dart';
 import 'package:cognme/features/home/presentation/widgets/location&date.dart';
+import 'package:cognme/features/home/presentation/widgets/routine_category.dart';
 import 'package:cognme/features/home/presentation/widgets/weather_category.dart';
 import 'package:cognme/features/home/presentation/widgets/home_app_bar.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/utils/app_styles.dart';
-import '../widgets/routine_category.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

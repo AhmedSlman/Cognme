@@ -1,8 +1,7 @@
+import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_strings.dart';
-import '../../../../core/utils/app_styles.dart';
 
 class SkipButton extends StatelessWidget {
   const SkipButton({

@@ -1,6 +1,5 @@
+import 'package:cognme/features/dashboard/data/dashboard_category_model.dart';
 import 'package:flutter/material.dart';
-
-import '../../data/dashboard_category_model.dart';
 import 'controller_card.dart';
 
 class ControllerGridView extends StatelessWidget {

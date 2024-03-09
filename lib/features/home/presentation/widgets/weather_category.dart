@@ -2,7 +2,6 @@ import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
-
 class WeatherCategory extends StatelessWidget {
   const WeatherCategory({super.key});
 

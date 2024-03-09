@@ -1,7 +1,6 @@
+import 'package:cognme/core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_assets.dart';
-import 'doctor_name_and_desc_widget.dart';
+import 'physician_name_and_desc_widget.dart';
 
 class DoctorCardIfoWidget extends StatelessWidget {
   const DoctorCardIfoWidget({

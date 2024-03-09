@@ -1,6 +1,6 @@
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-import '../utils/app_styles.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key, required this.label, this.appBarLeading,this.appBarTrailing});

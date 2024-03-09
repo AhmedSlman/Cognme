@@ -1,5 +1,5 @@
-import '../../errors/exceptions.dart';
-import '../../utils/app_constants.dart';
+import 'package:cognme/core/errors/exceptions.dart';
+import 'package:cognme/core/utils/app_constants.dart';
 import 'api_consumer.dart';
 import 'api_interceptors.dart';
 import 'package:dio/dio.dart';

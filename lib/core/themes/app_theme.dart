@@ -1,5 +1,5 @@
+import 'package:cognme/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-import '../utils/app_colors.dart';
 
 ThemeData appThemes() {
   return ThemeData(

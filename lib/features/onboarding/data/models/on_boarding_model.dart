@@ -15,7 +15,7 @@ class OnboardingModel {
 List<OnboardingModel> onBoardingData = [
   OnboardingModel(
     imagePath: AppAssets.OnBoarding1,
-    title: "Explore The History With Dalel In Smart Way",
+    title: "Explore The History With Cognme In Smart Way",
     subTitle:
         "Using our app history libraries can find many historical periods",
   ),
@@ -26,8 +26,8 @@ List<OnboardingModel> onBoardingData = [
   ),
   OnboardingModel(
     imagePath: AppAssets.OnBoarding2,
-    title: "Using Modern AI Technology For Better User Experince",
+    title: "Using Modern AI Technology For Better User Experience",
     subTitle:
-        "AI provide recommendation and helps you to continue the search journy",
+        "AI provide recommendation and helps you to continue the search journey",
   ),
 ];

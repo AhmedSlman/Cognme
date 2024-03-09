@@ -1,10 +1,9 @@
+import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/functions/on_boarding.dart';
+import 'package:cognme/features/onboarding/presentation/widgets/get_buttons.dart';
+import 'package:cognme/features/onboarding/presentation/widgets/onboarding_body.dart';
+import 'package:cognme/features/onboarding/presentation/widgets/skip_button.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/functions/custom_navigate.dart';
-import '../../../../core/functions/on_boarding.dart';
-import '../widgets/get_buttons.dart';
-import '../widgets/on_boarding_body.dart';
-import '../widgets/skip_botton.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});

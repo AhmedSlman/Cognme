@@ -1,11 +1,10 @@
+import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/functions/on_boarding.dart';
+import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/core/widgets/custom_button.dart';
+import 'package:cognme/features/onboarding/data/models/on_boarding_model.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/functions/custom_navigate.dart';
-import '../../../../core/functions/on_boarding.dart';
-import '../../../../core/utils/app_strings.dart';
-import '../../../../core/utils/app_styles.dart';
-import '../../../../core/widgets/custom_button.dart';
-import '../../data/models/on_boarding_model.dart';
 
 class GetButtons extends StatelessWidget {
   const GetButtons(

@@ -1,12 +1,11 @@
+import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/routes/router_names.dart';
+import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/features/auth/presentation/widgets/cover_image.dart';
+import 'package:cognme/features/auth/presentation/widgets/custom_sign_in_form.dart';
+import 'package:cognme/features/auth/presentation/widgets/have_an_account.dart';
+import 'package:cognme/features/auth/presentation/widgets/welcom_text_widget.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/functions/custom_navigate.dart';
-import '../../../../core/routes/router_names.dart';
-import '../../../../core/utils/app_strings.dart';
-import '../widgets/custom_sign_in_form.dart';
-import '../widgets/have_an_account.dart';
-import '../widgets/welcom_text_widget.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -32,7 +31,7 @@ class SignInView extends StatelessWidget {
           const SliverToBoxAdapter(
             child: CustomSignInForm(),
           ),
-           SliverToBoxAdapter(
+          SliverToBoxAdapter(
               child:
                   SizedBox(height: MediaQuery.of(context).size.height * 0.08)),
           SliverToBoxAdapter(

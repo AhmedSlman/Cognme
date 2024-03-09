@@ -1,8 +1,7 @@
+import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_colors.dart';
-import 'doctor_card_info_widget.dart';
+import 'physician_card_info_widget.dart';
 
 class DoctorCategory extends StatelessWidget {
   const DoctorCategory({super.key});

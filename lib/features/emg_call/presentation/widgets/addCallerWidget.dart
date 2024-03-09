@@ -1,11 +1,11 @@
 // ignore_for_file: file_names
 import 'package:cognme/core/utils/app_assets.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/core/widgets/customTxtForm.dart';
-import '../../../../core/utils/app_styles.dart';
 
 class AddCallerWidget extends StatelessWidget {
   AddCallerWidget({

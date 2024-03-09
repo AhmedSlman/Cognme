@@ -1,8 +1,7 @@
+import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/features/dashboard/presentation/widgets/controller_grid_view.dart';
+import 'package:cognme/features/dashboard/presentation/widgets/dashboard_image.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_styles.dart';
-import '../widgets/controler_gridview.dart';
-import '../widgets/dashboard_image.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});

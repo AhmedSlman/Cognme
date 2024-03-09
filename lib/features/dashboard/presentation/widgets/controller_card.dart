@@ -1,8 +1,8 @@
+import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/media_query.dart';
+import 'package:cognme/features/dashboard/data/dashboard_category_model.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_styles.dart';
-import '../../data/dashboard_category_model.dart';
 
 class ControllerCard extends StatelessWidget {
   const ControllerCard({super.key, required this.category});

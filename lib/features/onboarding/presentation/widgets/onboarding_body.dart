@@ -1,7 +1,8 @@
+import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/features/onboarding/data/models/on_boarding_model.dart';
+import 'package:cognme/features/onboarding/presentation/widgets/custom_smooth_page_indicator.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/utils/app_styles.dart';
-import '../../data/models/on_boarding_model.dart';
-import 'custom_smooth_page_indicator.dart';
+
 
 class OnBoardingBody extends StatelessWidget {
   const OnBoardingBody({super.key, required this.controller, this.onPageChanged});

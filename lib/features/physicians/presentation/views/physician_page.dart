@@ -1,13 +1,10 @@
 // ignore_for_file: unused_import
-
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/features/physicians/presentation/widgets/physician_cards_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import '../widgets/doctor_cards_list_view.dart';
-import '../widgets/doctor_category.dart';
 
 class PhysicianView extends StatelessWidget {
   const PhysicianView({super.key});

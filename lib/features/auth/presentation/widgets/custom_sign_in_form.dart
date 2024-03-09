@@ -6,9 +6,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_text_form_field.dart';
 import 'forget_password_text_widget.dart';
 
+// ignore: must_be_immutable
 class CustomSignInForm extends StatelessWidget {
-  const CustomSignInForm({super.key});
-
+   CustomSignInForm({super.key});
+  final GlobalKey<FormState> _signInFormKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
@@ -17,7 +18,7 @@ class CustomSignInForm extends StatelessWidget {
           AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
 
           return Form(
-            key: authCubit.signInFormKey,
+            key: _signInFormKey,
             child: Column(
               children: [
                 CustomTextField(

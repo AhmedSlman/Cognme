@@ -11,8 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomSignUpForm extends StatelessWidget {
-  const CustomSignUpForm({super.key});
-
+   CustomSignUpForm({super.key});
+final GlobalKey<FormState> _signUpFormKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
@@ -29,7 +29,7 @@ class CustomSignUpForm extends StatelessWidget {
           AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
 
           return Form(
-            key: authCubit.signUpFormKey,
+            key: _signUpFormKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

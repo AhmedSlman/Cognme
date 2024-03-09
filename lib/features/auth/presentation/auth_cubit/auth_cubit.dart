@@ -1,4 +1,3 @@
-// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 part 'auth_state.dart';
@@ -12,15 +11,17 @@ class AuthCubit extends Cubit<AuthState> {
   GlobalKey<FormState> signUpFormKey = GlobalKey();
   GlobalKey<FormState> signInFormKey = GlobalKey();
   GlobalKey<FormState> forgotPasswordFormKey = GlobalKey();
-  bool termsAndConditionCheckBoxValue = false;
+  bool termsAndCondtionCheckBoxValue = false;
   bool? obscurePasswordTextValue = true;
+
+  get termsAndConditionCheckBoxValue => null;
 
   Future<void> signUpWithEmailAndPassword() async {}
 
   Future<void> verifyEmail() async {}
 
-  void updateTermsAndConditionCheckBox({required newValue}) {
-    termsAndConditionCheckBoxValue = newValue;
+  void updateTermsAndCondtionCheckBox({required newValue}) {
+    termsAndCondtionCheckBoxValue = newValue;
     emit(TermsAndConditionUpdateState());
   }
 
@@ -38,4 +39,6 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> resetPasswordWithLink() async {}
 
   Future<void> addUserProfile() async {}
+
+  void updateTermsAndConditionCheckBox({bool? newValue}) {}
 }

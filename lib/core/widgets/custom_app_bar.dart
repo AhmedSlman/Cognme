@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
     ),
       child: ListTile(
         leading: appBarLeading,
-        title: Text(label,style: AppStyles.s28.copyWith(
+        title: Text(label,style: AppStyles.formText16.copyWith(
           color: AppColors.black,
           fontWeight: FontWeight.bold
         ),),

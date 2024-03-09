@@ -11,7 +11,7 @@ class WelcomeTextWidget extends StatelessWidget {
       child: Text(
         text,
         textAlign: TextAlign.center,
-        style: AppStyles.s28,
+        style: AppStyles.formText16,
       ),
     );
   }

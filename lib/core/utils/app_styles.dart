@@ -39,23 +39,21 @@ abstract class AppStyles {
     fontFamily: "Raleway",
   );
 
-  static final s28 = TextStyle(
-    fontSize: 28,
-    fontWeight: FontWeight.w600,
-    color: AppColors.black,
+  static const formText16 = TextStyle(
+    fontSize: 16,
+    color: Colors.black,
     fontFamily: "Raleway",
   );
 
-  static const s42 = TextStyle(
-    fontSize: 42,
-    fontWeight: FontWeight.bold,
-    color: Colors.white,
+  static const regularStyle18 = TextStyle(
+    fontSize: 18.25,
+    color: Colors.black,
     fontFamily: "Raleway",
   );
-  static final s64 = TextStyle(
-    fontSize: 64,
-    fontWeight: FontWeight.w400,
-    color: AppColors.deepBrown,
+  static const boldStyle38 = TextStyle(
+    fontSize: 38,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
     fontFamily: "Raleway",
   );
 }

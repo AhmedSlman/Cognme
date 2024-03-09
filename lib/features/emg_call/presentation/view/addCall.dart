@@ -1,5 +1,6 @@
+// ignore_for_file: file_names
 import 'package:cognme/core/functions/custom_navigate.dart';
-import 'package:cognme/core/routes/routernames.dart';
+import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/core/widgets/btn.dart';
@@ -40,9 +41,9 @@ class AddCaller extends StatelessWidget {
             lable: "Add",
             width: context.width * 0.5,
             height: context.height * 0.05,
-            backgroundColor: AppColors.primaryColor,
+            backgroundColor: AppColors.mainColor,
             isOutlined: false,
-            textColor: AppColors.white,
+            textColor: AppColors.whiteOfColor,
           ),
         ]),
       ),

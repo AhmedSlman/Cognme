@@ -1,7 +1,6 @@
+import 'package:cognme/core/data/cache/cache.dart';
+import 'package:cognme/core/utils/app_constants.dart';
 import 'package:dio/dio.dart';
-
-import '../../utils/app_constants.dart';
-import '../cache/cache.dart';
 
 class ApiInterceptors extends Interceptor {
   @override

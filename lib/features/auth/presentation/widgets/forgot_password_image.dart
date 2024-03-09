@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_assets.dart';
-
 class ForgotPasswordImage extends StatelessWidget {
   const ForgotPasswordImage({super.key});
 

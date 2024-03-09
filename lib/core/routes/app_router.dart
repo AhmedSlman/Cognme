@@ -1,17 +1,19 @@
 // ignore_for_file: constant_identifier_names, duplicate_ignore
+
 import 'package:cognme/core/routes/routernames.dart';
-import 'package:cognme/features/Profile/presentation/view/profileScreen.dart';
-import 'package:cognme/features/auth/presentation/views/sign_up_view.dart';
-import 'package:cognme/features/emg_call/presentation/view/emgergency_call.dart';
-import 'package:cognme/features/home/presetation/view/home_view.dart';
-import 'package:cognme/features/physicians/presentation/views/physician_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../features/Profile/presentation/view/profileScreen.dart';
 import '../../features/auth/presentation/auth_cubit/auth_cubit.dart';
 import '../../features/auth/presentation/views/sign_in_view.dart';
+import '../../features/auth/presentation/views/sign_up_view.dart';
 import '../../features/dashboard/presentation/views/dashbord_page.dart';
 import '../../features/emg_call/presentation/view/addCall.dart';
+import '../../features/emg_call/presentation/view/emgergency_call.dart';
+import '../../features/home/presetation/view/home_view.dart';
 import '../../features/on_boarding/presentation/views/on_bording_view.dart';
+import '../../features/physicians/presentation/views/physician_page.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 import '../services/service_locator.dart';
 

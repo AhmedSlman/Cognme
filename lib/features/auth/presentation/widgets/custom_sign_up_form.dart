@@ -32,7 +32,6 @@ class CustomSignUpForm extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Your Name"),
                 CustomTextField(
                   labelText: AppStrings.fristName,
                   onChanged: (fristName) {
@@ -58,8 +57,8 @@ class CustomSignUpForm extends StatelessWidget {
                     },
                     icon: Icon(
                       authCubit.obscurePasswordTextValue == true
-                          ? Icons.visibility_outlined
-                          : Icons.visibility_off_outlined,
+                          ? Icons.visibility_off_outlined
+                          : Icons.visibility_outlined,
                     ),
                   ),
                   labelText: AppStrings.password,

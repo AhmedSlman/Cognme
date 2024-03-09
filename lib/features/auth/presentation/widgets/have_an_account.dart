@@ -1,6 +1,5 @@
+import 'package:cognme/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_styles.dart';
 
 class HaveAnAccountWidget extends StatelessWidget {
@@ -11,19 +10,21 @@ class HaveAnAccountWidget extends StatelessWidget {
   final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Align(
-        child: Text.rich(
-          TextSpan(
-            children: [
-              TextSpan(text: text1, style: AppStyles.s12),
-              TextSpan(
-                  text: text2,
-                  style: AppStyles.s12.copyWith(color: AppColors.lightGrey)),
-            ],
+    return SizedBox(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            AppStrings.alreadyHaveAnAccount,
+            style: AppStyles.s16,
           ),
-        ),
+          TextButton(
+              onPressed: () {},
+              child: Text(
+                AppStrings.signIn,
+                style: AppStyles.s18.copyWith(color: Colors.blueAccent),
+              ))
+        ],
       ),
     );
   }

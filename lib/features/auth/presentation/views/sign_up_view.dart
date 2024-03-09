@@ -1,3 +1,4 @@
+import 'package:cognme/features/auth/presentation/widgets/cover_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/functions/custom_navigate.dart';
@@ -12,35 +13,33 @@ class SignUpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-                child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.15)),
-            const SliverToBoxAdapter(
-                child: WelcomeTextWidget(text: AppStrings.welcome)),
-            SliverToBoxAdapter(
-                child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.03)),
-            const SliverToBoxAdapter(
-              child: CustomSignUpForm(),
+      body: CustomScrollView(
+        slivers: [
+          const SliverToBoxAdapter(child: CognmeImageWidget()),
+          SliverToBoxAdapter(
+              child:
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.04)),
+          const SliverToBoxAdapter(
+              child: WelcomeTextWidget(text: AppStrings.welcome)),
+          SliverToBoxAdapter(
+              child:
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.001)),
+          const SliverToBoxAdapter(
+            child: CustomSignUpForm(),
+          ),
+          SliverToBoxAdapter(
+              child:
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02)),
+          SliverToBoxAdapter(
+            child: HaveAnAccountWidget(
+              text1: AppStrings.alreadyHaveAnAccount,
+              text2: AppStrings.signIn,
+              onTap: () {
+                customNavigate(context, "/signIn");
+              },
             ),
-            SliverToBoxAdapter(
-                child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.02)),
-            SliverToBoxAdapter(
-              child: HaveAnAccountWidget(
-                text1: AppStrings.alreadyHaveAnAccount,
-                text2: AppStrings.signIn,
-                onTap: () {
-                  customNavigate(context, "/signIn");
-                },
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

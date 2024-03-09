@@ -29,7 +29,7 @@ class CustomSignUpForm extends StatelessWidget {
           AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
 
           return Form(
-            // key: authCubit.signUpFormKey,
+            key: authCubit.signUpFormKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

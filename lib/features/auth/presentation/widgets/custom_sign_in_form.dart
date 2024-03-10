@@ -8,7 +8,8 @@ import 'forget_password_text_widget.dart';
 
 // ignore: must_be_immutable
 class CustomSignInForm extends StatelessWidget {
-   CustomSignInForm({super.key});
+  final bool _obscure = true;
+  CustomSignInForm({super.key});
   final GlobalKey<FormState> _signInFormKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -30,12 +31,13 @@ class CustomSignInForm extends StatelessWidget {
                 CustomTextField(
                   suffixIcon: IconButton(
                     onPressed: () {
-                      authCubit.obscurePasswordText();
+                      // authCubit.obscurePasswordText();
+                      _obscure;
                     },
                     icon: Icon(
-                      authCubit.obscurePasswordTextValue == true
-                          ? Icons.visibility_outlined
-                          : Icons.visibility_off_outlined,
+                      _obscure == true
+                          ? Icons.visibility_off_outlined
+                          : Icons.visibility_outlined,
                     ),
                   ),
                   labelText: AppStrings.password,

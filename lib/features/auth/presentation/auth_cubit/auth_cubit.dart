@@ -34,6 +34,7 @@ class AuthCubit extends Cubit<AuthState> {
     emit(ObscurePasswordTextUpdateState());
   }
 
+
   Future<void> sigInWithEmailAndPassword() async {}
 
   Future<void> resetPasswordWithLink() async {}

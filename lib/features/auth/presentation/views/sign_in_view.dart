@@ -28,7 +28,7 @@ class SignInView extends StatelessWidget {
           SliverToBoxAdapter(
               child:
                   SizedBox(height: MediaQuery.of(context).size.height * 0.03)),
-           SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: CustomSignInForm(),
           ),
           SliverToBoxAdapter(
@@ -38,8 +38,9 @@ class SignInView extends StatelessWidget {
             child: HaveAnAccountWidget(
               text1: AppStrings.dontHaveAnAccount,
               text2: AppStrings.signUp,
-              onTap: () =>
-                  customReplacementNavigate(context, RouterNames.SignUpView),
+              onTap: () {
+                customReplacementNavigate(context, RouterNames.SignUpView);
+              },
             ),
           ),
         ],

@@ -6,11 +6,14 @@ class WelcomeTextWidget extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Align(
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: AppStyles.boldStyle28,
+    return Padding(
+      padding: const EdgeInsets.only(left: 10),
+      child: Align(
+        alignment: Alignment.topLeft,
+        child: Text(
+          text,
+          style: AppStyles.boldStyle28,
+        ),
       ),
     );
   }

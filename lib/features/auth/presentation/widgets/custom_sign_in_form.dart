@@ -29,11 +29,11 @@ class CustomSignInForm extends StatelessWidget {
                 CustomTextField(
                   suffixIcon: IconButton(
                     onPressed: () {
-                      // authCubit.obscurePasswordText();
-                      _obscure;
+                      authCubit.obscurePasswordText();
+                      ;
                     },
                     icon: Icon(
-                      _obscure == true
+                      authCubit.obscurePasswordTextValue == true
                           ? Icons.visibility_off_outlined
                           : Icons.visibility_outlined,
                     ),

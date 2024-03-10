@@ -27,7 +27,7 @@ Widget CustomTxtFormField({
               },
               icon: Icon(suffix)),
           suffixIconColor: Colors.black,
-          errorBorder: UnderlineInputBorder(
+          errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
               borderSide: const BorderSide(color: Colors.red)),
           focusedBorder: OutlineInputBorder(

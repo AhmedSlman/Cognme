@@ -1,6 +1,7 @@
 import 'package:cognme/core/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/auth/presentation/widgets/cover_image.dart';
 import 'package:cognme/features/auth/presentation/widgets/custom_sign_up_form.dart';
 import 'package:cognme/features/auth/presentation/widgets/have_an_account.dart';
@@ -15,12 +16,21 @@ class SignUpView extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          const SliverToBoxAdapter(child: CognmeImageWidget()),
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: context.height * 0.09,
+            ),
+          ),
+          const SliverToBoxAdapter(
+              child: WelcomeTextWidget(text: AppStrings.createAccount)),
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: context.height * 0.001,
+            ),
+          ),
           SliverToBoxAdapter(
               child:
                   SizedBox(height: MediaQuery.of(context).size.height * 0.04)),
-          const SliverToBoxAdapter(
-              child: WelcomeTextWidget(text: AppStrings.welcome)),
           SliverToBoxAdapter(
               child:
                   SizedBox(height: MediaQuery.of(context).size.height * 0.001)),

@@ -27,7 +27,7 @@ abstract class AppStyles {
     fontFamily: "Raleway",
   );
   static const boldStyle28 = TextStyle(
-    fontSize: 28,
+    fontSize: 30,
     fontWeight: FontWeight.w500,
     color: Colors.black,
     fontFamily: "Raleway",

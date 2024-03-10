@@ -5,10 +5,10 @@ abstract class AppStrings {
       //On Boarding Strings
       skip = "Skip",
       next = "Next",
-      createAccount = "Create Account",
+      createAccount = "Create New Account",
       loginNow = "Login Now",
       //Auth Strings
-      welcome = "Welcome To Cognme, SignUp!",
+      welcome = "Welcome To Cognme",
       welcomeBack = "Welcome Back!",
       fristName = "First Name",
       lastName = "Last Name",

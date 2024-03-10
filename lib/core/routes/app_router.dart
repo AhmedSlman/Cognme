@@ -16,7 +16,6 @@ import 'package:cognme/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-
 final GoRouter router = GoRouter(
   routes: [
     GoRoute(
@@ -30,14 +29,14 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.SignUpView,
       builder: (context, state) => BlocProvider(
-        create: (context) => getIt<AuthCubit>(),
+        create: (context) => AuthCubit(),
         child: const SignUpView(),
       ),
     ),
     GoRoute(
       path: RouterNames.SignInView,
       builder: (context, state) => BlocProvider(
-        create: (context) => getIt<AuthCubit>(),
+        create: (context) => AuthCubit(),
         child: const SignInView(),
       ),
     ),

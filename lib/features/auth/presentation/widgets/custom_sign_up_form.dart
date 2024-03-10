@@ -2,26 +2,15 @@ import 'package:cognme/core/widgets/custom_button.dart';
 import 'package:cognme/features/auth/presentation/widgets/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/functions/custom_navigate.dart';
-import '../../../../core/utils/app_strings.dart';
-import '../auth_cubit/auth_cubit.dart';
-import 'custom_text_form_field.dart';
 
 class CustomSignUpForm extends StatelessWidget {
-  const CustomSignUpForm({super.key});
-
+  CustomSignUpForm({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
         listener: (context, state) {},
-        //  (context, state) {
-        //   if (state is SignUpSuccessState) {
-        //     showToast("Account Created Successfully");
-        //     customReplacementNavigate(context, "/signIn");
-        //   } else if (state is SignUpFailuerState) {
-        //     showToast(state.errMessage);
-        //   }
-        // },
         builder: (context, state) {
           AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
 
@@ -72,15 +61,14 @@ class CustomSignUpForm extends StatelessWidget {
                     : CustomButton(
                         buttonColor:
                             authCubit.termsAndCondtionCheckBoxValue == false
-                                ? Colors.grey
+                                ? AppColors.greyOfText
                                 : null,
                         text: AppStrings.signUp,
-                        onPressed: () {
+                        onPressed: () async {
                           if (authCubit.termsAndCondtionCheckBoxValue == true) {
                             if (authCubit.signUpFormKey.currentState!
                                 .validate()) {
-                              authCubit.signUpWithEmailAndPassword();
-                              customReplacementNavigate(context, "/signIn");
+                              await authCubit.signUpWithEmailAndPassword();
                             }
                           }
                         }),

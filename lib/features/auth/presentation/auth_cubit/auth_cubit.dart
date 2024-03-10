@@ -14,8 +14,6 @@ class AuthCubit extends Cubit<AuthState> {
   bool termsAndCondtionCheckBoxValue = false;
   bool? obscurePasswordTextValue = true;
 
-  get termsAndConditionCheckBoxValue => null;
-
   Future<void> signUpWithEmailAndPassword() async {}
 
   Future<void> verifyEmail() async {}
@@ -40,6 +38,4 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> resetPasswordWithLink() async {}
 
   Future<void> addUserProfile() async {}
-
-  void updateTermsAndConditionCheckBox({bool? newValue}) {}
 }

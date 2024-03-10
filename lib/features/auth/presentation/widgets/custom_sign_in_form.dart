@@ -8,9 +8,7 @@ import 'forget_password_text_widget.dart';
 
 // ignore: must_be_immutable
 class CustomSignInForm extends StatelessWidget {
-  final bool _obscure = true;
-  CustomSignInForm({super.key});
-  final GlobalKey<FormState> _signInFormKey = GlobalKey();
+   const CustomSignInForm({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(

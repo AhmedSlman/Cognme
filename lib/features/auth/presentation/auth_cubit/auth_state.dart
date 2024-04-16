@@ -4,14 +4,14 @@ class AuthState {}
 
 final class AuthInitial extends AuthState {}
 
-final class SignUpLoadingState extends AuthState {}
+final class RegisterLoadingState extends AuthState {}
 
-final class SignUpSuccessState extends AuthState {}
+final class RegisterSuccessState extends AuthState {}
 
-final class SignUpFailureState extends AuthState {
+final class RegisterFailureState extends AuthState {
   final String errMessage;
 
-  SignUpFailureState({required this.errMessage});
+  RegisterFailureState({required this.errMessage});
 }
 
 final class TermsAndConditionUpdateState extends AuthState {}

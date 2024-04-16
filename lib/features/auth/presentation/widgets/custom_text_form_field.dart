@@ -2,24 +2,28 @@ import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+   CustomTextField({
     super.key,
     required this.labelText,
     this.onChanged,
     this.onFieldSubmitted,
     this.suffixIcon,
     this.obscureText,
+    this.controller,
   });
+  TextEditingController? controller=TextEditingController();
   final String labelText;
   final Widget? suffixIcon;
   final bool? obscureText;
   final Function(String)? onChanged;
   final Function(String)? onFieldSubmitted;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 8),
       child: TextFormField(
+        controller: controller,
         validator: (value) {
           if (value!.isEmpty) {
             return "This field is required";

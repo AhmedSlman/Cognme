@@ -2,7 +2,6 @@ import 'package:cognme/core/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
-import 'package:cognme/features/auth/presentation/widgets/cover_image.dart';
 import 'package:cognme/features/auth/presentation/widgets/custom_sign_up_form.dart';
 import 'package:cognme/features/auth/presentation/widgets/have_an_account.dart';
 import 'package:cognme/features/auth/presentation/widgets/welcom_text_widget.dart';
@@ -34,7 +33,7 @@ class SignUpView extends StatelessWidget {
           SliverToBoxAdapter(
               child:
                   SizedBox(height: MediaQuery.of(context).size.height * 0.001)),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: CustomSignUpForm(),
           ),
           SliverToBoxAdapter(

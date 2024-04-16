@@ -1,3 +1,7 @@
+// ignore_for_file: use_build_context_synchronously
+
+import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/widgets/custom_button.dart';
 import 'package:cognme/features/auth/presentation/auth_cubit/auth_cubit.dart';
@@ -8,7 +12,7 @@ import 'forget_password_text_widget.dart';
 
 // ignore: must_be_immutable
 class CustomSignInForm extends StatelessWidget {
-   const CustomSignInForm({super.key});
+  const CustomSignInForm({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
@@ -30,7 +34,6 @@ class CustomSignInForm extends StatelessWidget {
                   suffixIcon: IconButton(
                     onPressed: () {
                       authCubit.obscurePasswordText();
-                      ;
                     },
                     icon: Icon(
                       authCubit.obscurePasswordTextValue == true
@@ -57,6 +60,8 @@ class CustomSignInForm extends StatelessWidget {
                           if (authCubit.signInFormKey.currentState!
                               .validate()) {
                             await authCubit.sigInWithEmailAndPassword();
+                            customReplacementNavigate(
+                                context, RouterNames.HomeView,);
                           }
                         },
                       ),

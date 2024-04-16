@@ -9,10 +9,8 @@ import 'package:cognme/features/auth/presentation/widgets/terms_and_conditions.d
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/functions/custom_navigate.dart';
-
 class CustomSignUpForm extends StatelessWidget {
-  CustomSignUpForm({super.key});
+  const CustomSignUpForm({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
@@ -95,27 +93,35 @@ class CustomSignUpForm extends StatelessWidget {
                                     }
                                   }
                                 }),
-                                SizedBox(height: context.height*0.02,),
+                        SizedBox(
+                          height: context.height * 0.02,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children:  [
-                            SizedBox(width: context.width*0.05,),
+                          children: [
+                            SizedBox(
+                              width: context.width * 0.05,
+                            ),
                             const Icon(
                               Icons.facebook,
                               size: 40,
                               color: Colors.blue,
                             ),
-                            SizedBox(width: context.width*0.05,),
+                            SizedBox(
+                              width: context.width * 0.05,
+                            ),
                             const Icon(
                               Icons.facebook,
                               size: 40,
                               color: Colors.blue,
                             ),
-                            SizedBox(width: context.width*0.05,),
+                            SizedBox(
+                              width: context.width * 0.05,
+                            ),
                             const Icon(
                               Icons.facebook,
                               size: 40,
-                            color: Colors.blue,
+                              color: Colors.blue,
                             ),
                           ],
                         )

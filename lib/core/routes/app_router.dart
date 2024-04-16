@@ -1,6 +1,5 @@
 // ignore_for_file: constant_identifier_names, duplicate_ignore
 import 'package:cognme/core/routes/router_names.dart';
-import 'package:cognme/core/services/service_locator.dart';
 import 'package:cognme/features/Profile/presentation/view/profileScreen.dart';
 import 'package:cognme/features/auth/presentation/auth_cubit/auth_cubit.dart';
 import 'package:cognme/features/auth/presentation/views/forgot_password_view.dart';

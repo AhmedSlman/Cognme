@@ -13,6 +13,14 @@ import '../../../../core/functions/custom_navigate.dart';
 
 class CustomSignUpForm extends StatelessWidget {
   CustomSignUpForm({super.key});
+
+  TextEditingController registerName= TextEditingController();
+    TextEditingController registerEmail= TextEditingController();
+
+  TextEditingController registerPassword= TextEditingController();
+
+  TextEditingController registerConfirmPassword= TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
@@ -39,24 +47,45 @@ class CustomSignUpForm extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CustomTextField(
+                          controller: registerName,
                           labelText: AppStrings.fristName,
                           onChanged: (fristName) {
                             authCubit.firstName = fristName;
                           },
                         ),
+                        // CustomTextField(
+                        //   labelText: AppStrings.lastName,
+                        //   onChanged: (lastName) {
+                        //     authCubit.lastName = lastName;
+                        //   },
+                        // ),
                         CustomTextField(
-                          labelText: AppStrings.lastName,
-                          onChanged: (lastName) {
-                            authCubit.lastName = lastName;
-                          },
-                        ),
-                        CustomTextField(
+                          controller:registerEmail,
                           labelText: AppStrings.emailAddress,
                           onChanged: (emailAddress) {
                             authCubit.emailAddress = emailAddress;
                           },
                         ),
                         CustomTextField(
+                          controller: registerPassword,
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              authCubit.obscurePasswordText();
+                            },
+                            icon: Icon(
+                              authCubit.obscurePasswordTextValue == true
+                                  ? Icons.visibility_off_outlined
+                                  : Icons.visibility_outlined,
+                            ),
+                          ),
+                          labelText: AppStrings.password,
+                          obscureText: authCubit.obscurePasswordTextValue,
+                          onChanged: (password) {
+                            authCubit.password = password;
+                          },
+                        ),
+                        CustomTextField(
+                          controller: registerConfirmPassword,
                           suffixIcon: IconButton(
                             onPressed: () {
                               authCubit.obscurePasswordText();
@@ -76,7 +105,7 @@ class CustomSignUpForm extends StatelessWidget {
                         const TermsAndConditionsWidget(),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.02),
-                        state is SignUpLoadingState
+                        state is RegisterLoadingState
                             ? const CircularProgressIndicator()
                             : CustomButton(
                                 buttonColor:
@@ -91,7 +120,7 @@ class CustomSignUpForm extends StatelessWidget {
                                     if (authCubit.signUpFormKey.currentState!
                                         .validate()) {
                                       await authCubit
-                                          .signUpWithEmailAndPassword();
+                                          .registerUser(name: '', email: '', password: '', confirmPassword: '');
                                     }
                                   }
                                 }),

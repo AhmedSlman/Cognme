@@ -1,7 +1,7 @@
 class EndPoints {
-  static String baseUrl = "";
-  static String signIn = "user/signup"; //!
-  static String signUp = "user/signup";
+  static String baseUrl = "https://3a1c-197-35-254-83.ngrok-free.app/";
+  static String signIn = "login"; //!
+  static String signUp = "register";
   static String getUserDataEndPoint(id) {
     return "user/get-user/$id";
   }

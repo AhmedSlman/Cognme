@@ -12,7 +12,11 @@ import 'forget_password_text_widget.dart';
 
 // ignore: must_be_immutable
 class CustomSignInForm extends StatelessWidget {
-  const CustomSignInForm({super.key});
+  CustomSignInForm({super.key});
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
@@ -47,9 +51,12 @@ class CustomSignInForm extends StatelessWidget {
                     authCubit.password = password;
                   },
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(top: 15),
-                  child: ForgetPassWordTextWidget(),
+                  child: ForgetPassWordTextWidget(
+                    onPressed:
+                        customNavigate(context, RouterNames.forgotPasswordView),
+                  ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.06),
                 state is SignInLoadingState
@@ -59,9 +66,14 @@ class CustomSignInForm extends StatelessWidget {
                         onPressed: () async {
                           if (authCubit.signInFormKey.currentState!
                               .validate()) {
-                            await authCubit.sigInWithEmailAndPassword();
+                            await authCubit.sigInUser(
+                              email: emailController.text,
+                              password: passwordController.text,
+                            );
                             customReplacementNavigate(
-                                context, RouterNames.HomeView,);
+                              context,
+                              RouterNames.HomeView,
+                            );
                           }
                         },
                       ),

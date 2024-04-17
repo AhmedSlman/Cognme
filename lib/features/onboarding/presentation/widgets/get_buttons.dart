@@ -1,5 +1,6 @@
 import 'package:cognme/core/functions/custom_navigate.dart';
 import 'package:cognme/core/functions/on_boarding.dart';
+import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/widgets/custom_button.dart';
@@ -21,7 +22,7 @@ class GetButtons extends StatelessWidget {
             text: AppStrings.createAccount,
             onPressed: () {
               onBoardingVisited();
-              customReplacementNavigate(context, "/signUp");
+              customReplacementNavigate(context, RouterNames.SignUpView);
             },
           ),
           const SizedBox(
@@ -30,7 +31,7 @@ class GetButtons extends StatelessWidget {
           GestureDetector(
             onTap: () {
               onBoardingVisited();
-              customReplacementNavigate(context, "/signIn");
+              customReplacementNavigate(context, RouterNames.SignInView);
             },
             child: Text(
               "Login Now",

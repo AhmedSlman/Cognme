@@ -6,17 +6,17 @@ final class AuthInitial extends AuthState {}
 
 final class RegisterLoadingState extends AuthState {}
 
-final class RegisterSuccessState extends AuthState {}
+final class RegisterSuccessState extends AuthState {
+  final String message;
+
+  RegisterSuccessState({required this.message});
+}
 
 final class RegisterFailureState extends AuthState {
   final String errMessage;
 
   RegisterFailureState({required this.errMessage});
 }
-
-final class TermsAndConditionUpdateState extends AuthState {}
-
-final class ObscurePasswordTextUpdateState extends AuthState {}
 
 final class SignInLoadingState extends AuthState {}
 
@@ -37,3 +37,7 @@ final class ResetPasswordFailureState extends AuthState {
 
   ResetPasswordFailureState({required this.errMessage});
 }
+
+final class TermsAndConditionUpdateState extends AuthState {}
+
+final class ObscurePasswordTextUpdateState extends AuthState {}

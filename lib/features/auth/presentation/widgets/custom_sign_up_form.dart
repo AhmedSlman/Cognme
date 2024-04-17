@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
@@ -12,12 +14,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class CustomSignUpForm extends StatelessWidget {
   CustomSignUpForm({super.key});
 
-  TextEditingController registerName = TextEditingController();
-  TextEditingController registerEmail = TextEditingController();
+  TextEditingController registerNameContorller = TextEditingController();
+  TextEditingController registerEmailController = TextEditingController();
 
-  TextEditingController registerPassword = TextEditingController();
+  TextEditingController registerPasswordController = TextEditingController();
 
-  TextEditingController registerConfirmPassword = TextEditingController();
+  TextEditingController registerConfirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -45,27 +48,21 @@ class CustomSignUpForm extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CustomTextField(
-                          controller: registerName,
-                          labelText: AppStrings.fristName,
-                          onChanged: (fristName) {
-                            authCubit.firstName = fristName;
+                          controller: registerNameContorller,
+                          labelText: AppStrings.name,
+                          onChanged: (name) {
+                            authCubit.name = name;
                           },
                         ),
-                        // CustomTextField(
-                        //   labelText: AppStrings.lastName,
-                        //   onChanged: (lastName) {
-                        //     authCubit.lastName = lastName;
-                        //   },
-                        // ),
                         CustomTextField(
-                          controller: registerEmail,
+                          controller: registerEmailController,
                           labelText: AppStrings.emailAddress,
                           onChanged: (emailAddress) {
                             authCubit.emailAddress = emailAddress;
                           },
                         ),
                         CustomTextField(
-                          controller: registerPassword,
+                          controller: registerPasswordController,
                           suffixIcon: IconButton(
                             onPressed: () {
                               authCubit.obscurePasswordText();
@@ -83,7 +80,7 @@ class CustomSignUpForm extends StatelessWidget {
                           },
                         ),
                         CustomTextField(
-                          controller: registerConfirmPassword,
+                          controller: registerConfirmPasswordController,
                           suffixIcon: IconButton(
                             onPressed: () {
                               authCubit.obscurePasswordText();
@@ -94,7 +91,7 @@ class CustomSignUpForm extends StatelessWidget {
                                   : Icons.visibility_outlined,
                             ),
                           ),
-                          labelText: AppStrings.password,
+                          labelText: AppStrings.confirmPassword,
                           obscureText: authCubit.obscurePasswordTextValue,
                           onChanged: (password) {
                             authCubit.password = password;
@@ -118,10 +115,14 @@ class CustomSignUpForm extends StatelessWidget {
                                     if (authCubit.signUpFormKey.currentState!
                                         .validate()) {
                                       await authCubit.registerUser(
-                                          name: '',
-                                          email: '',
-                                          password: '',
-                                          confirmPassword: '');
+                                        name: registerNameContorller.text,
+                                        email: registerEmailController.text,
+                                        password:
+                                            registerPasswordController.text,
+                                        confirmPassword:
+                                            registerConfirmPasswordController
+                                                .text,
+                                      );
                                     }
                                   }
                                 }),

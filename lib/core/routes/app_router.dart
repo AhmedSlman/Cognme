@@ -1,4 +1,5 @@
 // ignore_for_file: constant_identifier_names, duplicate_ignore
+import 'package:cognme/core/data/Api/api_consumer.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/features/Profile/presentation/view/profileScreen.dart';
 import 'package:cognme/features/auth/data/repo/auth_repo.dart';
@@ -65,8 +66,9 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const ProfileScreen(),
     ),
     GoRoute(
-        path: RouterNames.forgotPasswordView,
-        builder: ((context, state) => const ForgotPasswordView()))
+      path: RouterNames.forgotPasswordView,
+      builder: (context, state) => const ForgotPasswordView(),
+    )
   ],
 );
 

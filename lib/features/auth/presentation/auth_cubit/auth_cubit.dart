@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 part 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
-  AuthCubit( this.authRepo) : super(AuthInitial());
-  final AuthRepo authRepo;
-  String? firstName;
+  AuthCubit() : super(AuthInitial());
+  late AuthRepo authRepo;
+  String? name;
   String? lastName;
   String? emailAddress;
   String? password;
@@ -29,9 +29,25 @@ class AuthCubit extends Cubit<AuthState> {
       password: password,
       confirmPassword: confirmPassword,
     );
+    response.fold(
+        (errMessage) => emit(RegisterFailureState(errMessage: errMessage)),
+        (regesterModel) =>
+            emit(RegisterSuccessState(message: regesterModel.message)));
   }
 
-  Future<void> verifyEmail() async {}
+  Future<void> sigInUser({
+    required String email,
+    required String password,
+  }) async {
+    emit(SignInLoadingState());
+    final response = await authRepo.signInUser(
+      email: email,
+      password: password,
+    );
+    response.fold(
+        (errMessage) => emit(SignInFailureState(errMessage: errMessage)),
+        (signInModel) => emit(SignInSuccessState()));
+  }
 
   void updateTermsAndCondtionCheckBox({required newValue}) {
     termsAndCondtionCheckBoxValue = newValue;
@@ -47,9 +63,5 @@ class AuthCubit extends Cubit<AuthState> {
     emit(ObscurePasswordTextUpdateState());
   }
 
-  Future<void> sigInWithEmailAndPassword() async {}
-
   Future<void> resetPasswordWithLink() async {}
-
-  Future<void> addUserProfile() async {}
 }

@@ -33,7 +33,7 @@ class SignUpView extends StatelessWidget {
           SliverToBoxAdapter(
               child:
                   SizedBox(height: MediaQuery.of(context).size.height * 0.001)),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: CustomSignUpForm(),
           ),
           SliverToBoxAdapter(

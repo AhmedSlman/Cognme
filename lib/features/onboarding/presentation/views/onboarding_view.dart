@@ -1,5 +1,6 @@
 import 'package:cognme/core/functions/custom_navigate.dart';
 import 'package:cognme/core/functions/on_boarding.dart';
+import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/features/onboarding/presentation/widgets/get_buttons.dart';
 import 'package:cognme/features/onboarding/presentation/widgets/onboarding_body.dart';
 import 'package:cognme/features/onboarding/presentation/widgets/skip_button.dart';
@@ -28,7 +29,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               SkipButton(
                 onTap: () {
                   onBoardingVisited();
-                  customReplacementNavigate(context, "/signUp");
+                  customReplacementNavigate(context, RouterNames.SignUpView);
                 },
               ),
               OnBoardingBody(

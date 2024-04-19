@@ -1,5 +1,5 @@
-import 'package:cognme/core/functions/custom_navigate.dart';
-import 'package:cognme/core/functions/on_boarding.dart';
+import 'package:cognme/core/common/functions/custom_navigate.dart';
+import 'package:cognme/core/common/functions/on_boarding.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/features/onboarding/presentation/widgets/get_buttons.dart';
 import 'package:cognme/features/onboarding/presentation/widgets/onboarding_body.dart';

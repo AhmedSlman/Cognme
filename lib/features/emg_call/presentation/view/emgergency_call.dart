@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
-import 'package:cognme/core/widgets/custom_app_bar.dart';
+import 'package:cognme/core/common/widgets/custom_app_bar.dart';
 import 'package:cognme/features/emg_call/presentation/widgets/listTileEmergency.dart';
 import 'package:flutter/material.dart';
 

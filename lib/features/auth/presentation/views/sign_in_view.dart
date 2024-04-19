@@ -1,4 +1,4 @@
-import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/features/auth/presentation/widgets/custom_sign_in_form.dart';

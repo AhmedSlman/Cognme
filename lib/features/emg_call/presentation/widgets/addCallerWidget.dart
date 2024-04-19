@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
-import 'package:cognme/core/widgets/customTxtForm.dart';
+import 'package:cognme/core/common/widgets/customTxtForm.dart';
 
 class AddCallerWidget extends StatelessWidget {
   AddCallerWidget({

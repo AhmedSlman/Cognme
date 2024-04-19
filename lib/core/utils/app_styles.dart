@@ -14,7 +14,7 @@ abstract class AppStyles {
     color: AppColors.greyOfText,
     fontFamily: "Raleway",
   );
-  
+
   static const formText16 = TextStyle(
     fontSize: 16,
     color: Colors.black,

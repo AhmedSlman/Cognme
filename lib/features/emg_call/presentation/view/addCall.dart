@@ -1,10 +1,10 @@
 // ignore_for_file: file_names
-import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
-import 'package:cognme/core/widgets/btn.dart';
-import 'package:cognme/core/widgets/custom_app_bar.dart';
+import 'package:cognme/core/common/widgets/btn.dart';
+import 'package:cognme/core/common/widgets/custom_app_bar.dart';
 import 'package:cognme/features/emg_call/presentation/widgets/addCallerWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +37,7 @@ class AddCaller extends StatelessWidget {
           SizedBox(
             height: context.height * 0.02,
           ),
-          CustomButtonDoctor(
+          CustomSmallButtom(
             lable: "Add",
             width: context.width * 0.5,
             height: context.height * 0.05,

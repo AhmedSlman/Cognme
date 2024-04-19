@@ -1,5 +1,5 @@
 import 'package:cognme/core/utils/app_strings.dart';
-import 'package:cognme/core/widgets/custom_button.dart';
+import 'package:cognme/core/common/widgets/custom_button.dart';
 import 'package:cognme/features/auth/presentation/auth_cubit/auth_cubit.dart';
 import 'package:cognme/features/auth/presentation/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';

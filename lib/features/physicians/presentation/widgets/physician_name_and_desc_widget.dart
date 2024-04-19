@@ -1,7 +1,7 @@
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
-import 'package:cognme/core/widgets/btn.dart';
+import 'package:cognme/core/common/widgets/btn.dart';
 import 'package:cognme/features/physicians/presentation/widgets/custom_rating-bar.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +48,7 @@ class DoctorNameAndDescWidget extends StatelessWidget {
             const SizedBox(
               width: 40,
             ),
-            CustomButtonDoctor(
+            CustomSmallButtom(
               lable: 'preview',
               backgroundColor: AppColors.mainColor,
             )

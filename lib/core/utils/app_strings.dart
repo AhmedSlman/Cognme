@@ -50,5 +50,6 @@ abstract class AppStrings {
       doctorDisc = 'Ear, Nose and Throat Surgery ',
       doctorLocation = ' In front of the Faculty of Islamic  ',
       phone = 'Phone',
+      appointments = "Appointments",
       nameContact = 'Name';
 }

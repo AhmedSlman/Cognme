@@ -1,8 +1,7 @@
 // ignore_for_file: constant_identifier_names, duplicate_ignore
-import 'package:cognme/core/data/Api/api_consumer.dart';
+import 'package:cognme/core/common/logic/dateAndTimeCubit/data_time_cubit.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/features/Profile/presentation/view/profileScreen.dart';
-import 'package:cognme/features/auth/data/repo/auth_repo.dart';
 import 'package:cognme/features/auth/presentation/auth_cubit/auth_cubit.dart';
 import 'package:cognme/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:cognme/features/auth/presentation/views/sign_in_view.dart';
@@ -13,9 +12,12 @@ import 'package:cognme/features/emg_call/presentation/view/emergency_call.dart';
 import 'package:cognme/features/home/presentation/view/home_view.dart';
 import 'package:cognme/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_page.dart';
+import 'package:cognme/features/reminder/presentation/cubit/reminder_cubit.dart';
 import 'package:cognme/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../features/reminder/presentation/views/appointment_view.dart';
 
 final GoRouter router = GoRouter(
   routes: [
@@ -68,7 +70,21 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.forgotPasswordView,
       builder: (context, state) => const ForgotPasswordView(),
-    )
+    ),
+    GoRoute(
+      path: RouterNames.appointmentView,
+      builder: (context, state) => MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => DateTimeCubit(),
+          ),
+          BlocProvider(
+            create: (context) => ReminderCubit(),
+          ),
+        ],
+        child: const AppointmentView(),
+      ),
+    ),
   ],
 );
 

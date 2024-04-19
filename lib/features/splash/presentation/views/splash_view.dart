@@ -1,5 +1,5 @@
 import 'package:cognme/core/data/cache/cache.dart';
-import 'package:cognme/core/functions/custom_navigate.dart';
+import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/services/service_locator.dart';
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/media_query.dart';

@@ -1,8 +1,10 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-   CustomTextField({
+  CustomTextField({
     super.key,
     required this.labelText,
     this.onChanged,
@@ -11,7 +13,7 @@ class CustomTextField extends StatelessWidget {
     this.obscureText,
     this.controller,
   });
-  TextEditingController? controller=TextEditingController();
+  TextEditingController? controller = TextEditingController();
   final String labelText;
   final Widget? suffixIcon;
   final bool? obscureText;
@@ -21,7 +23,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       child: TextFormField(
         controller: controller,
         validator: (value) {

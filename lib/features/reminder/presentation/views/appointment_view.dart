@@ -1,16 +1,9 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:cognme/features/reminder/presentation/cubit/reminder_cubit.dart';
-import 'package:cognme/features/reminder/presentation/cubit/reminder_state.dart';
-import 'package:cognme/features/reminder/presentation/widgets/add_data_widget.dart';
-import 'package:cognme/features/reminder/presentation/widgets/add_task_button.dart';
 import 'package:cognme/features/reminder/presentation/widgets/add_task_form.dart';
-import 'package:cognme/features/reminder/presentation/widgets/add_task_text_form_field.dart';
-import 'package:cognme/features/reminder/presentation/widgets/add_time_widget.dart';
 import 'package:cognme/features/reminder/presentation/widgets/custom_appoint_app_bar.dart';
 import 'package:cognme/features/reminder/presentation/widgets/tasks_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppointmentView extends StatelessWidget {
   const AppointmentView({

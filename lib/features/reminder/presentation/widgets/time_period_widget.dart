@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TimePeriodWidget extends StatelessWidget {
-  const TimePeriodWidget({super.key});
+  TimePeriodWidget({
+    super.key,
+    required this.selectedPeriod,
+  });
+
+  final String selectedPeriod;
+
+  DateTime selectedDateTime = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +39,26 @@ class TimePeriodWidget extends StatelessWidget {
               child: Text(period),
             );
           }).toList(),
-          onChanged: (value) {},
+          onChanged: (value) {
+            value == selectedPeriod;
+            // setState(() {
+            //   selectedDateTime = value == 'AM'
+            //       ? DateTime(
+            //           selectedDateTime.year,
+            //           selectedDateTime.month,
+            //           selectedDateTime.day,
+            //           selectedDateTime.hour % 12,
+            //           selectedDateTime.minute,
+            //         )
+            //       : DateTime(
+            //           selectedDateTime.year,
+            //           selectedDateTime.month,
+            //           selectedDateTime.day,
+            //           selectedDateTime.hour % 12 + 12,
+            //           selectedDateTime.minute,
+            //         );
+            // });
+          },
         ),
       ),
     );

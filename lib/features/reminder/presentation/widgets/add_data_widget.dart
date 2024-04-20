@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:cognme/core/common/logic/dateAndTimeCubit/data_time_cubit.dart';
 import 'package:cognme/core/common/models/data_time_model.dart';
 import 'package:cognme/core/utils/app_styles.dart';

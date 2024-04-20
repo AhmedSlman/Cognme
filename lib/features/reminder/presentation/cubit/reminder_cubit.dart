@@ -14,9 +14,18 @@ class ReminderCubit extends Cubit<ReminderState> {
     _loadReminders();
   }
 
-  void addTask(String task, DateTime dateTime) {
+  void updateTask(int index, String task, DateTime dateTime, Period period) {
     final List<ReminderModel> updateReminders = List.from(state.reminders)
-      ..add(ReminderModel(task: task, dateTime: dateTime));
+      ..removeAt(index)
+      ..insert(
+          index, ReminderModel(task: task, dateTime: dateTime, period: period));
+    emit(ReminderState(updateReminders));
+    saveReminders(updateReminders);
+  }
+
+  void addTask(String task, DateTime dateTime, Period period) {
+    final List<ReminderModel> updateReminders = List.from(state.reminders)
+      ..add(ReminderModel(task: task, dateTime: dateTime, period: period));
     emit(ReminderState(updateReminders));
     saveReminders(updateReminders);
   }

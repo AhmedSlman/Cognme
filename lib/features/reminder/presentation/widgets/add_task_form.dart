@@ -1,3 +1,6 @@
+// ignore_for_file: must_be_immutable
+
+import 'package:cognme/features/reminder/data/models/reminder_model.dart';
 import 'package:cognme/features/reminder/presentation/cubit/reminder_cubit.dart';
 import 'package:cognme/features/reminder/presentation/widgets/add_data_widget.dart';
 import 'package:cognme/features/reminder/presentation/widgets/add_task_button.dart';
@@ -15,6 +18,7 @@ class AddTaskForm extends StatelessWidget {
   TextEditingController? yearController = TextEditingController();
   TextEditingController? hoursController = TextEditingController();
   TextEditingController? minuteController = TextEditingController();
+  String selectedPeriod = "AM";
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +41,7 @@ class AddTaskForm extends StatelessWidget {
             AddTimeWidget(
               hourController: hoursController,
               minuteController: minuteController,
+              selectedPeriod: selectedPeriod,
             ),
             const SizedBox(height: 40),
             AddTaskButton(
@@ -47,22 +52,24 @@ class AddTaskForm extends StatelessWidget {
                 String year = yearController!.text;
                 String hour = hoursController!.text;
                 String minute = minuteController!.text;
+                String period = selectedPeriod;
                 if (task.isNotEmpty &&
                     day.isNotEmpty &&
                     month.isNotEmpty &&
                     year.isNotEmpty &&
                     hour.isNotEmpty &&
-                    minute.isNotEmpty) {
+                    minute.isNotEmpty &&
+                    period.isNotEmpty) {
                   BlocProvider.of<ReminderCubit>(context).addTask(
-                    task,
-                    DateTime(
-                      int.parse(year),
-                      int.parse(month),
-                      int.parse(day),
-                      int.parse(hour),
-                      int.parse(minute),
-                    ),
-                  );
+                      task,
+                      DateTime(
+                        int.parse(year),
+                        int.parse(month),
+                        int.parse(day),
+                        int.parse(hour),
+                        int.parse(minute),
+                      ),
+                      (period == selectedPeriod) as Period);
                   addTaskController!.clear();
                   dayController!.clear();
                   monthController!.clear();

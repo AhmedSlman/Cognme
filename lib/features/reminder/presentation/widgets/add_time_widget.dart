@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:cognme/core/common/logic/dateAndTimeCubit/data_time_cubit.dart';
 import 'package:cognme/core/common/models/data_time_model.dart';
 import 'package:cognme/core/utils/app_styles.dart';
@@ -11,9 +13,11 @@ class AddTimeWidget extends StatelessWidget {
     super.key,
     this.hourController,
     this.minuteController,
+    required this.selectedPeriod,
   });
   TextEditingController? hourController;
   TextEditingController? minuteController;
+  final String selectedPeriod;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +52,9 @@ class AddTimeWidget extends StatelessWidget {
               },
             ),
             const SizedBox(width: 20),
-            const TimePeriodWidget()
+            TimePeriodWidget(
+              selectedPeriod: '',
+            )
           ],
         );
       },

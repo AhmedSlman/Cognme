@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';

@@ -10,6 +10,8 @@ import 'package:cognme/features/dashboard/presentation/views/dashbord_page.dart'
 import 'package:cognme/features/emg_call/presentation/view/addCall.dart';
 import 'package:cognme/features/emg_call/presentation/view/emergency_call.dart';
 import 'package:cognme/features/home/presentation/view/home_view.dart';
+import 'package:cognme/features/location/presentation/views/location_view.dart';
+import 'package:cognme/features/navigation_bar.dart';
 import 'package:cognme/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_page.dart';
 import 'package:cognme/features/reminder/presentation/cubit/reminder_cubit.dart';
@@ -44,6 +46,10 @@ final GoRouter router = GoRouter(
       ),
     ),
     GoRoute(
+      path: RouterNames.navigatiomBarButton,
+      builder: (context, state) => const NavigationBarButton(),
+    ),
+    GoRoute(
       path: RouterNames.HomeView,
       builder: (context, state) => const HomeView(),
     ),
@@ -56,7 +62,7 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const DashboardView(),
     ),
     GoRoute(
-      path: RouterNames.PhysicalView,
+      path: RouterNames.physicalView,
       builder: (context, state) => const PhysicianView(),
     ),
     GoRoute(
@@ -84,6 +90,10 @@ final GoRouter router = GoRouter(
         ],
         child: const AppointmentView(),
       ),
+    ),
+    GoRoute(
+      path: RouterNames.locationView,
+      builder: (context, state) => const LocationView(),
     ),
   ],
 );

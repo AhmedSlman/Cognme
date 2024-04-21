@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:cognme/features/auth/data/repo/auth_repo.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 part 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
@@ -16,6 +17,21 @@ class AuthCubit extends Cubit<AuthState> {
   GlobalKey<FormState> forgotPasswordFormKey = GlobalKey();
   bool termsAndCondtionCheckBoxValue = false;
   bool? obscurePasswordTextValue = true;
+  late SharedPreferences pref;
+
+  bool? _isUserLoggedIn;
+  bool get isUserLoggedIn {
+    if (_isUserLoggedIn != null) {
+      _isUserLoggedIn = pref.getBool("isUserLoggedIn") ?? false;
+    }
+    return _isUserLoggedIn!;
+  }
+
+  void setUserLoggedIn(bool isLoggedIn) async {
+    _isUserLoggedIn = isLoggedIn;
+    await pref.setBool('isUserLoggedIn', isLoggedIn);
+    emit(UserLoggedInState(isLoggedIn: isLoggedIn));
+  }
 
   Future<void> registerUser(
       {required String name,

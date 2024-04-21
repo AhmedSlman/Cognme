@@ -69,7 +69,7 @@ class AddTaskForm extends StatelessWidget {
                         int.parse(hour),
                         int.parse(minute),
                       ),
-                      (period == selectedPeriod) as Period);
+                      period == selectedPeriod ? Period.AM : Period.PM);
                   addTaskController!.clear();
                   dayController!.clear();
                   monthController!.clear();

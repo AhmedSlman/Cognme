@@ -33,14 +33,14 @@ class HeartRateCategory extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 2),
                   child: Text('Heart Rate',
                       style:
                           AppStyles.s18.copyWith(color: AppColors.blackOfText)),
                 ),
                 Text('Yesterday was 75',
-                    style: AppStyles.regularStyle18
-                        .copyWith(color: AppColors.blackOfText)),
+                    style:
+                        AppStyles.s16.copyWith(color: AppColors.blackOfText)),
               ],
             ),
             const Spacer(),

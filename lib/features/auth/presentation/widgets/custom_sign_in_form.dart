@@ -52,7 +52,7 @@ class CustomSignInForm extends StatelessWidget {
                   },
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 15),
+                  padding: const EdgeInsets.only(top: 15),
                   child: ForgetPassWordTextWidget(
                     onPressed:
                         customNavigate(context, RouterNames.forgotPasswordView),
@@ -72,7 +72,7 @@ class CustomSignInForm extends StatelessWidget {
                             );
                             customReplacementNavigate(
                               context,
-                              RouterNames.HomeView,
+                              RouterNames.navigatiomBarButton,
                             );
                           }
                         },

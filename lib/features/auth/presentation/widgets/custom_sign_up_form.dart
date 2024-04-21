@@ -1,5 +1,7 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, use_build_context_synchronously
 
+import 'package:cognme/core/common/functions/custom_navigate.dart';
+import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
@@ -114,15 +116,17 @@ class CustomSignUpForm extends StatelessWidget {
                                       true) {
                                     if (authCubit.signUpFormKey.currentState!
                                         .validate()) {
-                                      await authCubit.registerUser(
-                                        name: registerNameContorller.text,
-                                        email: registerEmailController.text,
-                                        password:
-                                            registerPasswordController.text,
-                                        confirmPassword:
-                                            registerConfirmPasswordController
-                                                .text,
-                                      );
+                                      // await authCubit.registerUser(
+                                      //   name: registerNameContorller.text,
+                                      //   email: registerEmailController.text,
+                                      //   password:
+                                      //       registerPasswordController.text,
+                                      //   confirmPassword:
+                                      //       registerConfirmPasswordController
+                                      //           .text,
+                                      // );
+                                      customReplacementNavigate(context,
+                                          RouterNames.navigatiomBarButton);
                                     }
                                   }
                                 }),

@@ -7,4 +7,6 @@ abstract class AppColors {
   static Color whiteOfColor = const Color(0xffFBFBFB);
   static Color greyOfText = const Color(0xff797979);
   static Color ratingColor = const Color(0xffFFB800);
+
+  static Color greyColor = const Color.fromARGB(255, 192, 190, 190);
 }

@@ -1,4 +1,6 @@
 // ignore_for_file: unused_import
+import 'package:cognme/core/common/functions/custom_navigate.dart';
+import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
@@ -19,7 +21,10 @@ class PhysicianView extends StatelessWidget {
             style: AppStyles.regularStyle18,
           ),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              customReplacementNavigate(
+                  context, RouterNames.navigatiomBarButton);
+            },
             icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.black,

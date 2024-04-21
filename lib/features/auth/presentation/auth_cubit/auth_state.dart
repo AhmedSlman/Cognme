@@ -28,6 +28,12 @@ final class SignInFailureState extends AuthState {
   SignInFailureState({required this.errMessage});
 }
 
+final class UserLoggedInState extends AuthState {
+  final bool isLoggedIn;
+
+  UserLoggedInState({required this.isLoggedIn});
+}
+
 final class ResetPasswordLoadingState extends AuthState {}
 
 final class ResetPasswordSuccessState extends AuthState {}

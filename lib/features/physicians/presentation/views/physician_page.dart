@@ -32,7 +32,9 @@ class PhysicianView extends StatelessWidget {
           ),
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                customNavigate(context, RouterNames.PhysicianForm);
+              },
               icon: Icon(
                 FontAwesomeIcons.penToSquare,
                 color: AppColors.blackOfText,

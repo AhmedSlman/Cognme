@@ -1,3 +1,5 @@
+import 'package:cognme/core/common/functions/custom_navigate.dart';
+import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
@@ -49,6 +51,9 @@ class DoctorNameAndDescWidget extends StatelessWidget {
               width: 40,
             ),
             CustomSmallButtom(
+              onTap: (){
+                customNavigate(context, RouterNames.physiciansData);
+              },
               lable: 'preview',
               backgroundColor: AppColors.mainColor,
             )

@@ -13,34 +13,36 @@ class PhysicianView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        toolbarHeight: 80,
-        title: const Text(
-          AppStrings.physicians,
-          style: AppStyles.regularStyle18,
-        ),
-        leading: IconButton(
-          onPressed: () {
-            customReplacementNavigate(context, RouterNames.navigatiomBarButton);
-          },
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
+        appBar: AppBar(
+          elevation: 0,
+          toolbarHeight: 80,
+          title: const Text(
+            AppStrings.physicians,
+            style: AppStyles.regularStyle18,
           ),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              FontAwesomeIcons.penToSquare,
-              color: AppColors.blackOfText,
-              size: 25,
+          leading: IconButton(
+            onPressed: () {
+              customReplacementNavigate(
+                  context, RouterNames.navigatiomBarButton);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
             ),
-          )
-        ],
-      ),
-      body: const DoctorCardsListView(),
-    );
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {
+                customNavigate(context, RouterNames.PhysicianForm);
+              },
+              icon: Icon(
+                FontAwesomeIcons.penToSquare,
+                color: AppColors.blackOfText,
+                size: 25,
+              ),
+            )
+          ],
+        ),
+        body: const DoctorCardsListView());
   }
 }

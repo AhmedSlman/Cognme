@@ -2,18 +2,20 @@
 
 class RouterNames {
 // ignore: constant_identifier_names
-  static const SplashView = "/0";
+  static const SplashView = "/splash";
   static const OnBoardingView = "/onBoarding";
   static const SignUpView = "/signUpView";
   static const SignInView = "/signIn";
   static const HomeView = "/1";
   static const EmergencyCallPage = "/";
   static const DashBoardView = "/dashBoardView";
-  static const physicalView = "/physicalView";
+  static const physicalView = "/";
   static const AddCaller = "/addCaller";
   static const ProfileScreen = "/profileScreen";
   static const forgotPasswordView = "/ForgotPasswordView";
   static const appointmentView = "/appointmentView";
   static const locationView = "/locationView";
-  static const navigatiomBarButton = "/11";
+  static const navigatiomBarButton = "/navigationBarButton";
+  static const physiciansData = "/physiciansData";
+  static const PhysicianForm = "/physicianForm";
 }

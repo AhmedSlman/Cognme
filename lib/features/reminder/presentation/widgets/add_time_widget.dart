@@ -53,7 +53,7 @@ class AddTimeWidget extends StatelessWidget {
             ),
             const SizedBox(width: 20),
             TimePeriodWidget(
-              selectedPeriod: '',
+              selectedPeriod: selectedPeriod,
             )
           ],
         );

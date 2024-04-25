@@ -4,7 +4,7 @@ import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/core/common/widgets/custom_app_bar.dart';
-import 'package:cognme/features/emg_call/presentation/widgets/listTileEmergency.dart';
+import 'package:cognme/features/emg_call/presentation/widgets/contacts_list_view.dart';
 import 'package:flutter/material.dart';
 
 class EmergencyCallPage extends StatelessWidget {
@@ -17,6 +17,7 @@ class EmergencyCallPage extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: context.width * 0.02),
         child: Column(
           children: [
+            SizedBox(height: 20),
             CustomAppBar(
               label: "Emergency Contact",
               appBarTrailing: IconButton(
@@ -30,33 +31,7 @@ class EmergencyCallPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-              height: context.height * 0.04,
-            ),
-            listTileEmergencyCall(),
-            SizedBox(
-              height: context.height * 0.03,
-            ),
-            listTileEmergencyCall(),
-            SizedBox(
-              height: context.height * 0.03,
-            ),
-            listTileEmergencyCall(),
-            SizedBox(
-              height: context.height * 0.03,
-            ),
-            listTileEmergencyCall(),
-            SizedBox(
-              height: context.height * 0.03,
-            ),
-            listTileEmergencyCall(),
-            SizedBox(
-              height: context.height * 0.03,
-            ),
-            listTileEmergencyCall(),
-            SizedBox(
-              height: context.height * 0.03,
-            ),
+            Expanded(child: ContactsListView()),
           ],
         ),
       ),

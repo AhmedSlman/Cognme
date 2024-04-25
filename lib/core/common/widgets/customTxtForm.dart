@@ -12,28 +12,29 @@ Widget CustomTxtFormField({
   Function? suffixPressed,
 }) =>
     TextFormField(
-        obscureText: isPassword,
-        keyboardType: type,
-        validator: (String? s) {
-          return validate(s);
-        },
-        controller: controller,
-        style: const TextStyle(color: Colors.black),
-        cursorColor: Colors.black,
-        decoration: InputDecoration(
-          suffixIcon: IconButton(
-              onPressed: () {
-                suffixPressed!();
-              },
-              icon: Icon(suffix)),
-          suffixIconColor: Colors.black,
-          errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-              borderSide: const BorderSide(color: Colors.red)),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: AppColors.blackOfText)),
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: AppColors.blackOfText)),
-        ));
+      obscureText: isPassword,
+      keyboardType: type,
+      validator: (String? s) {
+        return validate(s);
+      },
+      controller: controller,
+      style: const TextStyle(color: Colors.black),
+      cursorColor: Colors.black,
+      decoration: InputDecoration(
+        suffixIcon: IconButton(
+            onPressed: () {
+              suffixPressed!();
+            },
+            icon: Icon(suffix)),
+        suffixIconColor: Colors.black,
+        errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: const BorderSide(color: Colors.red)),
+        focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(color: AppColors.blackOfText)),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(color: AppColors.blackOfText)),
+      ),
+    );

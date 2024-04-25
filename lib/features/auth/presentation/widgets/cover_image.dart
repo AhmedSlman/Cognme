@@ -2,7 +2,7 @@ import 'package:cognme/core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
 
 class CognmeImageWidget extends StatelessWidget {
-  const CognmeImageWidget({Key? key}) : super(key: key);
+  const CognmeImageWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

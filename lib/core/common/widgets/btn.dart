@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class CustomSmallButtom extends StatelessWidget {
   const CustomSmallButtom({
-    Key? key,
+    super.key,
     required this.lable,
     this.height,
     this.width,
@@ -12,7 +12,7 @@ class CustomSmallButtom extends StatelessWidget {
     this.isOutlined,
     this.backgroundColor,
     this.textColor,
-  }) : super(key: key);
+  });
   final String lable;
   final double? height;
   final double? width;
@@ -37,7 +37,10 @@ class CustomSmallButtom extends StatelessWidget {
                 )
               : BorderSide.none,
         ),
-        child: Text(lable, style: AppStyles.s16),
+        child: Text(lable,
+            style: AppStyles.s16.copyWith(
+              color: AppColors.whiteOfColor,
+            )),
       ),
     );
   }

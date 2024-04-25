@@ -19,6 +19,8 @@ import 'package:cognme/features/physicians/presentation/views/physician_form.dar
 import 'package:cognme/features/physicians/presentation/views/physician_info.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_page.dart';
 import 'package:cognme/features/reminder/presentation/cubit/reminder_cubit.dart';
+import 'package:cognme/features/sensors/presentation/view/sensors.dart';
+import 'package:cognme/features/smart_watch/presentation/view/smart_watch.dart';
 import 'package:cognme/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -118,6 +120,14 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.PhysicianForm,
       builder: (context, state) => const PhysicianForm(),
+    ),
+    GoRoute(
+      path: RouterNames.sensorScreen,
+      builder: (context, state) => const SensorScreen(),
+    ),
+    GoRoute(
+      path: RouterNames.smartWatchScreen,
+      builder: (context, state) => const SmartWatchScreen(),
     ),
   ],
 );

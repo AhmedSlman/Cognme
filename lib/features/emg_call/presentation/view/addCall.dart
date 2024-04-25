@@ -1,5 +1,4 @@
 // ignore_for_file: file_names
-
 import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/common/logic/getIamgeCubit/get_image_cubit.dart';
 import 'package:cognme/core/common/widgets/btn.dart';

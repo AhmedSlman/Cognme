@@ -18,4 +18,6 @@ class RouterNames {
   static const navigatiomBarButton = "/navigationBarButton";
   static const physiciansData = "/physiciansData";
   static const PhysicianForm = "/physicianForm";
+  static const sensorScreen = "/sensorScreen";
+  static const smartWatchScreen = "/smartWatchScreen";
 }

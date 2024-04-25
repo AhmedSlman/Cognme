@@ -8,14 +8,25 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PhysicianInfo extends StatelessWidget {
-  const PhysicianInfo({super.key});
-  static String id = 'PhysicianInfoPage';
+  const PhysicianInfo(
+      {super.key,
+      this.name,
+      this.phone,
+      this.address,
+      this.description,
+      this.email,
+      this.lastVisited});
+  final String? name;
+  final String? phone;
+  final String? address;
+  final String? description;
+  final String? email;
+  final String? lastVisited;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-       
         backgroundColor: Colors.white,
         elevation: 0,
         toolbarHeight: 100,
@@ -63,17 +74,6 @@ class PhysicianInfo extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15, top: 15),
-                    child: ClipOval(
-                      child: Image.asset(
-                        AppAssets.Victor1,
-                        height: 70,
-                        width: 70,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
                   const SizedBox(
                     width: 20,
                   ),
@@ -81,12 +81,20 @@ class PhysicianInfo extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        'Dr. Ahmed Lotfy',
+                      ClipOval(
+                        child: Image.asset(
+                          AppAssets.Victor1,
+                          height: 70,
+                          width: 70,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      Text(
+                        "Dr: $name ",
                         style: AppStyles.s16,
                       ),
                       Text(
-                        'Ear, Nose and Throat Surgery Specialist',
+                        'Spec: $description',
                         style: AppStyles.formText16.copyWith(
                           color: AppColors.greyColor,
                         ),
@@ -94,42 +102,45 @@ class PhysicianInfo extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      const Row(
+                      Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.location_pin,
                             color: Colors.black,
                           ),
+                          const SizedBox(width: 10),
                           Text(
-                            ' In front of the Faculty of Islamic Studies ... ',
+                            ' $address ',
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             softWrap: false,
                           ),
                         ],
                       ),
-                      const Row(
+                      Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.phone,
                             color: Colors.black,
                           ),
+                          const SizedBox(width: 10),
                           Text(
-                            ' 01033816092 ',
+                            phone!,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             softWrap: false,
                           ),
                         ],
                       ),
-                      const Row(
+                      Row(
                         children: [
-                          Icon(
+                          const Icon(
                             FontAwesomeIcons.calendarCheck,
                             color: Colors.black,
                           ),
+                          const SizedBox(width: 10),
                           Text(
-                            ' Last visit: Last Monday  ',
+                            ' $lastVisited ',
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             softWrap: false,
@@ -142,6 +153,7 @@ class PhysicianInfo extends StatelessWidget {
                             Icons.file_copy_rounded,
                             color: Colors.black,
                           ),
+                          SizedBox(width: 10),
                           Text(
                             ' Display The prescription ',
                             maxLines: 1,
@@ -156,6 +168,7 @@ class PhysicianInfo extends StatelessWidget {
                             Icons.door_sliding,
                             color: Colors.black,
                           ),
+                          SizedBox(width: 10),
                           Text(
                             ' next visit: After 1 month ',
                             maxLines: 1,
@@ -170,6 +183,7 @@ class PhysicianInfo extends StatelessWidget {
                             Icons.note,
                             color: Colors.black,
                           ),
+                          SizedBox(width: 10),
                           Text(
                             ' Regularly take your medications until  ',
                             maxLines: 1,

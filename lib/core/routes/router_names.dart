@@ -7,7 +7,7 @@ class RouterNames {
   static const SignUpView = "/signUpView";
   static const SignInView = "/signIn";
   static const HomeView = "/1";
-  static const EmergencyCallPage = "/";
+  static const EmergencyCallPage = "/45";
   static const DashBoardView = "/dashBoardView";
   static const physicalView = "/";
   static const AddCaller = "/addCaller";

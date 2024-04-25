@@ -4,7 +4,6 @@ import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/emg_call/presentation/cubit/eemergacy_calls_cubit.dart';
 import 'package:cognme/features/emg_call/presentation/cubit/eemergacy_calls_state.dart';
-import 'package:cognme/features/emg_call/presentation/widgets/listTileEmergency.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

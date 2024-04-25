@@ -3,9 +3,16 @@ import 'package:flutter/material.dart';
 import 'physician_name_and_desc_widget.dart';
 
 class DoctorCardIfoWidget extends StatelessWidget {
-  const DoctorCardIfoWidget({
-    super.key,
-  });
+  DoctorCardIfoWidget(
+      {super.key,
+      required this.name,
+      required this.description,
+      required this.address,
+      required this.onTap});
+  final String name;
+  final String description;
+  final String address;
+  void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +33,12 @@ class DoctorCardIfoWidget extends StatelessWidget {
         const SizedBox(
           width: 10,
         ),
-        const DoctorNameAndDescWidget()
+        DoctorNameAndDescWidget(
+          name: name,
+          description: description,
+          address: address,
+          onTap: onTap,
+        )
       ],
     );
   }

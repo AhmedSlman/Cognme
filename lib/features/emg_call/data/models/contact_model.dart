@@ -13,7 +13,7 @@ class ContactsModel {
     return {
       'name': name,
       'number': number,
-      'imagePath': image,
+      'image': image,
     };
   }
 
@@ -21,7 +21,7 @@ class ContactsModel {
     return ContactsModel(
       name: json['name'],
       number: json['number'],
-      image: json['imagePath'], // No need for XFile conversion
+      image: json['image'], // No need for XFile conversion
     );
   }
 }

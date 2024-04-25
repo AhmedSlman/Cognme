@@ -4,62 +4,77 @@ import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/common/widgets/btn.dart';
+import 'package:cognme/features/physicians/presentation/cubit/physicians_cubit.dart';
+import 'package:cognme/features/physicians/presentation/views/physician_info.dart';
 import 'package:cognme/features/physicians/presentation/widgets/custom_rating-bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DoctorNameAndDescWidget extends StatelessWidget {
-  const DoctorNameAndDescWidget({
+  DoctorNameAndDescWidget({
     super.key,
+    required this.name,
+    required this.description,
+    required this.address,
+    required this.onTap,
   });
 
+  final String name;
+  final String description;
+  final String address;
+  void Function()? onTap;
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          AppStrings.doctorName,
-          style: AppStyles.s16,
-        ),
-        Text(
-          AppStrings.doctorDisc,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          style: AppStyles.regularStyle18.copyWith(
-            color: AppColors.greyOfText,
-          ),
-        ),
-        Row(
+  Widget build(
+    BuildContext context,
+  ) {
+    return BlocBuilder<PhysiciansCubit, PhysiciansState>(
+      builder: (context, state) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              Icons.location_pin,
-              color: AppColors.mainColor,
+            Text(
+              "Dr: $name",
+              style: AppStyles.s16,
             ),
-            const Text(
-              AppStrings.doctorLocation,
+            Text(
+              "Spec: $description",
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
+              style: AppStyles.regularStyle18.copyWith(
+                color: AppColors.greyOfText,
+              ),
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.location_pin,
+                  color: AppColors.mainColor,
+                ),
+                Text(
+                  address,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const CustomRatingBar(),
+                const SizedBox(
+                  width: 40,
+                ),
+                CustomSmallButtom(
+                  onTap: onTap,
+                  lable: 'preview',
+                  backgroundColor: AppColors.mainColor,
+                )
+              ],
             ),
           ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const CustomRatingBar(),
-            const SizedBox(
-              width: 40,
-            ),
-            CustomSmallButtom(
-              onTap: (){
-                customNavigate(context, RouterNames.physiciansData);
-              },
-              lable: 'preview',
-              backgroundColor: AppColors.mainColor,
-            )
-          ],
-        ),
-      ],
+        );
+      },
     );
   }
 }

@@ -4,7 +4,17 @@ import 'package:flutter/material.dart';
 import 'physician_card_info_widget.dart';
 
 class DoctorCategory extends StatelessWidget {
-  const DoctorCategory({super.key});
+  DoctorCategory({
+    super.key,
+    required this.name,
+    required this.description,
+    required this.address,
+    required this.onTap,
+  });
+  final String name;
+  final String description;
+  final String address;
+  void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +36,12 @@ class DoctorCategory extends StatelessWidget {
             ),
           ],
         ),
-        child: const DoctorCardIfoWidget(),
+        child: DoctorCardIfoWidget(
+          name: name,
+          description: description,
+          address: address,
+          onTap: onTap,
+        ),
       ),
     );
   }

@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, must_be_immutable
 
 import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/common/logic/getIamgeCubit/get_image_cubit.dart';

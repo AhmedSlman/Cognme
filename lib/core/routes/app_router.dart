@@ -15,6 +15,7 @@ import 'package:cognme/features/home/presentation/view/home_view.dart';
 import 'package:cognme/features/location/presentation/views/location_view.dart';
 import 'package:cognme/features/navigation_bar.dart';
 import 'package:cognme/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:cognme/features/physicians/presentation/cubit/physicians_cubit.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_form.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_info.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_page.dart';
@@ -68,10 +69,6 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const DashboardView(),
     ),
     GoRoute(
-      path: RouterNames.physicalView,
-      builder: (context, state) => const PhysicianView(),
-    ),
-    GoRoute(
       path: RouterNames.AddCaller,
       builder: (context, state) => MultiBlocProvider(
         providers: [
@@ -111,13 +108,30 @@ final GoRouter router = GoRouter(
       path: RouterNames.locationView,
       builder: (context, state) => const LocationView(),
     ),
-     GoRoute(
+
+    //? Physican Feature Routes
+    GoRoute(
+      path: RouterNames.physicalView,
+      builder: (context, state) => BlocProvider(
+        create: (context) => PhysiciansCubit(),
+        child: const PhysicianView(),
+      ),
+    ),
+    GoRoute(
       path: RouterNames.physiciansData,
-      builder: (context, state) => const PhysicianInfo(),
+      builder: (context, state) => BlocProvider(
+        create: (context) => PhysiciansCubit(),
+        child: PhysicianInfo(
+          name: '',
+        ),
+      ),
     ),
     GoRoute(
       path: RouterNames.PhysicianForm,
-      builder: (context, state) => const PhysicianForm(),
+      builder: (context, state) => BlocProvider(
+        create: (context) => PhysiciansCubit(),
+        child: PhysicianForm(),
+      ),
     ),
   ],
 );

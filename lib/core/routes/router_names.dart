@@ -6,12 +6,12 @@ class RouterNames {
   static const OnBoardingView = "/onBoarding";
   static const SignUpView = "/signUpView";
   static const SignInView = "/signIn";
-  static const HomeView = "/1";
-  static const EmergencyCallPage = "/45";
+  static const HomeView = "/homeView";
+  static const EmergencyCallPage = "/EmergencyCallPage";
   static const DashBoardView = "/dashBoardView";
-  static const physicalView = "/ة";
+  static const physicalView = "/physicalView";
   static const AddCaller = "/addCaller";
-  static const ProfileScreen = "/profileScreen";
+  static const ProfileScreen = "/";
   static const forgotPasswordView = "/ForgotPasswordView";
   static const appointmentView = "/appointmentView";
   static const locationView = "/locationView";
@@ -20,6 +20,6 @@ class RouterNames {
   static const PhysicianForm = "/physicianForm";
   static const sensorScreen = "/sensorScreen";
   static const smartWatchScreen = "/smartWatchScreen";
-  static const patientEntryScreen = "/11111";
-  static const qRCodeScreen = "/";
+  static const patientEntryScreen = "/patientEntryScreen";
+  // static const qRCodeScreen = "/qRCodeScreen";
 }

@@ -87,10 +87,6 @@ final GoRouter router = GoRouter(
       ),
     ),
     GoRoute(
-      path: RouterNames.ProfileScreen,
-      builder: (context, state) => const ProfileScreen(),
-    ),
-    GoRoute(
       path: RouterNames.forgotPasswordView,
       builder: (context, state) => const ForgotPasswordView(),
     ),
@@ -150,9 +146,13 @@ final GoRouter router = GoRouter(
     //     child: PatientEntryScreen(),
     //   ),
     // ),
+    // GoRoute(
+    //   path: RouterNames.qRCodeScreen,
+    //   builder: (context, state) => const QRCodeScreen(),
+    // ),
     GoRoute(
-      path: RouterNames.qRCodeScreen,
-      builder: (context, state) => const QRCodeScreen(),
+      path: RouterNames.ProfileScreen,
+      builder: (context, state) => const ProfileScreen(),
     ),
   ],
 );

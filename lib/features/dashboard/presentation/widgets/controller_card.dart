@@ -20,9 +20,9 @@ class ControllerCard extends StatelessWidget {
         } else if (category.title == 'Appointments') {
           customNavigate(context, RouterNames.appointmentView);
         } else if (category.title == 'Smart Watch') {
-          customNavigate(context, '');
+          customNavigate(context, RouterNames.smartWatchScreen);
         } else if (category.title == 'Sensors') {
-          customNavigate(context, "");
+          customNavigate(context, RouterNames.sensorScreen);
         }
       },
       child: Container(

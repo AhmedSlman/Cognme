@@ -2,9 +2,11 @@
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/features/Profile/presentation/view/profileScreen.dart';
 import 'package:cognme/features/dashboard/presentation/views/dashbord_page.dart';
+import 'package:cognme/features/emg_call/presentation/cubit/eemergacy_calls_cubit.dart';
 import 'package:cognme/features/emg_call/presentation/view/emergency_call.dart';
 import 'package:cognme/features/home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 int pageIndex = 0;
@@ -23,7 +25,10 @@ class _NavigationBarButtonState extends State<NavigationBarButton> {
   final pageOption = [
     HomeView(),
     DashboardView(),
-    EmergencyCallPage(),
+    BlocProvider(
+      create: (context) => EemergacyCallsCubit(),
+      child: EmergencyCallPage(),
+    ),
     ProfileScreen(),
   ];
 

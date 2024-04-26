@@ -19,6 +19,8 @@ import 'package:cognme/features/physicians/presentation/cubit/physicians_cubit.d
 import 'package:cognme/features/physicians/presentation/views/physician_form.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_info.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_page.dart';
+import 'package:cognme/features/qr_code/presentation/cubit/patient_qr_code_cubit.dart';
+import 'package:cognme/features/qr_code/presentation/views/qr_code_screen.dart';
 import 'package:cognme/features/reminder/presentation/cubit/reminder_cubit.dart';
 import 'package:cognme/features/sensors/presentation/view/sensors.dart';
 import 'package:cognme/features/smart_watch/presentation/view/smart_watch.dart';
@@ -123,9 +125,7 @@ final GoRouter router = GoRouter(
       path: RouterNames.physiciansData,
       builder: (context, state) => BlocProvider(
         create: (context) => PhysiciansCubit(),
-        child: PhysicianInfo(
-          name: '',
-        ),
+        child: const PhysicianInfo(),
       ),
     ),
     GoRoute(
@@ -142,6 +142,17 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.smartWatchScreen,
       builder: (context, state) => const SmartWatchScreen(),
+    ),
+    // GoRoute(
+    //   path: RouterNames.patientEntryScreen,
+    //   builder: (context, state) => BlocProvider(
+    //     create: (context) => PatientCubit(),
+    //     child: PatientEntryScreen(),
+    //   ),
+    // ),
+    GoRoute(
+      path: RouterNames.qRCodeScreen,
+      builder: (context, state) => const QRCodeScreen(),
     ),
   ],
 );

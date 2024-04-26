@@ -1,8 +1,6 @@
 import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
-import 'package:cognme/features/emg_call/data/models/contact_model.dart';
-import 'package:cognme/features/emg_call/presentation/cubit/eemergacy_calls_state.dart';
 import 'package:cognme/features/physicians/data/models/physicians_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,14 +22,16 @@ class PhysiciansCubit extends Cubit<PhysiciansState> {
     String lastVisited,
   ) {
     final List<PhysiciansModel> updatedPhysicians = List.from(state.physicians)
-      ..add(PhysiciansModel(
-        name: doctorName,
-        description: doctorSpeciality,
-        address: doctorAddress,
-        phoneNumber: doctorPhone,
-        email: doctorEmail,
-        lastVisitDate: lastVisited,
-      ));
+      ..add(
+        PhysiciansModel(
+          name: doctorName,
+          description: doctorSpeciality,
+          address: doctorAddress,
+          phoneNumber: doctorPhone,
+          email: doctorEmail,
+          lastVisitDate: lastVisited,
+        ),
+      );
     emit(PhysiciansState(updatedPhysicians.cast<PhysiciansModel>()));
     _savePhysicians(updatedPhysicians);
   }

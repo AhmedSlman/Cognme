@@ -9,7 +9,7 @@ class RouterNames {
   static const HomeView = "/1";
   static const EmergencyCallPage = "/45";
   static const DashBoardView = "/dashBoardView";
-  static const physicalView = "/";
+  static const physicalView = "/ة";
   static const AddCaller = "/addCaller";
   static const ProfileScreen = "/profileScreen";
   static const forgotPasswordView = "/ForgotPasswordView";
@@ -20,4 +20,6 @@ class RouterNames {
   static const PhysicianForm = "/physicianForm";
   static const sensorScreen = "/sensorScreen";
   static const smartWatchScreen = "/smartWatchScreen";
+  static const patientEntryScreen = "/11111";
+  static const qRCodeScreen = "/";
 }

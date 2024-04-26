@@ -5,6 +5,7 @@ import 'package:cognme/core/common/widgets/custom_button.dart';
 import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/auth/presentation/widgets/custom_text_form_field.dart';
+// ignore: unused_import
 import 'package:cognme/features/physicians/data/models/physicians_model.dart';
 import 'package:cognme/features/physicians/presentation/cubit/physicians_cubit.dart';
 import 'package:flutter/material.dart';

@@ -11,7 +11,7 @@ class RouterNames {
   static const DashBoardView = "/dashBoardView";
   static const physicalView = "/physicalView";
   static const AddCaller = "/addCaller";
-  static const ProfileScreen = "/";
+  static const ProfileScreen = "/ProfileScreen";
   static const forgotPasswordView = "/ForgotPasswordView";
   static const appointmentView = "/appointmentView";
   static const locationView = "/locationView";
@@ -21,5 +21,6 @@ class RouterNames {
   static const sensorScreen = "/sensorScreen";
   static const smartWatchScreen = "/smartWatchScreen";
   static const patientEntryScreen = "/patientEntryScreen";
+  static const settingsScreen = "/";
   // static const qRCodeScreen = "/qRCodeScreen";
 }

@@ -1,3 +1,5 @@
+import 'package:cognme/core/common/functions/custom_navigate.dart';
+import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/media_query.dart';
@@ -5,6 +7,7 @@ import 'package:cognme/features/settings/presentation/widget/about_us_card.dart'
 import 'package:cognme/features/settings/presentation/widget/list_tile_button.dart';
 import 'package:cognme/features/settings/presentation/widget/list_tile_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ColumnData extends StatelessWidget {
   const ColumnData({
@@ -36,10 +39,15 @@ class ColumnData extends StatelessWidget {
         SizedBox(
           height: context.height * 0.02,
         ),
-        const ListTileWidget(
-          label: 'Security',
-          leadingIcon: Icon(Icons.key),
-          trailingIcon: Icon(Icons.arrow_forward_ios),
+        GestureDetector(
+          onTap: () {
+             customReplacementNavigate(context, RouterNames.securityScreen);
+          },
+          child: const ListTileWidget(
+            label: 'Security',
+            leadingIcon: Icon(Icons.key),
+            trailingIcon: Icon(Icons.arrow_forward_ios),
+          ),
         ),
         SizedBox(
           height: context.height * 0.02,

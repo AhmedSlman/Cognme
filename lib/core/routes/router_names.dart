@@ -22,5 +22,6 @@ class RouterNames {
   static const smartWatchScreen = "/smartWatchScreen";
   static const patientEntryScreen = "/patientEntryScreen";
   static const settingsScreen = "/";
+   static const securityScreen = "/securityScreen";
   // static const qRCodeScreen = "/qRCodeScreen";
 }

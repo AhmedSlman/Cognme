@@ -22,6 +22,7 @@ import 'package:cognme/features/physicians/presentation/views/physician_page.dar
 import 'package:cognme/features/qr_code/presentation/cubit/patient_qr_code_cubit.dart';
 import 'package:cognme/features/qr_code/presentation/views/qr_code_screen.dart';
 import 'package:cognme/features/reminder/presentation/cubit/reminder_cubit.dart';
+import 'package:cognme/features/security/presentation/view/security_screen.dart';
 import 'package:cognme/features/sensors/presentation/view/sensors.dart';
 import 'package:cognme/features/settings/presentation/view/settings_screen.dart';
 import 'package:cognme/features/smart_watch/presentation/view/smart_watch.dart';
@@ -158,6 +159,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.settingsScreen,
       builder: (context, state) => const SettingsScreen(),
+    ),
+    GoRoute(
+      path: RouterNames.securityScreen,
+      builder: (context, state) => const SecurityScreen(),
     ),
   ],
 );

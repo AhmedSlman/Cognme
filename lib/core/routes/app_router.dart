@@ -15,6 +15,7 @@ import 'package:cognme/features/home/presentation/view/home_view.dart';
 import 'package:cognme/features/location/presentation/views/location_view.dart';
 import 'package:cognme/features/navigation_bar.dart';
 import 'package:cognme/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:cognme/features/patient_info/presentation/view/patient_info_screen.dart';
 import 'package:cognme/features/physicians/presentation/cubit/physicians_cubit.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_form.dart';
 import 'package:cognme/features/physicians/presentation/views/physician_info.dart';
@@ -141,17 +142,17 @@ final GoRouter router = GoRouter(
       path: RouterNames.smartWatchScreen,
       builder: (context, state) => const SmartWatchScreen(),
     ),
-    // GoRoute(
-    //   path: RouterNames.patientEntryScreen,
-    //   builder: (context, state) => BlocProvider(
-    //     create: (context) => PatientCubit(),
-    //     child: PatientEntryScreen(),
-    //   ),
-    // ),
-    // GoRoute(
-    //   path: RouterNames.qRCodeScreen,
-    //   builder: (context, state) => const QRCodeScreen(),
-    // ),
+    GoRoute(
+      path: RouterNames.patientInfoScreen,
+      builder: (context, state) => BlocProvider(
+        create: (context) => PatientCubit(),
+        child: const PatientInfoScreen(),
+      ),
+    ),
+    GoRoute(
+      path: RouterNames.qRCodeScreen,
+      builder: (context, state) => const QRCodeScreen(),
+    ),
     GoRoute(
       path: RouterNames.ProfileScreen,
       builder: (context, state) => const ProfileScreen(),

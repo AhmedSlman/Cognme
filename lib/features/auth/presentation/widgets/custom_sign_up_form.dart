@@ -1,13 +1,14 @@
 // ignore_for_file: must_be_immutable, use_build_context_synchronously
-
 import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
+import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/core/common/widgets/container_screen.dart';
 import 'package:cognme/core/common/widgets/custom_button.dart';
 import 'package:cognme/features/auth/presentation/auth_cubit/auth_cubit.dart';
+import 'package:cognme/features/auth/presentation/widgets/Sign_with_container.dart';
 import 'package:cognme/features/auth/presentation/widgets/custom_text_form_field.dart';
 import 'package:cognme/features/auth/presentation/widgets/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
@@ -52,6 +53,7 @@ class CustomSignUpForm extends StatelessWidget {
                         CustomTextField(
                           controller: registerNameContorller,
                           labelText: AppStrings.name,
+                          
                           onChanged: (name) {
                             authCubit.name = name;
                           },
@@ -131,34 +133,20 @@ class CustomSignUpForm extends StatelessWidget {
                                   }
                                 }),
                         SizedBox(
-                          height: context.height * 0.02,
+                          height: context.height * 0.03,
                         ),
+                        // ignore: prefer_const_constructors
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              width: context.width * 0.05,
+                          children: const [
+                            SignWithContainer(
+                              iconImage: AppAssets.gmailIcon,
                             ),
-                            const Icon(
-                              Icons.facebook,
-                              size: 40,
-                              color: Colors.blue,
+                            SignWithContainer(
+                              iconImage: AppAssets.facebookIcon,
                             ),
-                            SizedBox(
-                              width: context.width * 0.05,
-                            ),
-                            const Icon(
-                              Icons.facebook,
-                              size: 40,
-                              color: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: context.width * 0.05,
-                            ),
-                            const Icon(
-                              Icons.facebook,
-                              size: 40,
-                              color: Colors.blue,
+                            SignWithContainer(
+                              iconImage: AppAssets.appleIcon,
                             ),
                           ],
                         )

@@ -2,9 +2,12 @@
 
 import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
+import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/common/widgets/custom_button.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/auth/presentation/auth_cubit/auth_cubit.dart';
+import 'package:cognme/features/auth/presentation/widgets/Sign_with_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_text_form_field.dart';
@@ -58,7 +61,25 @@ class CustomSignInForm extends StatelessWidget {
                         customNavigate(context, RouterNames.forgotPasswordView),
                   ),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.06),
+                SizedBox(
+                  height: context.height * 0.03,
+                ),
+                // ignore: prefer_const_constructors
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    SignWithContainer(
+                      iconImage: AppAssets.gmailIcon,
+                    ),
+                    SignWithContainer(
+                      iconImage: AppAssets.facebookIcon,
+                    ),
+                    SignWithContainer(
+                      iconImage: AppAssets.appleIcon,
+                    ),
+                  ],
+                ),
+                SizedBox(height: context.height * 0.06),
                 state is SignInLoadingState
                     ? const CircularProgressIndicator()
                     : CustomButton(

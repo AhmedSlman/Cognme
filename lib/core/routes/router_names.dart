@@ -2,11 +2,11 @@
 
 class RouterNames {
 // ignore: constant_identifier_names
-  static const SplashView = "/splash";
+  static const SplashView = "/SplashView";
   static const OnBoardingView = "/onBoarding";
-  static const SignUpView = "/signUpView";
-  static const SignInView = "/signIn";
-  static const HomeView = "/homeView";
+  static const SignUpView = "/SignUpView";
+  static const SignInView = "/SignInView";
+  static const HomeView = "/HomeView";
   static const EmergencyCallPage = "/EmergencyCallPage";
   static const DashBoardView = "/dashBoardView";
   static const physicalView = "/physicalView";
@@ -15,13 +15,13 @@ class RouterNames {
   static const forgotPasswordView = "/ForgotPasswordView";
   static const appointmentView = "/appointmentView";
   static const locationView = "/locationView";
-  static const navigatiomBarButton = "/navigationBarButton";
+  static const navigatiomBarButton = "/";
   static const physiciansData = "/physiciansData";
   static const PhysicianForm = "/physicianForm";
   static const sensorScreen = "/sensorScreen";
   static const smartWatchScreen = "/smartWatchScreen";
-  static const patientEntryScreen = "/patientEntryScreen";
-  static const settingsScreen = "/";
-   static const securityScreen = "/securityScreen";
-  // static const qRCodeScreen = "/qRCodeScreen";
+  static const patientInfoScreen = "/patientInfoScreen";
+  static const settingsScreen = "/settingsScreen";
+  static const securityScreen = "/securityScreen";
+  static const qRCodeScreen = "/qRCodeScreen";
 }

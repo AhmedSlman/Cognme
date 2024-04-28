@@ -4,8 +4,6 @@ class AppAssets {
   static const String ClothesImage = "assets/images/clothes.png";
   static const String CognmeLogo = "assets/images/cognmeLogo.png";
   static const String DashboardImage = "assets/images/dashboard.png";
-  static const String FacebookImage = "assets/images/facebookImage.png";
-  static const String GmailImage = "assets/images/gmailImage.png";
   static const String MiscHash = "assets/images/MiscHash.png";
   static const String OnBoarding1 = "assets/images/onBoarding1.png";
   static const String OnBoarding2 = "assets/images/onBoarding2.png";
@@ -20,4 +18,7 @@ class AppAssets {
   static const String Victor2 = "assets/images/victor2.png";
   static const String Clouds = "assets/images/cloud.png";
   static const String coverImage="assets/images/cover.jpeg";
+  static const String facebookIcon="assets/images/facebook.png";
+  static const String gmailIcon="assets/images/gmail.png";
+  static const String appleIcon="assets/images/apple.png";
 }

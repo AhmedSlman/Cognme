@@ -1,4 +1,5 @@
 import 'package:cognme/core/utils/app_strings.dart';
+import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'custom_check_box.dart';
 
@@ -15,11 +16,11 @@ class TermsAndConditionsWidget extends StatelessWidget {
             children: [
               const TextSpan(
                 text: AppStrings.iHaveAgreeToOur,
-                style: TextStyle(fontSize: 14),
+                style: AppStyles.formText16,
               ),
               TextSpan(
                 text: AppStrings.termsAndCondition,
-                style: const TextStyle(fontSize: 14)
+                style: AppStyles.formText16
                     .copyWith(decoration: TextDecoration.underline),
               ),
             ],

@@ -4,7 +4,6 @@ import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LocationDateCetegory extends StatelessWidget {
   const LocationDateCetegory({super.key});
@@ -13,56 +12,33 @@ class LocationDateCetegory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: context.height * 0.05,
+      width: context.width * 0.5,
       decoration: ShapeDecoration(
-        color: AppColors.blackOfText,
+        color: AppColors.mainColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Container(
-              child: Row(
-                children: [
-                  const Icon(
-                    FontAwesomeIcons.locationDot,
-                    size: 20,
-                  ),
-                  Text(
-                    AppStrings.Mansoura,
-                    style: AppStyles.s16.copyWith(
-                      color: AppColors.blackOfText,
-                    ),
-                  ),
-                ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              AppStrings.Mansoura,
+              style: AppStyles.s16.copyWith(
+                color: Colors.white,
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              right: 20,
+            const SizedBox(
+              width: 20,
             ),
-            child: Container(
-              child: Row(
-                children: [
-                  const Icon(
-                    FontAwesomeIcons.calendarCheck,
-                    size: 20,
-                  ),
-                  Text(
-                    AppStrings.Monday,
-                    style: AppStyles.regularStyle18.copyWith(
-                      color: AppColors.blackOfText,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          )
-        ],
+            const Icon(
+              Icons.location_on_outlined,
+              color: Colors.white,
+            )
+          ],
+        ),
       ),
     );
   }

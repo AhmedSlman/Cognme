@@ -17,18 +17,18 @@ class WelcomCategory extends StatelessWidget {
         AppStrings.homewelcom,
         style: AppStyles.s16.copyWith(
           color: AppColors.blackOfText,
-          fontSize: 18,
-          fontWeight: FontWeight.w300,
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
         ),
       ),
       subtitle: Padding(
-        padding: const EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.only(top: 0),
         child: Text(
           AppStrings.name,
           style: AppStyles.s16.copyWith(
             color: AppColors.blackOfText,
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w300,
           ),
         ),
       ),

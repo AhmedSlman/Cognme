@@ -4,10 +4,8 @@ import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/settings/presentation/widget/about_us_card.dart';
-import 'package:cognme/features/settings/presentation/widget/list_tile_button.dart';
 import 'package:cognme/features/settings/presentation/widget/list_tile_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ColumnData extends StatelessWidget {
   const ColumnData({
@@ -41,7 +39,7 @@ class ColumnData extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-             customReplacementNavigate(context, RouterNames.securityScreen);
+            customReplacementNavigate(context, RouterNames.securityScreen);
           },
           child: const ListTileWidget(
             label: 'Security',

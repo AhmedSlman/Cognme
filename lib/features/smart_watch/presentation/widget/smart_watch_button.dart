@@ -1,6 +1,5 @@
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SmartWatchButton extends StatelessWidget {
   const SmartWatchButton({super.key, required this.text, required this.icon});

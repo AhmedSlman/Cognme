@@ -28,6 +28,7 @@ import 'package:cognme/features/sensors/presentation/view/sensors.dart';
 import 'package:cognme/features/settings/presentation/view/settings_screen.dart';
 import 'package:cognme/features/smart_watch/presentation/view/smart_watch.dart';
 import 'package:cognme/features/splash/presentation/views/splash_view.dart';
+import 'package:cognme/features/home/presentation/widgets/sliding_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/reminder/presentation/views/appointment_view.dart';
@@ -42,6 +43,8 @@ final GoRouter router = GoRouter(
       path: RouterNames.OnBoardingView,
       builder: (context, state) => const OnBoardingView(),
     ),
+    //? Auth Feature Routes
+
     GoRoute(
       path: RouterNames.SignUpView,
       builder: (context, state) => BlocProvider(
@@ -164,6 +167,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.securityScreen,
       builder: (context, state) => const SecurityScreen(),
+    ),
+    GoRoute(
+      path: RouterNames.testScreen,
+      builder: (context, state) => const SlidingWidget(),
     ),
   ],
 );

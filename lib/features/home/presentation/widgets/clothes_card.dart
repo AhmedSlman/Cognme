@@ -10,7 +10,7 @@ class ClothesCategory extends StatelessWidget {
     return Container(
       height: 160,
       decoration: ShapeDecoration(
-        color: AppColors.blackOfText,
+        color: Color(0xffE0F1FC),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25),
         ),
@@ -28,7 +28,8 @@ class ClothesCategory extends StatelessWidget {
                   Text(
                     'Cool Wears',
                     style: AppStyles.regularStyle18.copyWith(
-                        color: AppColors.blackOfText, fontWeight: FontWeight.w600),
+                        color: AppColors.blackOfText,
+                        fontWeight: FontWeight.w600),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 10),

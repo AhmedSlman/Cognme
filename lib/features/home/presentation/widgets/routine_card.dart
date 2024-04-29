@@ -1,5 +1,7 @@
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/media_query.dart';
+import 'package:cognme/features/home/presentation/widgets/dashed_line_widget.dart';
+import 'package:cognme/features/home/presentation/widgets/routin_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class RoutineCard extends StatelessWidget {
@@ -8,19 +10,52 @@ class RoutineCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.height * 0.18,
+      height: context.height * 0.25,
       decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 255, 255, 255),
         borderRadius: BorderRadius.circular(12),
-        image: const DecorationImage(
-            image: AssetImage(AppAssets.SeeImage), fit: BoxFit.fill),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 3,
+            blurRadius: 5,
+            offset: const Offset(0, 3),
+          ),
+        ],
       ),
-      child: const Center(
-        child: Text(
-          textAlign: TextAlign.center,
-          'simply dummy text of the printing and typesetting industry. Lorem Ipsum has',
-          style: TextStyle(
-              color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
-        ),
+      child: Row(
+        children: [
+          const SizedBox(
+            width: 15,
+          ),
+          Column(
+            children: [
+              const SizedBox(height: 20),
+              Image.asset(AppAssets.sunIcon),
+              const SizedBox(height: 15),
+              const DashedLine(),
+            ],
+          ),
+          const SizedBox(
+            width: 15,
+          ),
+          const Column(
+            children: [
+              SizedBox(height: 20),
+              RoutineListTile(
+                title: "Time to take medicine",
+                supTitle: 'Amphetamine,2 capsule Ginkgo Biloba, 1 capsule ',
+                image: AppAssets.medicine,
+              ),
+              SizedBox(height: 20),
+              RoutineListTile(
+                  title: "Time to meditation ",
+                  supTitle: "Find a quiet space, sit comfortably,focus on...",
+                  image: AppAssets.medetation),
+              SizedBox(height: 20),
+            ],
+          )
+        ],
       ),
     );
   }

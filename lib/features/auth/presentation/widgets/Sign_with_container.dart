@@ -1,4 +1,3 @@
-import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +5,8 @@ import 'package:flutter/material.dart';
 class SignWithContainer extends StatelessWidget {
   final String iconImage;
   const SignWithContainer({
-    super.key, required this.iconImage,
+    super.key,
+    required this.iconImage,
   });
 
   @override
@@ -19,7 +19,7 @@ class SignWithContainer extends StatelessWidget {
       decoration: BoxDecoration(
           color: AppColors.whiteOfColor,
           borderRadius: BorderRadius.circular(50),
-          border: Border.all(color: AppColors.greyColor,width: 2)),
+          border: Border.all(color: AppColors.greyColor, width: 2)),
       child: Image.asset(
         iconImage,
       ),

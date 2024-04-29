@@ -5,7 +5,6 @@ import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/security/presentation/widget/security_form.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class SecurityScreen extends StatelessWidget {
   const SecurityScreen({super.key});

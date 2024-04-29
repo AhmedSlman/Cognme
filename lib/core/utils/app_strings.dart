@@ -10,7 +10,7 @@ abstract class AppStrings {
       //Auth Strings
       welcome = "Welcome To Cognme",
       welcomeBack = "Welcome Back!",
-      name = "First Name",
+      name = "Have a nice day",
       lastName = "Last Name",
       emailAddress = "Email Address",
       password = "Password",
@@ -40,7 +40,7 @@ abstract class AppStrings {
       verifyAccount = "Verify Account",
       enter4DigitCodeWeHaveSentTo = "Enter 4 digit code we have sent to ",
       haventReceivedVerificationCode = "Haven’t received verification code?",
-      homewelcom = "Good morning",
+      homewelcom = "Hey Rose !",
       Mansoura = ' Mansoura, EGY',
       Monday = ' Monday, June',
       coolWears = 'Cool Wears',

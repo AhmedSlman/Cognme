@@ -1,3 +1,4 @@
+import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class HeartRateCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: 70,
       decoration: BoxDecoration(
         color: AppColors.whiteOfColor,
         shape: BoxShape.rectangle,
@@ -32,6 +33,9 @@ class HeartRateCategory extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 5,
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 2),
                   child: Text('Heart Rate',
@@ -44,11 +48,7 @@ class HeartRateCategory extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            const Icon(
-              FontAwesomeIcons.heartCircleCheck,
-              color: Colors.black,
-              size: 30,
-            ),
+            Image.asset(AppAssets.heartRate)
           ],
         ),
       ),

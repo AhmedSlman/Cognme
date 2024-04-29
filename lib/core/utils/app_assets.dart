@@ -17,8 +17,12 @@ class AppAssets {
   static const String Victor1 = "assets/images/victor1.png";
   static const String Victor2 = "assets/images/victor2.png";
   static const String Clouds = "assets/images/cloud.png";
-  static const String coverImage="assets/images/cover.jpeg";
-  static const String facebookIcon="assets/images/facebook.png";
-  static const String gmailIcon="assets/images/gmail.png";
-  static const String appleIcon="assets/images/apple.png";
+  static const String coverImage = "assets/images/cover.jpeg";
+  static const String facebookIcon = "assets/images/facebook.png";
+  static const String gmailIcon = "assets/images/gmail.png";
+  static const String appleIcon = "assets/images/apple.png";
+  static const String sunIcon = "assets/images/sun.png";
+  static const String medicine = "assets/images/medcine.png";
+  static const String medetation = "assets/images/meditation.png";
+  static const String heartRate = "assets/images/heartRate.png";
 }

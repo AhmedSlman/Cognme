@@ -1,11 +1,9 @@
-import 'package:cognme/core/common/functions/custom_navigate.dart';
-import 'package:cognme/core/routes/router_names.dart';
+// ignore_for_file: must_be_immutable
+
 import 'package:cognme/core/utils/app_colors.dart';
-import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/common/widgets/btn.dart';
 import 'package:cognme/features/physicians/presentation/cubit/physicians_cubit.dart';
-import 'package:cognme/features/physicians/presentation/views/physician_info.dart';
 import 'package:cognme/features/physicians/presentation/widgets/custom_rating-bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

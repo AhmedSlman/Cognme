@@ -1,4 +1,6 @@
+import 'package:cognme/features/Profile/data/missions_model.dart';
 import 'package:cognme/features/Profile/presentation/widget/category_headlines.dart';
+import 'package:cognme/features/Profile/presentation/widget/mission_card_widget.dart';
 import 'package:cognme/features/Profile/presentation/widget/missions_list_view.dart';
 import 'package:cognme/features/Profile/presentation/widget/time_list_view.dart';
 import 'package:cognme/features/Profile/presentation/widget/top_part_widget.dart';
@@ -28,18 +30,7 @@ class ProfileScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Expanded(
-                  flex: 3,
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: MissionsListView(
-                          scrollController: scrollController,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                Expanded(flex: 3, child: MissionsListView()),
                 const SizedBox(
                   width: 20,
                 ),

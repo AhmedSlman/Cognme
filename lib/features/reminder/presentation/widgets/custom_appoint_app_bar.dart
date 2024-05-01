@@ -1,5 +1,3 @@
-import 'package:cognme/core/common/functions/custom_navigate.dart';
-import 'package:cognme/core/routes/router_names.dart';
 import 'package:cognme/core/utils/app_strings.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -13,14 +11,12 @@ class CustomAppointmentAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-          onPressed: () {
-            customReplacementNavigate(context, RouterNames.navigatiomBarButton);
-          },
+          onPressed: () {},
           icon: const Icon(Icons.arrow_back_ios),
         ),
         Text(
           AppStrings.appointments,
-          style: AppStyles.boldStyle28.copyWith(fontWeight: FontWeight.w500),
+          style: AppStyles.boldStyle28.copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(
           width: 20,

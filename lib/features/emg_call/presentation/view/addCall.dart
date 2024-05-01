@@ -23,64 +23,67 @@ class AddCaller extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: context.width * 0.04),
-        child: Form(
-          key: formkey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              const SizedBox(height: 30),
-              CustomAppBar(
-                label: "Add Caller",
-                appBarLeading: IconButton(
-                  onPressed: () {
-                    customReplacementNavigate(
-                        context, RouterNames.EmergencyCallPage);
-                  },
-                  icon: const Icon(
-                    Icons.arrow_back_ios,
-                    size: 30,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: context.width * 0.04),
+          child: Form(
+            key: formkey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                const SizedBox(height: 30),
+                CustomAppBar(
+                  label: "Add Caller",
+                  appBarLeading: IconButton(
+                    onPressed: () {
+                      customReplacementNavigate(
+                          context, RouterNames.EmergencyCallPage);
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back_ios,
+                      size: 30,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 30),
-              const Center(child: PickImageWidget()),
-              const SizedBox(height: 20),
-              AddCallTextFormFieldWidget(
-                labelText: 'Name',
-                icon: const Icon(Icons.person),
-                controller: nameController,
-              ),
-              const SizedBox(height: 20),
-              AddCallTextFormFieldWidget(
-                textInputType: TextInputType.phone,
-                labelText: 'Phone Number',
-                icon: const Icon(Icons.phone),
-                controller: phoneController,
-              ),
-              const SizedBox(height: 20),
-              CustomSmallButtom(
-                backgroundColor: AppColors.mainColor,
-                textColor: AppColors.whiteOfColor,
-                lable: "Add Contact",
-                onTap: () {
-                  if (formkey.currentState!.validate()) {
-                    String name = nameController.text;
-                    String number = phoneController.text;
-                    XFile image = XFile(BlocProvider.of<GetImageCubit>(context)
-                        .profilePic!
-                        .path);
-                    BlocProvider.of<EemergacyCallsCubit>(context)
-                        .addContact(name, number, image);
-                    customReplacementNavigate(
-                      context,
-                      RouterNames.EmergencyCallPage,
-                    );
-                  }
-                },
-              )
-            ],
+                const SizedBox(height: 30),
+                const Center(child: PickImageWidget()),
+                const SizedBox(height: 20),
+                AddCallTextFormFieldWidget(
+                  labelText: 'Name',
+                  icon: const Icon(Icons.person),
+                  controller: nameController,
+                ),
+                const SizedBox(height: 20),
+                AddCallTextFormFieldWidget(
+                  textInputType: TextInputType.phone,
+                  labelText: 'Phone Number',
+                  icon: const Icon(Icons.phone),
+                  controller: phoneController,
+                ),
+                const SizedBox(height: 20),
+                CustomSmallButtom(
+                  backgroundColor: AppColors.mainColor,
+                  textColor: AppColors.whiteOfColor,
+                  lable: "Add Contact",
+                  onTap: () {
+                    if (formkey.currentState!.validate()) {
+                      String name = nameController.text;
+                      String number = phoneController.text;
+                      XFile image = XFile(
+                          BlocProvider.of<GetImageCubit>(context)
+                              .profilePic!
+                              .path);
+                      BlocProvider.of<EemergacyCallsCubit>(context)
+                          .addContact(name, number, image);
+                      customReplacementNavigate(
+                        context,
+                        RouterNames.EmergencyCallPage,
+                      );
+                    }
+                  },
+                )
+              ],
+            ),
           ),
         ),
       ),

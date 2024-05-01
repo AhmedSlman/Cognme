@@ -3,11 +3,8 @@ import 'package:cognme/features/Profile/presentation/widget/mission_card_widget.
 import 'package:flutter/material.dart';
 
 class MissionsListView extends StatelessWidget {
-  const MissionsListView({
-    super.key,
-    required this.scrollController,
-  });
-  final ScrollController scrollController;
+  MissionsListView({super.key});
+  final ScrollController scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +18,7 @@ class MissionsListView extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 20),
         child: ListView.builder(
+          controller: scrollController,
           itemCount: missions.length,
           itemBuilder: (context, index) {
             return MissionCardWidget(

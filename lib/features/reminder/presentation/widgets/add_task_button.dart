@@ -16,8 +16,8 @@ class AddTaskButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: context.height * 0.055,
-        width: context.width * 0.35,
+        height: context.height * 0.05,
+        width: context.width * 0.33,
         decoration: BoxDecoration(
           color: AppColors.mainColor,
           borderRadius: BorderRadius.circular(15),

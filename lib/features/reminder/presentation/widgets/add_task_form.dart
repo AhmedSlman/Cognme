@@ -1,6 +1,5 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/reminder/data/models/reminder_model.dart';
 import 'package:cognme/features/reminder/presentation/cubit/reminder_cubit.dart';
 import 'package:cognme/features/reminder/presentation/widgets/add_data_widget.dart';
@@ -32,7 +31,7 @@ class AddTaskForm extends StatelessWidget {
             AddTaskTextFormField(
               controller: addTaskController,
             ),
-            SizedBox(height: context.height * 0.04),
+            const SizedBox(height: 20),
             AddDataWidget(
               dayController: dayController,
               monthController: monthController,
@@ -44,7 +43,7 @@ class AddTaskForm extends StatelessWidget {
               minuteController: minuteController,
               selectedPeriod: selectedPeriod,
             ),
-            SizedBox(height: context.height * 0.04),
+            const SizedBox(height: 40),
             AddTaskButton(
               onTap: () {
                 String task = addTaskController!.text;

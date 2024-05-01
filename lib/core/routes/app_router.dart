@@ -107,7 +107,9 @@ final GoRouter router = GoRouter(
             create: (context) => ReminderCubit(),
           ),
         ],
-        child: const AppointmentView(),
+        child: AppointmentView(
+          key: null,
+        ),
       ),
     ),
     GoRoute(

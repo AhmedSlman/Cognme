@@ -73,7 +73,7 @@ class _NavigationBarButtonState extends State<NavigationBarButton> {
           unselectedItemColor: Colors.grey,
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          iconSize: 33,
+          iconSize: 28,
           currentIndex: pageIndex,
           onTap: (int index) {
             setState(

@@ -30,8 +30,8 @@ class LocationDateCetegory extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(
-              width: 20,
+            SizedBox(
+              width: context.width * 0.04,
             ),
             const Icon(
               Icons.location_on_outlined,

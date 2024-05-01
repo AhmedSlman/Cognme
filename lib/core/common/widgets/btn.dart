@@ -38,9 +38,8 @@ class CustomSmallButtom extends StatelessWidget {
               : BorderSide.none,
         ),
         child: Text(lable,
-            style: AppStyles.s16.copyWith(
-              color: AppColors.whiteOfColor,
-            )),
+            style: AppStyles.s16
+                .copyWith(color: AppColors.whiteOfColor, fontSize: 12)),
       ),
     );
   }

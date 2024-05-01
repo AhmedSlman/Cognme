@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:cognme/core/utils/app_assets.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 import 'physician_name_and_desc_widget.dart';
 
@@ -26,8 +27,8 @@ class DoctorCardIfoWidget extends StatelessWidget {
           child: ClipOval(
             child: Image.asset(
               AppAssets.Victor1,
-              height: 40,
-              width: 40,
+              height: context.height * 0.06,
+              width: context.width * 0.15,
               fit: BoxFit.fill,
             ),
           ),

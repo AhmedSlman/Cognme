@@ -1,4 +1,5 @@
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -8,7 +9,7 @@ class DayProgress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70,
+      height: context.height * 0.08,
       decoration: BoxDecoration(
         color: AppColors.whiteOfColor,
         borderRadius: BorderRadius.circular(16),
@@ -44,7 +45,7 @@ class DayProgress extends StatelessWidget {
                 ),
               ),
               LinearPercentIndicator(
-                width: 300,
+                width: context.width * 0.7,
                 lineHeight: 10.0,
                 percent: 0.5,
                 barRadius: const Radius.circular(10),

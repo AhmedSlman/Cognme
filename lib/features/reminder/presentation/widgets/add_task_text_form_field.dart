@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 class AddTaskTextFormField extends StatelessWidget {
@@ -24,11 +25,11 @@ class AddTaskTextFormField extends StatelessWidget {
       ),
       child: TextFormField(
         controller: controller,
-        decoration: const InputDecoration(
+        decoration: InputDecoration(
             border: InputBorder.none,
             hintText: 'add your task... ',
-            contentPadding: EdgeInsets.all(30),
-            suffix: Icon(
+            contentPadding: EdgeInsets.all(context.toPadding * 0.7),
+            suffix: const Icon(
               Icons.add,
               color: Colors.black,
             )),

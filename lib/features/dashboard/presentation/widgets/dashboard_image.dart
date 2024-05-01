@@ -8,7 +8,7 @@ class DashboardImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.height * 0.2,
+      height: context.height * 0.18,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         image: const DecorationImage(

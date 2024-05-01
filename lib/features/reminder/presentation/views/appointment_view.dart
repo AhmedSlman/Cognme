@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/reminder/presentation/widgets/add_task_form.dart';
 import 'package:cognme/features/reminder/presentation/widgets/custom_appoint_app_bar.dart';
 import 'package:cognme/features/reminder/presentation/widgets/tasks_list_view.dart';
@@ -13,16 +14,14 @@ class AppointmentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: context.toPadding * 0.5),
         child: Column(
           children: [
-            const SizedBox(
-              height: 45,
-            ),
+            SizedBox(height: context.height * 0.03),
             const CustomAppointmentAppBar(),
-            const SizedBox(height: 20),
+            SizedBox(height: context.height * 0.03),
             AddTaskForm(),
-            const SizedBox(height: 20),
+            SizedBox(height: context.height * 0.02),
             const Align(
               alignment: Alignment.bottomLeft,
               child: Text(

@@ -3,6 +3,7 @@
 import 'package:cognme/core/common/logic/dateAndTimeCubit/data_time_cubit.dart';
 import 'package:cognme/core/common/models/data_time_model.dart';
 import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/reminder/presentation/widgets/data_time_text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,7 +31,7 @@ class AddDataWidget extends StatelessWidget {
                 "Add Date",
                 style: AppStyles.s16,
               ),
-              const SizedBox(width: 40),
+              SizedBox(width: context.width * 0.1),
               DataTimeTextField(
                 controller: dayController,
                 hintText: "D",
@@ -41,7 +42,7 @@ class AddDataWidget extends StatelessWidget {
                       );
                 },
               ),
-              const SizedBox(width: 20),
+              SizedBox(width: context.width * 0.06),
               DataTimeTextField(
                 controller: monthController,
                 hintText: "M",
@@ -52,7 +53,7 @@ class AddDataWidget extends StatelessWidget {
                       );
                 },
               ),
-              const SizedBox(width: 20),
+              SizedBox(width: context.width * 0.06),
               DataTimeTextField(
                 controller: yearController,
                 hintText: "Y",

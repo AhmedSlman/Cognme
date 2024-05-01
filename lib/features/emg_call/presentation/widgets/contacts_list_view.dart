@@ -20,17 +20,17 @@ class ContactsListView extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: Container(
-                height: context.height * 0.08,
+                height: context.height * 0.09,
                 width: context.width * 0.9,
                 decoration: BoxDecoration(
                     color: AppColors.whiteOfColor,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(12),
                     boxShadow: [
                       BoxShadow(
                           color: AppColors.greyOfText,
-                          blurRadius: 6,
-                          offset: const Offset(0, 5),
-                          spreadRadius: 3)
+                          blurRadius: 4,
+                          offset: const Offset(0, 2),
+                          spreadRadius: 0)
                     ]),
                 child: ListTile(
                   leading: state.contacts.isNotEmpty &&

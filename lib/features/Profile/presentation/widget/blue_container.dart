@@ -1,4 +1,5 @@
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/Profile/presentation/widget/settings_button.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class BlueContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: context.height * 0.17,
       width: 479,
       decoration: BoxDecoration(
         color: AppColors.mainColor,

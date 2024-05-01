@@ -3,6 +3,7 @@
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/common/widgets/btn.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/physicians/presentation/cubit/physicians_cubit.dart';
 import 'package:cognme/features/physicians/presentation/widgets/custom_rating-bar.dart';
 import 'package:flutter/material.dart';
@@ -34,10 +35,14 @@ class DoctorNameAndDescWidget extends StatelessWidget {
             Text(
               "Dr: $name",
               style: AppStyles.s16,
+              maxLines: 1,
+              softWrap: true,
+              overflow: TextOverflow.ellipsis,
             ),
             Text(
               "Spec: $description",
-              maxLines: 2,
+              maxLines: 1,
+              softWrap: true,
               overflow: TextOverflow.ellipsis,
               style: AppStyles.regularStyle18.copyWith(
                 color: AppColors.greyOfText,
@@ -60,13 +65,15 @@ class DoctorNameAndDescWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const CustomRatingBar(),
-                const SizedBox(
-                  width: 40,
+                SizedBox(
+                  width: context.width * 0.05,
                 ),
                 CustomSmallButtom(
                   onTap: onTap,
                   lable: 'preview',
                   backgroundColor: AppColors.mainColor,
+                  width: context.width * 0.26,
+                  height: context.height * 0.04,
                 )
               ],
             ),

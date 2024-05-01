@@ -29,7 +29,7 @@ class ControllerCard extends StatelessWidget {
         width: context.width * 0.3,
         height: context.height * 0.1,
         decoration: ShapeDecoration(
-          color: AppColors.greyColor,
+          color: const Color.fromARGB(255, 235, 232, 232),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
@@ -38,25 +38,31 @@ class ControllerCard extends StatelessWidget {
           padding: const EdgeInsets.only(left: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              const SizedBox(
-                height: 5,
+              SizedBox(
+                height: context.height * 0.006,
               ),
               Icon(
                 category.iconData,
-                size: 30,
+                size: 25,
+              ),
+              SizedBox(
+                height: context.height * 0.006,
               ),
               Text(category.title,
-                  style: AppStyles.s18.copyWith(color: Colors.black)),
+                  style: AppStyles.s18.copyWith(
+                      color: Colors.black, fontWeight: FontWeight.w500)),
               Text(
                 category.subTitle,
                 style: TextStyle(
-                  color: AppColors.blackOfText,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
+                  color: Colors.black.withOpacity(0.5),
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
+              SizedBox(
+                height: context.height * 0.006,
+              )
             ],
           ),
         ),

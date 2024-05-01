@@ -1,3 +1,4 @@
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 class RoutineListTile extends StatelessWidget {
@@ -13,10 +14,10 @@ class RoutineListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
-      width: 300,
+      height: context.height * 0.09,
+      width: context.width * 0.7,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 243, 241, 241),
+        color: const Color.fromARGB(255, 243, 241, 241),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -25,17 +26,25 @@ class RoutineListTile extends StatelessWidget {
             child: ListTile(
               title: Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.bold),
+                softWrap: true,
+                maxLines: 1,
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
-              subtitle: Text(supTitle),
+              subtitle: Text(
+                supTitle,
+                softWrap: true,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ),
           Image.asset(
             image,
-            height: 70,
-            width: 70,
+            height: context.height * 0.07,
+            // width: context.width * 0.07,
           ),
-          const SizedBox(width: 10)
+          SizedBox(width: context.width * 0.01),
         ],
       ),
     );

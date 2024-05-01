@@ -1,5 +1,6 @@
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 class ClothesCategory extends StatelessWidget {
@@ -8,9 +9,9 @@ class ClothesCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
+      height: context.height * 0.17,
       decoration: ShapeDecoration(
-        color: Color(0xffE0F1FC),
+        color: const Color(0xffE0F1FC),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25),
         ),
@@ -18,32 +19,26 @@ class ClothesCategory extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 40),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Cool Wears',
-                    style: AppStyles.regularStyle18.copyWith(
-                        color: AppColors.blackOfText,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Text('more options', style: AppStyles.s18),
-                  ),
-                ],
+          SizedBox(
+            width: context.width * 0.01,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Cool Wears',
+                style: AppStyles.regularStyle18.copyWith(
+                    color: AppColors.blackOfText, fontWeight: FontWeight.w600),
               ),
-            ),
+              Text('more options', style: AppStyles.s18.copyWith(fontSize: 16)),
+            ],
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 15),
+            padding: EdgeInsets.only(right: context.toPadding * 0.3),
             child: Container(
-              height: 140,
-              width: 230,
+              height: context.height * 0.15,
+              width: context.width * 0.5,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 image: const DecorationImage(

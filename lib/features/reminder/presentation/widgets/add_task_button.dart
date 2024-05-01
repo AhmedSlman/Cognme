@@ -2,6 +2,7 @@
 
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 class AddTaskButton extends StatelessWidget {
@@ -15,8 +16,8 @@ class AddTaskButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 50,
-        width: 150,
+        height: context.height * 0.055,
+        width: context.width * 0.35,
         decoration: BoxDecoration(
           color: AppColors.mainColor,
           borderRadius: BorderRadius.circular(15),

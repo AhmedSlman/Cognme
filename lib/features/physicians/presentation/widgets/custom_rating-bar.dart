@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -9,7 +10,7 @@ class CustomRatingBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RatingBar.builder(
-      itemSize: 28,
+      itemSize: context.height * 0.03,
       unratedColor: Colors.grey,
       glowColor: AppColors.ratingColor,
       initialRating: 3,

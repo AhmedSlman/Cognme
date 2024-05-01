@@ -10,7 +10,7 @@ class RoutineCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.height * 0.25,
+      height: context.height * 0.24,
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 255, 255, 255),
         borderRadius: BorderRadius.circular(12),
@@ -39,20 +39,20 @@ class RoutineCard extends StatelessWidget {
           const SizedBox(
             width: 15,
           ),
-          const Column(
+          Column(
             children: [
-              SizedBox(height: 20),
-              RoutineListTile(
+              SizedBox(height: context.height * 0.02),
+              const RoutineListTile(
                 title: "Time to take medicine",
-                supTitle: 'Amphetamine,2 capsule Ginkgo Biloba, 1 capsule ',
+                supTitle: 'Amphetamine,2 capsule Ginkgo Biloba, 1 capsule',
                 image: AppAssets.medicine,
               ),
-              SizedBox(height: 20),
-              RoutineListTile(
+              SizedBox(height: context.height * 0.02),
+              const RoutineListTile(
                   title: "Time to meditation ",
                   supTitle: "Find a quiet space, sit comfortably,focus on...",
                   image: AppAssets.medetation),
-              SizedBox(height: 20),
+              SizedBox(height: context.height * 0.01),
             ],
           )
         ],

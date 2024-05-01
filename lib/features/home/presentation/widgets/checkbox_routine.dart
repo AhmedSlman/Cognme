@@ -28,7 +28,9 @@ class _CheckBoxRoutineState extends State<CheckBoxRoutine> {
           },
         ),
         Text(
-          'Simply dummy text of the printing',
+          'dummy text of the printing',
+          overflow: TextOverflow.ellipsis,
+          maxLines: 3,
           style: AppStyles.s18.copyWith(
             color: AppColors.blackOfText,
             fontWeight: FontWeight.w500,

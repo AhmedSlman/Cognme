@@ -23,7 +23,7 @@ class EmergencyCallPage extends StatelessWidget {
               appBarTrailing: IconButton(
                 color: AppColors.mainColor,
                 onPressed: () {
-                  customNavigate(context, RouterNames.AddCaller);
+                  customReplacementNavigate(context, RouterNames.AddCaller);
                 },
                 icon: Icon(
                   Icons.add,

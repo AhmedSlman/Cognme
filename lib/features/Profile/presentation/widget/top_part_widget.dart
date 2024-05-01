@@ -1,6 +1,7 @@
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/Profile/presentation/widget/blue_container.dart';
 import 'package:cognme/features/Profile/presentation/widget/date_slider.dart';
 import 'package:cognme/features/Profile/presentation/widget/taps.dart';
@@ -14,13 +15,13 @@ class TopPartProfilePage extends StatelessWidget {
     return Stack(
       alignment: Alignment.topCenter,
       children: [
-        const Column(
+        Column(
           children: [
-            BlueContainer(),
+            const BlueContainer(),
             SizedBox(
-              height: 50,
+              height: context.height * 0.05,
             ),
-            DateSlider(),
+            const DateSlider(),
           ],
         ),
         Positioned(
@@ -61,13 +62,13 @@ class TopPartProfilePage extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 80,
-          left: 170,
+          top: context.height * 0.07,
+          left: context.width * 0.4,
           child: CircleAvatar(radius: 45, child: Image.asset(AppAssets.profle)),
         ),
         Positioned(
-          top: 140,
-          right: 158,
+          top: context.height * 0.15,
+          right: context.width * 0.4,
           child: Container(
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(

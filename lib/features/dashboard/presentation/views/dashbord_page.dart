@@ -38,9 +38,9 @@ class DashboardView extends StatelessWidget {
               child: Text(
                 'Control',
                 style: AppStyles.s18.copyWith(
-                  color: const Color(0xFF0F0F0F),
-                  fontWeight: FontWeight.w500,
-                ),
+                    color: const Color(0xFF0F0F0F),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
               ),
             ),
             const SizedBox(

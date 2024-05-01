@@ -1,6 +1,7 @@
 import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 class HeartRateCategory extends StatelessWidget {
@@ -11,7 +12,7 @@ class HeartRateCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70,
+      height: context.height * 0.09,
       decoration: BoxDecoration(
         color: AppColors.whiteOfColor,
         shape: BoxShape.rectangle,

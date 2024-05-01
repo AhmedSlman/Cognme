@@ -1,4 +1,5 @@
 import 'package:cognme/core/utils/app_colors.dart';
+import 'package:cognme/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 
 class SmartWatchButton extends StatelessWidget {
@@ -10,7 +11,7 @@ class SmartWatchButton extends StatelessWidget {
     return InkWell(
       onTap: () {},
       child: Container(
-        height: 70,
+        height: context.height * 0.07,
         padding: const EdgeInsets.symmetric(
           horizontal: 19.61,
           vertical: 5.16,

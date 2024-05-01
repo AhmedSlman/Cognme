@@ -14,6 +14,7 @@ class _SwitchButtonState extends State<SwitchButton> {
   @override
   Widget build(BuildContext context) {
     return Switch(
+      inactiveThumbColor: Colors.white,
       activeColor: Colors.white,
       activeTrackColor: AppColors.mainColor,
       value: isSwitched,

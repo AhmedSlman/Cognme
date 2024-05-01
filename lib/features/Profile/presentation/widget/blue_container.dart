@@ -1,5 +1,5 @@
 import 'package:cognme/core/utils/app_colors.dart';
-import 'package:cognme/core/utils/media_query.dart';
+import 'package:cognme/features/Profile/presentation/widget/settings_button.dart';
 import 'package:flutter/material.dart';
 
 class BlueContainer extends StatelessWidget {
@@ -10,14 +10,18 @@ class BlueContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: context.height * 0.18,
+      height: 150,
+      width: 479,
       decoration: BoxDecoration(
         color: AppColors.mainColor,
         borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(800),
-          bottomRight: Radius.circular(800),
+          bottomLeft: Radius.circular(50),
+          bottomRight: Radius.circular(50),
         ),
+      ),
+      child: const Align(
+        alignment: Alignment.topLeft,
+        child: SettingButton(),
       ),
     );
   }

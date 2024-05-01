@@ -158,7 +158,7 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: RouterNames.ProfileScreen,
-      builder: (context, state) => const ProfileScreen(),
+      builder: (context, state) => ProfileScreen(),
     ),
     GoRoute(
       path: RouterNames.settingsScreen,
@@ -167,10 +167,6 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RouterNames.securityScreen,
       builder: (context, state) => const SecurityScreen(),
-    ),
-    GoRoute(
-      path: RouterNames.testScreen,
-      builder: (context, state) => const SlidingWidget(),
     ),
   ],
 );

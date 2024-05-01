@@ -2,7 +2,6 @@ import 'package:cognme/core/utils/app_assets.dart';
 import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HeartRateCategory extends StatelessWidget {
   const HeartRateCategory({
@@ -33,18 +32,18 @@ class HeartRateCategory extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 5,
-                ),
+                const SizedBox(height: 5),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 2),
-                  child: Text('Heart Rate',
-                      style:
-                          AppStyles.s18.copyWith(color: AppColors.blackOfText)),
+                  child: Text(
+                    'Heart Rate',
+                    style: AppStyles.s18.copyWith(color: AppColors.blackOfText),
+                  ),
                 ),
-                Text('Yesterday was 75',
-                    style:
-                        AppStyles.s16.copyWith(color: AppColors.blackOfText)),
+                Text(
+                  'Yesterday was 75',
+                  style: AppStyles.s16.copyWith(color: AppColors.blackOfText),
+                ),
               ],
             ),
             const Spacer(),

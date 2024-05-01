@@ -12,7 +12,7 @@ class WelcomCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         child: ListTile(
-      leading: Image.asset(AppAssets.Victor1),
+      leading: Image.asset(AppAssets.profle),
       title: Text(
         AppStrings.homewelcom,
         style: AppStyles.s16.copyWith(

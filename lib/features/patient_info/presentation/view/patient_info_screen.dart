@@ -1,6 +1,5 @@
 import 'package:cognme/core/common/functions/custom_navigate.dart';
 import 'package:cognme/core/routes/router_names.dart';
-import 'package:cognme/core/utils/app_colors.dart';
 import 'package:cognme/core/utils/app_styles.dart';
 import 'package:cognme/core/utils/media_query.dart';
 import 'package:cognme/features/patient_info/presentation/widget/patient_form.dart';

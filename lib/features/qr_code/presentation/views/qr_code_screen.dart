@@ -16,7 +16,7 @@ class QRCodeScreen extends StatelessWidget {
         ),
         body: Center(
           child: QrImageView(
-            data: "https://ahmedslman.github.io/gf/",
+            data: "https://ahmedslman.github.io/personal-info-web-/",
             version: QrVersions.auto,
             size: 300.0,
           ),
